@@ -1,0 +1,17 @@
+.container {
+    height: 100vh;
+    padding: 20px;
+    display: grid;
+    grid-template: 50% 50% / 80%;
+    .home__gif {
+        color: #fff;
+        font-size: 3rem;
+        margin: 0;
+        border: 1px solid #fff;
+    }
+    p {
+        color: #fff;
+        border: 1px solid #fff;
+        align-self: end;
+    }
+}
