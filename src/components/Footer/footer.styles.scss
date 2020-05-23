@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    justify-content: flex-end;
+    height: 50%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    width: 100%;
+    p {
+        color: #fff;
+        font-size: 13.1716px;
+        font-weight: 600;
+        line-height: 13px;
+    }
+}
