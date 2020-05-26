@@ -1,0 +1,24 @@
+.home__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .home {
+        padding-top: 26px;
+        padding: 0 0 42px 48px;
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+        &__body {
+            width: 273px;
+            strong {
+                font-size: 30px;
+                line-height: 33px;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.home__body+.home__body {
+    padding-top: 30px;
+}
