@@ -1,0 +1,16 @@
+.header {
+    padding: 98px 0 42px 48px;
+    height: 100vh;
+    .nav-toggle {
+        background-color: #000;
+        border: none;
+        padding-bottom: 36px;
+    }
+    &__logo {
+        max-width: 320px;
+        img {
+            width: 100%;
+            margin-left: -22px;
+        }
+    }
+}

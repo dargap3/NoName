@@ -1,0 +1,28 @@
+.nav {
+    background-color: #F4F3F1;
+    width: 215px;
+    position: absolute;
+    color: #000;
+    padding-left: 23px;
+    padding-bottom: 30px;
+    &__list {
+        list-style: none;
+        padding-top: 48px;
+    }
+    &__item {
+        padding-bottom: 25px;
+        padding-right: 30px;
+        &:last-child {
+            padding-top: 48px;
+        }
+    }
+    &__link {
+        color: inherit;
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 27px;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: -0.04em;
+    }
+}
