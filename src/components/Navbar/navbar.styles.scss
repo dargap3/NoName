@@ -1,0 +1,53 @@
+.nav {
+    background-color: #F4F3F1;
+    width: 215px;
+    position: absolute;
+    //display: none;
+    color: #000;
+    padding-left: 23px;
+    &__list {
+        list-style: none;
+        padding-top: 48px;
+    }
+    &__item+&__item {
+        padding-top: 25px;
+    }
+    &__item {
+        padding-right: 30px;
+        &:last-child {
+            padding-top: 48px;
+        }
+    }
+    &__link {
+        color: inherit;
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 27px;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: -0.04em;
+    }
+    &__line {
+        height: 4px;
+        background-color: #0A0909;
+        border: 0;
+        margin-top: 5px;
+        &--1 {
+            width: 133px;
+        }
+        &--2 {
+            width: 90px;
+        }
+        &--3 {
+            width: 146px;
+        }
+        &--4 {
+            width: 89px;
+        }
+        &--5 {
+            width: 115px;
+            height: 2px;
+            margin-bottom: 21px;
+        }
+    }
+}
