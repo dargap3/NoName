@@ -8,14 +8,31 @@ import './navbar.styles.scss';
 
 const Navbar = () => (
   <nav className={'nav'}>
-    <ul className="nav__list">
-      <li className="nav__item"><NavLink to={{pathname: '/home'}} activeClassName="nav__link" className="nav__link">quiero ser un aliado</NavLink></li>
-      <li className="nav__item"><NavLink to={{pathname: '/home'}} activeClassName="nav__link" className="nav__link">quiero conocer al equipo</NavLink></li>
-      <li className="nav__item"><NavLink to={{pathname: '/home'}} activeClassName="nav__link" className="nav__link">quiero conocer a los aliados</NavLink></li>
-      <li className="nav__item"><NavLink to={{pathname: '/home'}} activeClassName="nav__link" className="nav__link">quiero curiosear</NavLink></li>
-      <li className="nav__item"><NavLink to={{pathname: '/home'}} activeClassName="nav__link" className="nav__link"><img src={home} alt='go to home section' /></NavLink></li>
+    <ul className={'nav__list'}>
+      <li className={'nav__item'}>
+        <NavLink to={{pathname: '/home'}} activeClassName={'nav__link'} className={'nav__link'}>quiero ser un aliado</NavLink>
+        <hr  className={'nav__line nav__line--1'} />
+      </li>
+      <li className={'nav__item'}>
+        <NavLink to={{pathname: '/home'}} activeClassName={'nav__link'} className={'nav__link'}>quiero conocer<br/>al equipo</NavLink>
+        <hr className={'nav__line nav__line--2'} />
+      </li>
+      <li className={'nav__item'}>
+        <NavLink to={{pathname: '/home'}} activeClassName={'nav__link'} className={'nav__link'}>quiero conocer a los aliados</NavLink>
+        <hr className={'nav__line nav__line--3'} />
+      </li>
+      <li className={'nav__item'}>
+        <NavLink to={{pathname: '/home'}} activeClassName={'nav__link'} className={'nav__link'}>quiero curiosear</NavLink>
+        <hr className={'nav__line nav__line--4'} />
+      </li>
+      <li className={'nav__item'}>
+        <NavLink to={{pathname: '/home'}} activeClassName={'nav__link'} className={'nav__link'}>
+          <img src={home} alt='go to home section' />
+        <hr className={'nav__line nav__line--5'} />
+        </NavLink>
+      </li>
     </ul>
-    <Footer />
+    <Footer inverted />
   </nav>
 )
 

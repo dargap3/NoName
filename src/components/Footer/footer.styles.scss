@@ -1,4 +1,4 @@
-.footer {
+.footer--light {
     display: flex;
     flex-direction: column;
     margin-right: auto;
@@ -12,5 +12,11 @@
         font-size: 13.1716px;
         font-weight: 600;
         line-height: 13px;
+    }
+    &.footer--dark {
+        padding-bottom: 30px;
+        p {
+            color: #000;
+        }
     }
 }
