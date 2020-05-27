@@ -6,7 +6,7 @@ import Footer from '../../components/Footer/Footer'
 import './WannaBePartner.styles.scss'
 
 const WannaBePartner = () => (
-  <div className={'wanna-be-partner__container'}>
+  <div className={'wanna-be-partner__container hvh-100'}>
     <Header/>
     <section className={'wanna-be-partner'} >
         <p className={'wanna-be-partner__body'}>

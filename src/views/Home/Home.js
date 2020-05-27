@@ -7,7 +7,7 @@ import Footer from '../../components/Footer/Footer';
 import './home.styles.scss';
 
 const Home = () => (
-  <div className={'home__container'}>
+  <div className={'home__container hvh-100'}>
     <Navbar />
     <Header />    
       <section className={'home'} >
