@@ -6,9 +6,11 @@ const Footer = ({inverted}) => (
     ${inverted ? 'footer--dark' : '' }
     footer--light
   `}>
-    <p>@nonamecolombia</p>
-    <p>noname@noname.com</p>
-    <p>Calle NNA # NN - NN</p>    
+    <p>@nonamecolombia
+  noname@noname.com
+  Edificio Buró 4.0
+  Carrera 43B # 1A Sur-7  
+  oficina 1502</p> 
   </footer>
 )
 

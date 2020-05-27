@@ -1,7 +1,7 @@
-.home__container {
+.wanna-be-partner__container {
     display: flex;
     flex-direction: column;
-    .home {
+    .wanna-be-partner {
         padding-top: 26px;
         padding: 0 0 42px 48px;
         display: flex;
@@ -9,15 +9,21 @@
         height: 70%;
         &__body {
             width: 273px;
+            &:first-child {
+                padding-bottom: 20px;
+            }
             strong {
                 font-size: 30px;
                 line-height: 33px;
                 text-decoration: underline;
             }
+            &:first-child strong {
+                text-decoration: none;
+            }
         }
     }
 }
 
-.home__body+.home__body {
-    padding-top: 30px;
+.last {
+    padding-bottom: 60px;
 }
