@@ -1,4 +1,9 @@
 import React from 'react';
+
+import linkedin from '../../assets/images/linkedin.svg';
+import instagram from '../../assets/images/instagram.svg';
+import twitter from '../../assets/images/twitter.svg';
+
 import './footer.styles.scss';
 
 const Footer = ({inverted}) => (
@@ -6,11 +11,15 @@ const Footer = ({inverted}) => (
     ${inverted ? 'footer--dark' : '' }
     footer--light
   `}>
-    <p>@nonamecolombia
-  noname@noname.com
-  Edificio Buró 4.0
-  Carrera 43B # 1A Sur-7  
-  oficina 1502</p> 
+    <div>
+      <p>Edificio Buró 4.0 ·Carrera 43B # 1A Sur-7</p>
+      <p>Oficina 1502 · Medellín</p> 
+    </div>
+    <div className={'redes'}>
+      <img src={linkedin} alt='logo linkedin'/>
+      <img src={instagram} alt='logo instagram'/>
+      <img src={twitter} alt='logo twitter'/> 
+    </div>
   </footer>
 )
 
