@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Header from '../../components/Header/Header'
-import Footer from '../../components/Footer/Footer'
+import Header from '../../components/Header/Header'; 
+import Footer from '../../components/Footer/Footer';
 
-import './WannaBePartner.styles.scss'
+import './WannaBePartner.styles.scss';
 
 const WannaBePartner = () => (
   <div className={'wanna-be-partner__container hvh-100'}>
