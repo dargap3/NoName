@@ -1,24 +1,28 @@
 .footer--light {
     display: flex;
-    flex-direction: column;
-    margin-right: auto;
-    justify-content: flex-end;
-    height: 50%;
-    border-bottom: 1px solid #fff;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    width: 100%;
+    justify-content: space-between;
+    padding-top: 15px;
+    margin-bottom: 25px;
+    border-top: 1px solid #fff;
+    margin-left: 48px;
+    .redes {
+        margin-right: 5px;
+        img {
+            margin-left: 8px;
+        }
+    }
     p {
         color: #fff;
-        font-size: 13.1716px;
+        font-size: 10px;
         font-weight: 600;
         line-height: 13px;
-        width: 160px;
+        
     }
-    &.footer--dark {
+}
+
+.footer--dark {
         padding-bottom: 30px;
         p {
             color: #000;
         }
     }
-}

@@ -7,7 +7,7 @@ import Footer from '../../components/Footer/Footer';
 import './home.styles.scss';
 
 const Home = () => (
-  <div className={'home__container hvh-100'}>
+  <div className={'home__container'}>
     <Navbar />
     <Header />    
       <section className={'home'} >
@@ -20,13 +20,12 @@ const Home = () => (
         <p className={'home__body'}>
           Por eso no somos una sola empresa, somos todas las 
           empresas con las que trabajamos. Y como nos dimos 
-          cuenta que <strong>era imposible tener muchos nombres,</strong> 
+          cuenta que <strong>era imposible tener muchos nombres,</strong><br />
            tomamos uno en el que caben todos.
         </p>
         <p className={'home__body'}><strong>¿Tú qué estás buscando?</strong></p>
-      <Footer />
       </section> 
-   
+      <Footer />
   </div>
 )
 
