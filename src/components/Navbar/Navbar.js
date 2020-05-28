@@ -10,11 +10,11 @@ const Navbar = () => (
   <nav className={'nav'}>
     <ul className={'nav__list'}>
       <li className={'nav__item'}>
-        <NavLink to={{pathname: '/home'}} activeClassName={'nav__link'} className={'nav__link'}>quiero ser un aliado</NavLink>
+        <NavLink to={{pathname: '/quiero-ser-un-aliado'}} activeClassName={'nav__link'} className={'nav__link'}>quiero ser un aliado</NavLink>
         <hr  className={'nav__line nav__line--1'} />
       </li>
       <li className={'nav__item'}>
-        <NavLink to={{pathname: '/home'}} activeClassName={'nav__link'} className={'nav__link'}>quiero conocer<br/>al equipo</NavLink>
+        <NavLink to={{pathname: '/equipo'}} activeClassName={'nav__link'} className={'nav__link'}>quiero conocer<br/>al equipo</NavLink>
         <hr className={'nav__line nav__line--2'} />
       </li>
       <li className={'nav__item'}>
