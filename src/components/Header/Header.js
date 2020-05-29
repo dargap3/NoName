@@ -10,6 +10,7 @@ import hamburger from '../../assets/images/hamburger.svg';
 import './header.styles.scss'; 
 
 const Header = () => {
+
   const [showNavbar, setShowNavbar] = useState(false);
   const handleCloseNavbar = () => setShowNavbar(false);
   return (
@@ -24,14 +25,11 @@ const Header = () => {
     </div>
     <CSSTransition
         in={showNavbar}
-        timeout={300}
+        timeout={500}
         classNames="alert"
         unmountOnExit
-       
       >
       <Navbar
-          variant="primary"
-          dismissible
           onClose={() => setShowNavbar(false)}
           onClick={handleCloseNavbar}
         />
