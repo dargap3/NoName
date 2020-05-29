@@ -23,7 +23,18 @@ const routes = [
 
 const Routes = () => (
   <Router>       
-      <Route exact path='/' component={Landing} />
+      <Route exact path='/'>
+        {({match}) => (
+          <CSSTransition
+                  in={match != null}
+                  timeout={500}
+                  classNames={'page'}
+                  unmountOnExit
+                >
+                  <Landing/>
+                </CSSTransition>
+        )}
+      </Route>
       <div className={'container'}> 
       {routes.map(({ path, Component }) => (
             <Route key={path} exact path={path}>
