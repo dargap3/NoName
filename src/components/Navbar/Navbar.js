@@ -10,20 +10,20 @@ const Navbar = () => (
   <nav className={'nav'}>
     <ul className={'nav__list'}>
       <li className={'nav__item'}>
-        <NavLink to={{pathname: '/ser-un-aliado'}} activeClassName={'selected'} className={'nav__link'}>quiero ser un aliado</NavLink>
+        <NavLink to={{pathname: '/ser-un-aliado'}} activeClassName={'selected'} className={'nav__link'}>quiero ser un aliado<hr/></NavLink>
       </li>
       <li className={'nav__item'}>
-        <NavLink to={{pathname: '/equipo'}} activeClassName={'selected'} className={'nav__link'}>quiero conocer<br/>al equipo</NavLink>
+        <NavLink to={{pathname: '/equipo'}} activeClassName={'selected'} className={'nav__link'}>quiero conocer<br/>al equipo<hr/></NavLink>
       </li>
       <li className={'nav__item'}>
-        <NavLink to={{pathname: '/conocer-los-aliados'}} activeClassName={'selected'} className={'nav__link'}>quiero conocer a los aliados</NavLink>
+        <NavLink to={{pathname: '/conocer-los-aliados'}} activeClassName={'selected'} className={'nav__link'}>quiero conocer a los aliados<hr/></NavLink>
       </li>
       <li className={'nav__item'}>
-        <NavLink to={{pathname: '/home'}} activeClassName={'selected'} className={'nav__link'}>quiero curiosear</NavLink>
+        <NavLink to={{pathname: '/soy-curioso'}} activeClassName={'selected'} className={'nav__link'}>quiero curiosear<hr/></NavLink>
       </li>
       <li className={'nav__item'}>
         <NavLink to={{pathname: '/home'}} activeClassName={'selected'} className={'nav__link'}>
-          <img src={home} alt='go to home section' />
+          <img src={home} alt='go to home section' /><hr/>
         </NavLink>
       </li>
     </ul>
