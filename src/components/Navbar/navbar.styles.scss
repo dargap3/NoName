@@ -2,7 +2,7 @@
     background-color: #F4F3F1;
     width: 200px;
     position: absolute;
-    display: none;
+    
     color: #000;
     padding-left: 23px;
     &__list {
@@ -30,7 +30,22 @@
             background-color: #000;
             height: 4px;
             border: 0;
-            width: inherit;
+        }
+        &--1 {
+            width: 130px;
+        }
+        &--2 {
+            width: 115px;
+        }
+        &--3 {
+            width: 140px;
+        }
+        &--4 {
+            width: 125px;
+        }
+        &--5 {
+            width: 120px;
+            height: 2px !important;
         }
     }
 }
