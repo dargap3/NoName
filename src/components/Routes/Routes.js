@@ -6,6 +6,7 @@ import Home from '../../views/Home/Home';
 import WannaBePartner from '../../views/WannaBePartner/WannaBePartner';
 import Team from '../../views/Team/Team';
 import Partners from '../../views/Partners/Partners';
+import Curious from '../../views/Curious/Curious';
 
 const Routes = () => (
   <Router>
@@ -15,6 +16,7 @@ const Routes = () => (
       <Route exact path='/ser-un-aliado' component={WannaBePartner} />
       <Route exact path='/equipo' component={Team} />
       <Route exact path='/conocer-los-aliados' component={Partners} />
+      <Route exact path='/soy-curioso' component={Curious} />
     </Switch>
   </Router>
 )

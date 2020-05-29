@@ -6,23 +6,34 @@
     border-top: 1px solid #fff;
     margin-left: 48px;
     .redes {
-        margin-right: 5px;
+        margin-right: 20px;
         img {
             margin-left: 8px;
         }
     }
     p {
-        color: #fff;
         font-size: 10px;
         font-weight: 600;
         line-height: 13px;
-        
+        display: inline-block;
+        &:last-child {
+            display: block;
+        }
     }
 }
 
 .footer--dark {
-        padding-bottom: 30px;
-        p {
-            color: #000;
+    margin-bottom: 0;
+    margin-left: 0;
+    border-top: none;
+    .redes {
+        visibility: hidden;
+        margin-right: 0px;
+    }
+    p {
+        color: #000;
+        &:first-child {
+            transform: translateY(5px);
         }
     }
+}
