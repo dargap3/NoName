@@ -1,0 +1,27 @@
+.page {
+    position: absolute;
+}
+
+.page-enter {
+    display: none;
+    top: 1em;
+    left: -120vw;
+    transform: translateX(200%);
+}
+
+.page-enter-active {
+    display: flex;
+    top: 1em;
+    left: 1em;
+    z-index: 10000;
+    transform: translateX(0);
+    transition: opacity 1000ms, transform 1000ms;
+}
+
+.page-exit {
+    display: none;
+}
+
+.page-exit-active {
+    display: none;
+}
