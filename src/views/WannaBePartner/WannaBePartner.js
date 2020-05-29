@@ -1,15 +1,14 @@
 import React from 'react';
 
-import Header from '../../components/Header/Header';
-import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 
 import './WannaBePartner.styles.scss';
 
 const WannaBePartner = () => (
   <div className={'wanna-be-partner__container'}>
-    <Navbar/>
-    <Header/>
+    
+    
+  
     <section className={'wanna-be-partner'} >
         <p className={'wanna-be-partner__body'}>
           <strong>NO CREEMOS EN SIGLAS, CREEMOS EN LAS EMPRESAS

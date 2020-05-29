@@ -1,15 +1,14 @@
 import React from 'react';
 
-import Header from '../../components/Header/Header';
-import Navbar from '../../components/Navbar/Navbar';
+
 import Footer from '../../components/Footer/Footer';
 
 import './home.styles.scss';
 
 const Home = () => (
   <div className={'home__container'}>
-    <Navbar />
-    <Header />    
+    
+    
       <section className={'home'} >
         <p className={'home__body'}>
         Lo hacemos todo para que las PyMEs dejen de ser PyMEs. 

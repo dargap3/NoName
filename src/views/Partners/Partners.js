@@ -1,15 +1,14 @@
 import React from 'react';
 
-import Header from '../../components/Header/Header';
-import Navbar from '../../components/Navbar/Navbar';
+
 import Footer from '../../components/Footer/Footer';  
 
 import './Partners.styles.scss';
 
 const Partners = () => (
 	<div className={'partners-container'}>
-	  <Navbar />
-		<Header />
+	  
+	
 		<section className={'partners'}>
 			<p className={'partners__body'}>
 				 Los llamamos aliados <strong>porque lo que tenemos con ellos no son negocios sino conspiraciones</strong> para hacer país. 
