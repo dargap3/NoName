@@ -1,14 +1,12 @@
 import React from 'react';
 
-import Navbar from '../../components/Navbar/Navbar';
-import Header from '../../components/Header/Header'; 
 
 import './Team.styles.scss';
 
 const Team = () => (
   <div className={'team-container'}>
-    <Navbar />
-  	<Header />
+    
+  	
   	<section className={'team'}>
   		<p className={'team__body'}>
   		  LOS NAMES DETRÁS <br />DE NO NAME      

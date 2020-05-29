@@ -13,3 +13,21 @@
         }
     }
 }
+
+.alert-enter {
+    transform: translateX(200%);
+}
+
+.alert-enter-active {
+    transform: translateX(0);
+    transition: transform 500ms;
+}
+
+.alert-exit {
+    transform: translateX(0);
+}
+
+.alert-exit-active {
+    transform: translateX(200%);
+    transition: transform 500ms;
+}

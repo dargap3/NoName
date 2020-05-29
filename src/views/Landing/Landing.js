@@ -5,12 +5,12 @@ import Footer from '../../components/Footer/Footer'
 
 import './landing.styles.scss'
 
-const Landing = () => (
+const Landing = ({onClick}) => (
 	<div>
 		<section className={'landing'}>
 		  <div className={'landing__title'}>
 		    <Link to='/home' style={{ textDecoration: 'none' }}>
-		    	<h1 className={'landing__gif'} >N_N_M_</h1>
+		    	<h1 onClick={onClick} className={'landing__gif'} >N_N_M_</h1>
 		    </Link>  
 		  </div>
 		</section>
