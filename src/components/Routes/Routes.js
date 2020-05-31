@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group'
 
-
 import Layout from '../Layout/Layout'
 import Landing from '../../views/Landing/Landing';
 import Home from '../../views/Home/Home';
@@ -11,8 +10,9 @@ import Team from '../../views/Team/Team';
 import Partners from '../../views/Partners/Partners';
 import Curious from '../../views/Curious/Curious';
 
+import './routes.styles.scss'
+
 const routes = [
-  { path: '/', Component: Landing },
   { path: '/home',  Component: Home },
   { path: '/ser-un-aliado',  Component: WannaBePartner },
   { path: '/equipo', Component: Team },
@@ -22,37 +22,47 @@ const routes = [
 
 
 const Routes = () => (
-  <Router>       
-      <Route exact path='/'>
-        {({match}) => (
-          <CSSTransition
-                  in={match != null}
-                  timeout={500}
-                  classNames={'page'}
-                  unmountOnExit
-                >
-                  <Landing/>
-                </CSSTransition>
-        )}
-      </Route>
-      <div className={'container'}> 
-      {routes.map(({ path, Component }) => (
-            <Route key={path} exact path={path}>
-              {({ match }) => (
-                <CSSTransition
-                  in={match != null}
-                  timeout={500}
-                  classNames={'page'}
-                  unmountOnExit
-                >                         
-                  <Layout>
-                    <Component />
-                  </Layout>                
-                </CSSTransition>
-              )}
-              </Route>
-              ))}        
-      </div>
+  <Router>
+    <Route exact path='/'>      
+      { ({ match }) => (
+        <CSSTransition
+          in={match !== null}
+          timeout={1000}
+          classNames={'page'}
+          unmountOnExit
+          apear
+        >
+          <Landing />
+        </CSSTransition>
+        )
+      }
+    </Route>
+
+    
+        { routes.map(({ path, Component }) => (
+          <Route key={path} path={path}>
+            {({ match }) => (
+              <CSSTransition
+                in={match !== null}
+                timeout={500}
+                classNames={'page'}
+                unmountOnExit
+                apear
+              >                         
+                <Layout>
+                  <Component />
+                </Layout>                
+              </CSSTransition>
+            )}
+          </Route>
+        ))
+        }        
+      
+
+
+      
+
+      
   </Router>
 );
 

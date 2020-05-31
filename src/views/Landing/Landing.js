@@ -7,7 +7,7 @@ import './landing.styles.scss';
 import gifLogo from '../../assets/logo/WhatsApp-Video-2020-05-29-at-9.13.56-AM.gif';
 
 const Landing = ({onClick}) => (
-	<div className={'page'}>
+	<div className={'container page'} >
 		<section className={'landing'}>
 		  <div className={'landing__title'}>
 		    <Link to='/home' style={{ textDecoration: 'none' }}>
