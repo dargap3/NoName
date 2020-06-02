@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Footer from '../../components/Footer/Footer';
+import ControlledCarousel from '../../components/ControlledCarousel/ControlledCarousel'
 
 import './Partners.styles.scss';
 
@@ -16,6 +17,7 @@ const Partners = () => (
 			</p>
 		</section>
 		<section className={'partners-slider'}>
+      <ControlledCarousel />
 		</section>
     <Footer />
 	</div>
