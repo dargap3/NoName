@@ -84,3 +84,27 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+@keyframes increase-size {
+    0% {
+        font-size: 13px;
+    }
+    10% {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    100% {
+        font-size: 30px;
+        line-height: 33px;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+}
+
+.animated-text {
+    animation-name: increase-size;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.32, .99, .87, 1.53);
+}

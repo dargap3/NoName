@@ -6,9 +6,7 @@ import Footer from '../../components/Footer/Footer';
 import './home.styles.scss';
 
 const Home = () => (
-  <div className={'home__container home'}>
-    
-    
+  <div className={'home__container'}>    
       <section className={'home'} >
         <p className={'home__body'}>
         Lo hacemos todo para que las PyMEs dejen de ser PyMEs. 
@@ -19,10 +17,10 @@ const Home = () => (
         <p className={'home__body'}>
           Por eso no somos una sola empresa, somos todas las 
           empresas con las que trabajamos. Y como nos dimos 
-          cuenta que <strong>era imposible tener muchos nombres,</strong><br />
+          cuenta que <span className={'animated-text'}>era imposible tener muchos nombres,</span><br />
            tomamos uno en el que caben todos.
         </p>
-        <p className={'home__body'}><strong>¿Tú qué estás buscando?</strong></p>
+        <p className={'home__body'}><span className={'animated-text'}>¿Tú qué estás buscando?</span></p>
       </section> 
       <Footer />
   </div>

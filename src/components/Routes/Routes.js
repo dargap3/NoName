@@ -27,7 +27,7 @@ const Routes = () => (
       { ({ match }) => (
         <CSSTransition
           in={match !== null}
-          timeout={1000}
+          timeout={750}
           classNames={'page'}
           unmountOnExit
           apear
@@ -38,31 +38,24 @@ const Routes = () => (
       }
     </Route>
 
-    
-        { routes.map(({ path, Component }) => (
-          <Route key={path} path={path}>
-            {({ match }) => (
-              <CSSTransition
-                in={match !== null}
-                timeout={500}
-                classNames={'page'}
-                unmountOnExit
-                apear
-              >                         
-                <Layout>
-                  <Component />
-                </Layout>                
-              </CSSTransition>
-            )}
-          </Route>
-        ))
-        }        
-      
-
-
-      
-
-      
+    { routes.map(({ path, Component }) => (
+      <Route key={path} path={path}>
+        {({ match }) => (
+          <CSSTransition
+            in={match !== null}
+            timeout={750}
+            classNames={'page'}
+            unmountOnExit
+            apear
+          >
+            <Layout>
+              <Component />
+            </Layout>
+          </CSSTransition>
+        )}
+      </Route>
+    ))
+    }
   </Router>
 );
 

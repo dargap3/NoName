@@ -1,6 +1,4 @@
 .home__container {
-    display: flex;
-    flex-direction: column;
     .home {
         padding: 0 0 60px 48px;
         display: flex;
@@ -14,11 +12,6 @@
             }
             &:last-child {
                 padding-top: 5px;
-            }
-            strong {
-                font-size: 30px;
-                line-height: 33px;
-                text-decoration: underline;
             }
         }
     }
