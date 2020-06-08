@@ -6,7 +6,7 @@ import Footer from '../../components/Footer/Footer';
 import './home.styles.scss';
 
 const Home = () => (
-  <div className={'home__container'}>    
+  <>    
       <section className={'home'} >
         <p className={'home__body'}>
         Lo hacemos todo para que las PyMEs dejen de ser PyMEs. 
@@ -23,7 +23,7 @@ const Home = () => (
         <p className={'home__body'}><span className={'animated-text'}>¿Tú qué estás buscando?</span></p>
       </section> 
       <Footer />
-  </div>
+  </>
 )
 
 export default Home;
