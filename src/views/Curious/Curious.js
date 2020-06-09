@@ -6,9 +6,7 @@ import Footer from '../../components/Footer/Footer';
 import './curious.styles.scss';
 
 const Curious = () => (
-  <div className={'curious__container'}>
-    
-     
+  <>
     <section className={'curious'} >
         <p className={'curious__body'}>
           <strong>NO SOMOS UN PUNTO COM HACEMOS LAS COSAS Y PUNTO
@@ -23,7 +21,7 @@ const Curious = () => (
           o los no <span className={'animated-text-c'}>Nonamers<br/></span> te lo puedan explicar mejor.</p>
     </section>
     <Footer />
-  </div>
+  </>
 );
 
 export default Curious;

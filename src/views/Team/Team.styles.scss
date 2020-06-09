@@ -1,32 +1,29 @@
-.team-container {  
-    display: flex;
-    flex-direction: column;
-    .team {
-        padding: 0 0 20px 48px;
-        &__body {
-            width: 80%;
-            &:first-child {
-                font-weight: bold;
-                font-size: 30px;
-                line-height: 33px;
-                margin-bottom: 18px;
-            }
-            &:last-child {
-                width: 90%;
-            }
+.team {
+    padding: 0 0 20px 48px;
+    &__body {
+        width: 80%;
+        &:first-child {
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 33px;
+            margin-bottom: 18px;
+        }
+        &:last-child {
+            width: 90%;
         }
     }
-    .profile-team{
-        width: 100%;
+}
+
+.profile-team {
+    width: 100%;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    div {
+        background-color: gray;
+        width: 32%;
+        height: 125px;
         margin: 2px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        div {
-            background-color: gray;
-            width: 32%;
-            height: 125px;
-            margin: 2px;
-        }
     }
 }

@@ -5,10 +5,7 @@ import Footer from '../../components/Footer/Footer';
 import './WannaBePartner.styles.scss';
 
 const WannaBePartner = () => (
-  <div className={'wanna-be-partner__container'}>
-    
-    
-  
+  <>  
     <section className={'wanna-be-partner'} >
         <p className={'wanna-be-partner__body'}>
           <strong>NO CREEMOS EN SIGLAS, CREEMOS EN LAS EMPRESAS
@@ -24,7 +21,7 @@ const WannaBePartner = () => (
           que nunca te dirá qué hacer, lo hará contigo.</p>
     </section> 
     <Footer />
-  </div>
+  </>
 );
 
 export default WannaBePartner;

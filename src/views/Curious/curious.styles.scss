@@ -1,25 +1,21 @@
-.curious__container {
+.curious {
+    padding-top: 26px;
+    padding: 0 0 42px 48px;
     display: flex;
     flex-direction: column;
-    .curious {
-        padding-top: 26px;
-        padding: 0 0 42px 48px;
-        display: flex;
-        flex-direction: column;
-        height: 70%;
-        &__body {
-            width: 273px;
-            &:first-child {
-                padding-bottom: 20px;
-            }
-            strong {
-                font-size: 25px;
-                line-height: 33px;
-                text-decoration: underline;
-            }
-            &:first-child strong {
-                text-decoration: none;
-            }
+    height: 70%;
+    &__body {
+        width: 273px;
+        &:first-child {
+            padding-bottom: 20px;
+        }
+        strong {
+            font-size: 25px;
+            line-height: 33px;
+            text-decoration: underline;
+        }
+        &:first-child strong {
+            text-decoration: none;
         }
     }
 }
