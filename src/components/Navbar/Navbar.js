@@ -1,9 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import Footer from '../Footer/Footer'
+import Footer from '../Footer/Footer';
 
-import home from '../../assets/images/home.svg';
 import './navbar.styles.scss';
 
 const Navbar = () => (
@@ -23,7 +22,7 @@ const Navbar = () => (
       </li>
       <li  className={'nav__item'}>
         <NavLink to={{pathname: '/home'}} activeClassName={'selected'} className={'nav__link'}>
-          <img src={home} alt='go to home section' /><hr className={'nav__link--5'}/>
+          <Icon name='home' /><hr className={'nav__link--5'}/>
         </NavLink>
       </li>
     </ul>
