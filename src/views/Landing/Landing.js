@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-import Footer from '../../components/Footer/Footer'
+import Footer from '../../components/Footer/Footer';
 
 import './landing.styles.scss';
 import gifLogo from '../../assets/logo/WhatsApp-Video-2020-05-29-at-9.13.56-AM.gif';

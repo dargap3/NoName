@@ -22,7 +22,9 @@ const Navbar = () => (
       </li>
       <li  className={'nav__item'}>
         <NavLink to={{pathname: '/home'}} activeClassName={'selected'} className={'nav__link'}>
-          <Icon name='home' /><hr className={'nav__link--5'}/>
+        <svg width="29" height="25" viewBox="0 0 29 25" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.88235 13.5V24H12.2941V20H17.1961V24H21.1176V13.5H27L14.7451 1L9.84314 6V3.5H7.88235V8L2 13.5H7.88235Z" fill="inherit" stroke="inherit"/>
+        </svg><hr className={'nav__link--5'}/>
         </NavLink>
       </li>
     </ul>

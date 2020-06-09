@@ -1,24 +1,20 @@
-.partners-container {
-    display: flex;
-    flex-direction: column;
-    .partners {
-        padding: 0 0 20px 48px;
-        &__body {
-            width: 275px;
-            padding-bottom: 15px;
-            &:nth-child(2) {
-                padding-bottom: 12px;
-            }
-        }
-        &__line {
-            width: 230px;
-            border-bottom: 1px solid darken(#fff, 35%);
+.partners {
+    padding: 0 0 20px 48px;
+    &__body {
+        width: 275px;
+        padding-bottom: 15px;
+        &:nth-child(2) {
+            padding-bottom: 12px;
         }
     }
-    .partners-slider {
+    &__slider {
         width: 265px;
         height: 236px;
         margin: 0 0 100px 48px;
         border: 1px solid darken(#fff, 50%);
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
 }
