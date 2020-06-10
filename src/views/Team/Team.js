@@ -4,7 +4,7 @@ import './Team.styles.scss';
 
 const Team = () => {
   return (
-    <>  	
+    <div className={'team__container'}>  	
       <section className={'team'}>
         <p className={'team__body'}>
           LOS NAMES DETRÁS <br />DE NO NAME      
@@ -26,7 +26,7 @@ const Team = () => {
         <div />	
         <div />	
       </section>
-    </>
+    </div>
   );
 }
 

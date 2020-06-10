@@ -6,7 +6,7 @@ import './WannaBePartner.styles.scss';
 
 const WannaBePartner = () => (
   <>  
-    <section className={'wanna-be-partner'} >
+    <section className={'wanna-be-partner'} > 
         <p className={'wanna-be-partner__body'}>
           <strong>NO CREEMOS EN SIGLAS, CREEMOS EN LAS EMPRESAS
           </strong>        

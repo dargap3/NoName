@@ -5,7 +5,8 @@ import Footer from '../../components/Footer/Footer';
 import Modal from '../../components/Modal/Modal';
 
 import './landing.styles.scss';
-import gifLogo from '../../assets/logo/WhatsApp-Video-2020-05-29-at-9.13.56-AM.gif';
+/* import gifLogo from '../../assets/logo/WhatsApp-Video-2020-05-29-at-9.13.56-AM.gif'; */
+import firmaNoName from '../../assets/images/firma_noname (1).mp4';
 
 const Landing = () => {
   const [modalIsOpen, setIsModalOpen] = useState(false);
@@ -14,7 +15,8 @@ const Landing = () => {
     <div className={'container page'} >
       <section className={'landing'}>
         <div className={'landing__title'}>
-          <img src={gifLogo} onClick={ () => setIsModalOpen(true) } alt='gif__ok' className={'landing__gif'} />          
+          <video src={firmaNoName} onClick={ () => setIsModalOpen(true) } alt='gif__ok' className={'landing__gif'} autoPlay loop/>
+          {/* <img src={gifLogo} onClick={ () => setIsModalOpen(true) } alt='gif__ok' className={'landing__gif'} />  */}         
         </div>
       </section>
       <Footer />
