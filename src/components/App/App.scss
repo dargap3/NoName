@@ -86,22 +86,21 @@ body {
     0% {
         font-size: 13px;
     }
-    10% {
-        text-decoration: underline;
-        font-weight: bold;
-    }
-    100% {
+    50% {
         font-size: 30px;
         line-height: 33px;
-        text-decoration: underline;
-        font-weight: bold;
+    }
+    100% {
+        font-size: 13px;
     }
 }
 
 .animated-text {
+    text-decoration: underline;
+    font-weight: bold;
     animation-name: increase-size;
-    animation-delay: 3s;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(.32, .99, .87, 1.53);
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
 }
