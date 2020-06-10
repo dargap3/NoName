@@ -14,9 +14,11 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     borderRadius: 0,
+    padding: 0,
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.75)',
+    backdropFilter: 'blur(5px)',
   },
 };
 
