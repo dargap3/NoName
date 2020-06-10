@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 const Layout = ({ children }) => (
   <div className={'container page'}>
     <Header />
-    <main>
+    <main style={{marginTop: 175}}  className={'main'}>
       { children }
     </main>
   </div>

@@ -3,12 +3,23 @@
     .nav-toggle {
         background-color: #000;
         border: none;
+        @media (min-width: 1000px) {
+            position: absolute;
+            right: 70px;
+        }
     }
     &__logo {
         margin-top: 50px;
         max-width: 320px;
         img {
             width: 90%;
+        }
+        @media (min-width: 1000px) {
+            max-width: 360px;
+            img {
+                margin-top: 60px;
+                width: 100%;
+            }
         }
     }
 }

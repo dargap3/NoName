@@ -12,6 +12,16 @@
         &:last-child {
             padding-top: 5px;
         }
+        @media (min-width: 1000px) {
+            width: 526px;
+            font-size: 18px;
+            line-height: 25px;
+            span {
+                font-weight: bold;
+                font-size: 40px;
+                line-height: 44px;
+            }
+        }
     }
 }
 
