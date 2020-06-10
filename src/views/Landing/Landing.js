@@ -12,7 +12,7 @@ const Landing = () => {
   const [modalIsOpen, setIsModalOpen] = useState(false);
   const onCloseModal = () => setIsModalOpen(false);
   return (
-    <div className={'container page'} >
+    <div className={'page'} >
       <section className={'landing'}>
         <div className={'landing__title'}>
           <video src={firmaNoName} onClick={ () => setIsModalOpen(true) } alt='gif__ok' className={'landing__gif'} autoPlay loop/>
