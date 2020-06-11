@@ -6,6 +6,10 @@
     left: 0;
     color: #000;
     padding-left: 23px;
+    @media (min-width: 1000px) {
+        left: unset;
+        right: 0;
+    }
     &__list {
         list-style: none;
         padding-top: 48px;

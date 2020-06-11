@@ -11,7 +11,7 @@ const Footer = ({inverted}) => (
     ${inverted ? 'footer--dark' : '' }
     footer--light
   `}>
-    <div>
+    <div className={'footer__text'}>
       <p>Edificio Buró 4.0 ·</p>
       <p> Carrera 43B # 1A Sur-7</p>
       <p>Oficina 1502 · Medellín</p> 

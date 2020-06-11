@@ -11,7 +11,7 @@ import carouselImage2 from '../../assets/images/Moby-logo.png'
 import carouselImage3 from '../../assets/images/Docker-Logo-White-RGB_Horizontal.png'
 
 const Partners = () => (
-	<>	
+	<div className={'partners__container'}>	
 		<section className={'partners'}>
 			<p className={'partners__body'}>
 				 Los llamamos aliados <strong>porque lo que tenemos con ellos no son negocios sino conspiraciones</strong> para hacer país. 
@@ -33,7 +33,7 @@ const Partners = () => (
       </Carousel>
 		</section>
     <Footer />
-	</>
+	</div>
 )
 
 export default Partners;

@@ -10,16 +10,13 @@ import hamburger from '../../assets/images/hamburger.svg';
 import './header.styles.scss'; 
 
 const Header = () => {
-
   const [showNavbar, setShowNavbar] = useState(false);
   const handleCloseNavbar = () => setShowNavbar(false);
   return (
-  <header className={'header'}>
-    
-      <button onClick={() => setShowNavbar(true)} className={'nav-toggle'} >
-        <img src={hamburger} alt='button toggle' />
-      </button>
-    
+  <header className={'header'}>    
+    <button onClick={() => setShowNavbar(true)} className={'nav-toggle'} >
+      <img src={hamburger} alt='button toggle' />
+    </button>    
     <div className={'header__logo'}>
       <img src={logo} alt='logo noname'/>
     </div>
