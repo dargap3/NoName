@@ -103,7 +103,8 @@ body {
 }
 
 .animated-text {
-    text-decoration: underline;
+    padding-bottom: 1px;
+    border-bottom: 1px white solid;
     font-weight: bold;
     animation-name: increase-size;
     animation-duration: 10s;

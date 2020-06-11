@@ -22,7 +22,7 @@ const Curious = () => {
           universo SIN NOMBRE en el que las empresas <br/><span onClick={ () => setIsModalOpen(true) } className={'animated-text-c'}>no aceleran, escalan.</span>
           </p>
           <p className={'curious__body last'}>Quizás <span className={'animated-text-c'}>nuestros aliados <br/></span>
-            o los no <span className={'animated-text-c'}>Nonamers<br/></span> te lo puedan explicar mejor.</p>
+            o los <span className={'animated-text-c'}>Nonamers<br/></span> te lo puedan explicar mejor.</p>
       </section>
       <Footer />
       <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={false}>

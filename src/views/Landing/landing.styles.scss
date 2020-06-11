@@ -24,12 +24,14 @@
     text-align: right;
     font-size: 18px;
     line-height: 20px;
-    max-width: 280px;
-    margin-right: 20px;
+    max-width: 320px;
+    padding: 10px 35px 35px 17px;
+    background-image: url('../../assets/images/fondo_Mesa\ de\ trabajo\ 1-21\ 1.png');
     p+p {
         padding-top: 20px;
     }
     a {
+        padding-top: 20px;
         font-size: 25px;
         line-height: 20px;
         text-transform: uppercase;
@@ -38,9 +40,9 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        margin: 30px -20px 25px;
         svg {
             margin-left: 15px;
+            margin-right: -15px;
         }
     }
 }

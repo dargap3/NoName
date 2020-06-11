@@ -20,8 +20,14 @@ const Landing = () => {
         </div>
       </section>
       <Footer />
-      <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={true}>
+      <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={false}>
         <div className={'modal__content--landing'} >
+        <button className={'modal__close'} onClick={onCloseModal}>
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M29 2L5 27" stroke="black" stroke-width="4"/>
+            <line x1="1.38919" y1="2.5612" x2="30.3892" y2="30.5612" stroke="black" stroke-width="4"/>
+          </svg>
+        </button>
           <p>Para nosotros este no es el mes de la igualdad, porque no somos iguales. Celebramos la diferencia porque es ahí donde están las nuevas respuestas.</p>
           <p>#HappyPride <span role='img' aria-labelledby='jsx-a11y/accessible-emoji'>🏳️‍🌈</span></p>
           <p>En NoName #HacemosNoDecimos Por eso creamos esta experiencia, para que le encuentres tu propio significado a nuestro nombre sin nombre.</p>
