@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import Footer from '../../components/Footer/Footer';
+
+import image1 from '../../assets/images/image-one.png';
+import image2 from '../../assets/images/image-two.png';
+import image3 from '../../assets/images/image-three.png';
+import image4 from '../../assets/images/image-four.png';
+import image5 from '../../assets/images/image-five.png';
+import image6 from '../../assets/images/image-six.png';
+import image7 from '../../assets/images/image-seven.png';
+import image8 from '../../assets/images/image-eight.png';
+import image9 from '../../assets/images/image-nine.png';
+
 
 import './Team.styles.scss';
 
 const Team = () => {
+  const [ width, setWidth ] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);  //componentDidMount y componentDidUpdate
+    return () => {
+      window.removeEventListener('resize', handleResize); // componentWillMount
+    }
+  });
+
   return (
     <div className={'team__container'}>  	
       <section className={'team'}>
@@ -16,16 +39,35 @@ const Team = () => {
         </p>
       </section>
       <section className={'profile-team'}>
-        <div /> 
-        <div />	
-        <div />	
-        <div />	
-        <div />	
-        <div />	
-        <div />	
-        <div />	
-        <div />	
+        <div>
+          <img src={image1} alt={'person one'}/>
+        </div>
+        <div>
+          <img src={image2} alt={'person one'}/>
+        </div>
+        <div>
+          <img src={image3} alt={'person one'}/>
+        </div>
+        <div>
+          <img src={image4} alt={'person one'}/>
+        </div>
+        <div>
+          <img src={image5} alt={'person one'}/>
+        </div>
+        <div>
+          <img src={image6} alt={'person one'}/>
+        </div>
+        <div>
+          <img src={image7} alt={'person one'}/>
+        </div>
+        <div>
+          <img src={image8} alt={'person one'}/>
+        </div>
+        <div>
+          <img src={image9} alt={'person one'}/>
+        </div>
       </section>
+      {width >= 1000 && <Footer />}
     </div>
   );
 }

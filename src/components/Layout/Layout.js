@@ -2,10 +2,12 @@ import React from 'react';
 
 import Header from '../Header/Header';
 
+import './Layout.styles.scss'
+
 const Layout = ({ children }) => (
   <div className={'container page'}>
     <Header />
-    <main style={{marginTop: 175}}  className={'main'}>
+    <main className={'main'}>
       { children }
     </main>
   </div>
