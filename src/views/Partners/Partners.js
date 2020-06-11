@@ -6,9 +6,12 @@ import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import './Partners.styles.scss';
 
-import carouselImage1 from '../../assets/images/Logo_TV_2015.png'
-import carouselImage2 from '../../assets/images/Moby-logo.png'
-import carouselImage3 from '../../assets/images/Docker-Logo-White-RGB_Horizontal.png'
+import carouselImage1 from '../../assets/logo/logo-carpinteria.png'
+import carouselImage2 from '../../assets/logo/logo-hierbas.png'
+import carouselImage3 from '../../assets/logo/logo-noise.png'
+import carouselImage4 from '../../assets/logo/logo-siembra.png'
+import carouselImage5 from '../../assets/logo/logo-true.png'
+
 
 const Partners = () => (
 	<div className={'partners__container'}>	
@@ -23,13 +26,15 @@ const Partners = () => (
 		</section>
 		<section className={'partners__slider'}>
       <Carousel
-      autoPlay={2000}
-      animationSpeed={1000}
+      autoPlay={4000}
+      animationSpeed={3000}
       infinite
       >
-        <img src={carouselImage1} alt='' />
-        <img src={carouselImage2} alt='' />
-        <img src={carouselImage3} alt='' />
+        <img src={carouselImage5} alt='logo true' />
+        <img src={carouselImage1} alt='logo la carpinteria' />
+        <img src={carouselImage2} alt='logo taller de hierbas' />
+        <img src={carouselImage4} alt='logo siembraViva' />
+        <img src={carouselImage3} alt='logo noise' />
       </Carousel>
 		</section>
     <Footer />

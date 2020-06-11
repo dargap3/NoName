@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import Footer from '../Footer/Footer'
+import Footer from '../Footer/Footer';
 
 import './navbar.styles.scss';
 

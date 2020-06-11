@@ -9,12 +9,14 @@
             }
         }
         &__slider {
+            display: flex;
+            align-items: center;
             width: 265px;
             height: 236px;
             margin: 0 0 100px 48px;
             border: 1px solid darken(#fff, 50%);
             img {
-                max-width: 100%;
+                width: 100%;
                 height: auto;
             }
         }
@@ -34,7 +36,7 @@
             }
         }
         .partners__slider {
-            margin: 20px;
+            margin-bottom: 20px;
         }
     }
 }
