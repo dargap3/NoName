@@ -39,7 +39,7 @@ const Routes = () => (
     </Route>
 
     { routes.map(({ path, Component }) => (
-      <Route key={path} path={path}>
+      <Route key={path} exact path={path}>
         {({ match }) => (
           <CSSTransition
             in={match !== null}
