@@ -17,11 +17,13 @@
         animation: breathing20 3s ease-in-out alternate infinite;
         transform-origin: left center;
     }
-    .animated-text--20+.animated-text--20 {
-        margin-top: 20px;
-    }
     @media (min-width: 1000px) {
         margin-top: 175px;
+        .animated-text--16,
+        .animated-text--18,
+        .animated-text--20 {
+            animation-name: none;
+        }
     }
 }
 
