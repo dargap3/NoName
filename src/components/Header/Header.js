@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
-import Navbar from '../Navbar/Navbar'
+import Navbar from '../Navbar/Navbar';
 
 import logo from '../../assets/logo/LOGOX4.jpg';
 import hamburger from '../../assets/images/hamburger.svg';

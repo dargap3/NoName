@@ -1,31 +1,45 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 
 import Footer from '../../components/Footer/Footer';
 import Modal from '../../components/Modal/Modal';
 
 import './landing.styles.scss';
 import gifLogo from '../../assets/logo/WhatsApp-Video-2020-05-29-at-9.13.56-AM.gif';
-/*import firmaNoName from '../../assets/images/firma_noname (1).mp4';*/
 
 const Landing = () => {
   const [modalIsOpen, setIsModalOpen] = useState(false);
   const onCloseModal = () => setIsModalOpen(false);
+  const history = useHistory();
+
+  const handleClick = () => {
+    onCloseModal();
+    history.push("/home"); 
+  };
+
+  useEffect(() => {
+    const setTimeOut = setTimeout(() => {
+      setIsModalOpen(true);
+    }, 4000);
+    return () => {
+      clearTimeout(setTimeOut);
+    }
+  }, [modalIsOpen] );
+
   return (
     <div className={'page'} >
       <section className={'landing'}>
         <div className={'landing__title'}>
-          {/*<video src={firmaNoName} onClick={ () => setIsModalOpen(true) } alt='gif__ok' className={'landing__gif'} autoPlay loop/>*/}
-          <img src={gifLogo} onClick={ () => setIsModalOpen(true) } alt='gif__ok' className={'landing__gif'} />         
+          <img src={gifLogo} alt='gif__ok' className={'landing__gif'} />         
         </div>
       </section>
       <Footer />
       <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={false}>
         <div className={'modal__content--landing'} >
-        <button className={'modal__close'} onClick={onCloseModal}>
+        <button className={'modal__close'} onClick={handleClick}>
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M29 2L5 27" stroke="black" stroke-width="4"/>
-            <line x1="1.38919" y1="2.5612" x2="30.3892" y2="30.5612" stroke="black" stroke-width="4"/>
+            <path d="M29 2L5 27" stroke="black" strokeWidth="4"/>
+            <line x1="1.38919" y1="2.5612" x2="30.3892" y2="30.5612" stroke="black" strokeWidth="4"/>
           </svg>
         </button>
           <p>Para nosotros este no es el mes de la igualdad, porque no somos iguales. Celebramos la diferencia porque es ahí donde están las nuevas respuestas.</p>
