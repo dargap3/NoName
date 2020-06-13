@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import Footer from '../../components/Footer/Footer';
 
@@ -17,14 +18,13 @@ import './Team.styles.scss';
 
 const Team = () => {
   const [ width, setWidth ] = useState(window.innerWidth);
-
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);  //componentDidMount y componentDidUpdate
     return () => {
       window.removeEventListener('resize', handleResize); // componentWillUnMount
     }
-  });
+  }, [width]);
 
   return (
     <div className={'team__container'}>  	
@@ -38,36 +38,51 @@ const Team = () => {
           Somos doers que <br />#<strong>HacemosNoDecimos</strong> que las cosas pasen en las empresas más tremendas de Colombia.
         </p>
       </section>
-      <section className={'profile-team'}>
+      <section className={'profile-team'}> {/*AQUÍ IRIA UN MAP CON LAS IMAGENES DE LOS DATOS QUE SE TRAIGAN DE INSTAGRAM*/}
         <div>
-          <img src={image1} alt={'person one'}/>
+          <Link to={`/equipo/${100}`} className={'partner-link'}>
+            <img src={image1} alt={'person one'}/>
+          </Link>
         </div>
         <div>
-          <img src={image2} alt={'person one'}/>
+          <Link to={`/equipo/${200}`} className={'partner-link'}>
+            <img src={image2} alt={'person one'}/>
+          </Link>
         </div>
         <div>
-          <img src={image3} alt={'person one'}/>
+          <Link to={`/equipo/${300}`} className={'partner-link'}>
+            <img src={image3} alt={'person one'}/>
+          </Link>
         </div>
         <div>
-          <img src={image4} alt={'person one'}/>
+          <Link to={`/equipo/${400}`} className={'partner-link'}>
+            <img src={image4} alt={'person one'}/>
+          </Link>
         </div>
         <div>
-          <img src={image5} alt={'person one'}/>
+          <Link to={`/equipo/${500}`} className={'partner-link'}>
+            <img src={image5} alt={'person one'}/>
+          </Link>
         </div>
         <div>
-          <img src={image6} alt={'person one'}/>
-        </div>
-        <div>
-          <img src={image7} alt={'person one'}/>
-        </div>
-        <div>
-          <img src={image8} alt={'person one'}/>
-        </div>
-        <div>
-          <img src={image9} alt={'person one'}/>
+          <Link to={`/equipo/${600}`} className={'partner-link'}>
+            <img src={image6} alt={'person one'}/>
+          </Link>
+        </div><div>
+          <Link to={`/equipo/${700}`} className={'partner-link'}>
+            <img src={image7} alt={'person one'}/>
+          </Link>
+        </div><div>
+          <Link to={`/equipo/${800}`} className={'partner-link'}>
+            <img src={image8} alt={'person one'}/>
+          </Link>
+        </div><div>
+          <Link to={`/equipo/${900}`} className={'partner-link'}>
+            <img src={image9} alt={'person one'}/>
+          </Link>
         </div>
       </section>
-      {width >= 1000 && <Footer />}
+      {width > 1000 && <Footer />}
     </div>
   );
 }
