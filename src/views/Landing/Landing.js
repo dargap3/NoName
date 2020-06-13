@@ -20,7 +20,7 @@ const Landing = () => {
   useEffect(() => {
     const setTimeOut = setTimeout(() => {
       setIsModalOpen(true);
-    }, 3000);
+    }, 4000);
     return () => {
       clearTimeout(setTimeOut);
     }
