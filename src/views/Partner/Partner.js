@@ -34,7 +34,7 @@ const Partner = () => {
     	</div>
     	<div className={'partner-description'}>
     		<h1 className={'partner-description__title'}>Daniel Upegui</h1>
-    		<p>business builder marketing</p>
+    		<p className={'partner-description__role'}>Business Builder - Marketing</p>
 				<p>@Dupegui</p>
 				<div className={'carousel-container'}>
 					<Carousel
