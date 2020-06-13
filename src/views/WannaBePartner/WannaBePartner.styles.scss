@@ -9,6 +9,9 @@
         &:first-child {
             padding-bottom: 20px;
         }
+        &:nth-child(3) {
+            padding-top: 5px;
+        }
         strong {
             font-size: 30px;
             line-height: 33px;

@@ -88,30 +88,3 @@ body {
         display: flex;
     }
 }
-
-@keyframes increase-size {
-    0% {
-        font-size: 13px;
-    }
-    50% {
-        font-size: 30px;
-        line-height: 33px;
-    }
-    100% {
-        font-size: 13px;
-    }
-}
-
-.animated-text {
-    padding-bottom: 1px;
-    border-bottom: 1px white solid;
-    font-weight: bold;
-    animation-name: increase-size;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-    @media (min-width: 1000px) {
-        animation-name: no-animation;
-    }
-}

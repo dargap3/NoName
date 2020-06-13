@@ -21,10 +21,10 @@ const Home = () => {
         <p className={'home__body'}>
             Por eso no somos una sola empresa, somos todas las 
             empresas con las que trabajamos. Y como nos dimos 
-            cuenta que <span onClick={ () => setIsModalOpen(true) } className={'animated-text'}>era imposible tener muchos nombres,</span><br />
-            tomamos uno en el que caben todos.
+            cuenta que<br /> <span onClick={ () => setIsModalOpen(true) } className={'animated-text animated-text--16'}>era imposible tener muchos nombres,</span><br />
+            tomamos uno en el que caben todos. 
         </p>
-        <p className={'home__body'}><span className={'animated-text'}>¿Tú qué estás buscando?</span></p>
+        <p className={'home__body'}><span className={'animated-text animated-text--16'}>¿Tú qué estás buscando?</span></p>
       </section> 
       <Footer />
       <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={false}>

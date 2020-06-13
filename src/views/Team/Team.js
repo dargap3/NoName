@@ -22,7 +22,7 @@ const Team = () => {
     const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);  //componentDidMount y componentDidUpdate
     return () => {
-      window.removeEventListener('resize', handleResize); // componentunWillMount
+      window.removeEventListener('resize', handleResize); // componentWillUnMount
     }
   }, [width]);
 

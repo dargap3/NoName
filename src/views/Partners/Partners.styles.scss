@@ -5,7 +5,6 @@
             width: 275px;
             padding-bottom: 15px;
             &:nth-child(2) {
-                display: inline;
                 padding-bottom: 1px;
             }
         }
@@ -24,7 +23,7 @@
     }
     @media (min-width: 1000px) {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         width: 491px;
         align-items: center;
         .partners__body {
@@ -38,6 +37,10 @@
         }
         .partners__slider {
             margin-bottom: 20px;
+            width: 100%;
+            img {
+                padding-left: 10px;
+            }
         }
     }
 }
