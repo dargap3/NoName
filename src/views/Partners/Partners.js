@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Footer from '../../components/Footer/Footer';
 import Carousel from '@brainhubeu/react-carousel';
@@ -14,6 +14,15 @@ import carouselImage5 from '../../assets/logo/logo-true.png'
 
 
 const Partners = () => {
+  const [ width, setWidth ] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);  //componentDidMount y componentDidUpdate
+    return () => {
+      window.removeEventListener('resize', handleResize); // componentWillUnMount
+    }
+  });
   return (
     <div className={'partners__container'}>	
       <section className={'partners'}>
@@ -33,15 +42,9 @@ const Partners = () => {
         <Carousel
         autoPlay={4000}
         animationSpeed={3000}
+        centered
         infinite
-        slidesPerPage={3}
-        centered={true}
-        breakpoints={{
-          1000: {
-            slidesPerPage: 1,
-            arrows: false
-          }
-        }}        
+        slidesPerPage = { width >= 1000 ? 3 : 1}
         >
           <img src={carouselImage5} alt='logo true' />
           <img src={carouselImage1} alt='logo la carpinteria' />
