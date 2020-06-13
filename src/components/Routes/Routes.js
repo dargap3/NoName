@@ -9,6 +9,7 @@ import WannaBePartner from '../../views/WannaBePartner/WannaBePartner';
 import Team from '../../views/Team/Team';
 import Partners from '../../views/Partners/Partners';
 import Curious from '../../views/Curious/Curious';
+import Partner from '../../views/Partner/Partner';
 
 import './routes.styles.scss'
 
@@ -17,7 +18,8 @@ const routes = [
   { path: '/ser-un-aliado',  Component: WannaBePartner },
   { path: '/equipo', Component: Team },
   { path: '/conocer-los-aliados',  Component: Partners },
-  { path: '/soy-curioso',  Component: Curious }
+  { path: '/soy-curioso',  Component: Curious },
+  { path: '/equipo/:partnerId',  Component: Partner }
 ]
 
 
@@ -39,7 +41,7 @@ const Routes = () => (
     </Route>
 
     { routes.map(({ path, Component }) => (
-      <Route key={path} path={path}>
+      <Route key={path} exact path={path}>
         {({ match }) => (
           <CSSTransition
             in={match !== null}
@@ -48,7 +50,7 @@ const Routes = () => (
             unmountOnExit
             apear
           >
-            <Layout>
+            <Layout path={path}>
               <Component />
             </Layout>
           </CSSTransition>
