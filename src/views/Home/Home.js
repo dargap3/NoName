@@ -6,7 +6,7 @@ import Modal from '../../components/Modal/Modal';
 import './home.styles.scss';
 import jamesFranco from '../../assets/gif/James Franco.gif'
 
-const Home = () => {
+const Home = ({ onOpenNav }) => {
   const [modalIsOpen, setIsModalOpen] = useState(false);
   const onCloseModal = () => setIsModalOpen(false);
   return (
@@ -24,7 +24,7 @@ const Home = () => {
             cuenta que<br /> <span onClick={ () => setIsModalOpen(true) } className={'animated-text animated-text--16'}>era imposible tener muchos nombres,</span><br />
             tomamos uno en el que caben todos. 
         </p>
-        <p className={'home__body'}><span className={'animated-text animated-text--16'}>¿Tú qué estás buscando?</span></p>
+        <p className={'home__body'}><span className={'animated-text animated-text--16'} onClick={onOpenNav}>¿Tú qué estás buscando?</span></p>
       </section> 
       <Footer />
       <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={false}>
