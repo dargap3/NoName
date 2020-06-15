@@ -3,6 +3,7 @@
     .nav-toggle {
         background-color: #000;
         border: none;
+        outline: none;
         @media (min-width: 1000px) {
             position: absolute;
             right: 70px;

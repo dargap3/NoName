@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { animateScroll as scroll} from 'react-scroll';
 
 import Footer from '../../components/Footer/Footer';
 import Form from '../../components/Form/Form';
@@ -9,6 +10,14 @@ import './WannaBePartner.styles.scss';
 
 const WannaBePartner = () => {
   const history = useHistory();
+  const handleClick = () => {
+    if (document.documentElement.scrollTop > 0) {
+      scroll.scrollToTop();
+      setTimeout(() => history.push('/equipo'), 1000);
+    } else {
+      history.push('/equipo'); 
+    }
+  }
 
   const [modalIsOpen, setIsModalOpen] = useState(false);
   const onCloseModal = () => setIsModalOpen(false);
@@ -34,12 +43,11 @@ const WannaBePartner = () => {
           </p>
           <p className={'wanna-be-partner__body last'}>
             Por eso juntamos
-            <span
-              onClick={ () => history.push("/equipo")}
-              className={'animated-text animated-text--18'}
-            >
+
+            <span onClick={handleClick} className={'animated-text animated-text--18'}>un equipo tremendo</span><br/> 
               un equipo tremendo
             </span><br/> 
+
             que nunca te dirá qué hacer, lo hará contigo.
           </p>
       </section> 

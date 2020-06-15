@@ -1,0 +1,12 @@
+.mouse-tracker {
+	display: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: darken(white, 20%);
+	opacity: 0.8;
+  @media (min-width: 1000px) {
+  	display: block;
+  	z-index: 10;
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { animateScroll as scroll} from 'react-scroll';
 
 import Footer from '../../components/Footer/Footer';
 import Modal from '../../components/Modal/Modal';
@@ -11,6 +12,24 @@ const Curious = () => {
   const [modalIsOpen, setIsModalOpen] = useState(false);
   const onCloseModal = () => setIsModalOpen(false);
   const history = useHistory();
+
+  const handleClickOne = () => {
+    if (document.documentElement.scrollTop > 0) {
+      scroll.scrollToTop();
+      setTimeout(() => history.push('/equipo'), 1000);
+    } else {
+      history.push('/equipo'); 
+    }
+  }
+
+  const handleClickTwo = () => {
+    if (document.documentElement.scrollTop > 0) {
+      scroll.scrollToTop();
+      setTimeout(() => history.push('/conocer-los-aliados'), 1000);
+    } else {
+      history.push('/conocer-los-aliados'); 
+    }
+  }
 
   return (
     <>
@@ -33,7 +52,7 @@ const Curious = () => {
             Quizás 
             <span 
               className={'animated-text animated-text--20'}
-              onClick={ () => history.push("/conocer-los-aliados") }
+              onClick={handleClickTwo}
             >
               nuestros aliados
             </span>
@@ -42,7 +61,7 @@ const Curious = () => {
             o los 
             <span 
               className={'animated-text animated-text--20'}
-              onClick={ () => history.push("/equipo") }
+              onClick={handleClickOne}
             >
               Nonamers
             </span>

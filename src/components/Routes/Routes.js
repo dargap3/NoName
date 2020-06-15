@@ -1,4 +1,4 @@
-import React from 'react';
+import React,  { useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group'
 
@@ -23,26 +23,15 @@ const routes = [
 ]
 
 
-const Routes = () => (
-  <Router>
-    <Route exact path='/'>      
-      { ({ match }) => (
-        <CSSTransition
-          in={match !== null}
-          timeout={750}
-          classNames={'page'}
-          unmountOnExit
-          apear
-        >
-          <Landing />
-        </CSSTransition>
-        )
-      }
-    </Route>
+const Routes = () => {
+  const [showNavbar, setShowNavbar] = useState(false);
+  const handleCloseNavbar = () => setShowNavbar(false);
+  const handleOpenNav = () => setShowNavbar(true);
 
-    { routes.map(({ path, Component }) => (
-      <Route key={path} exact path={path}>
-        {({ match }) => (
+  return (
+    <Router>
+      <Route exact path='/'>      
+        { ({ match }) => (
           <CSSTransition
             in={match !== null}
             timeout={750}
@@ -50,15 +39,32 @@ const Routes = () => (
             unmountOnExit
             apear
           >
-            <Layout path={path}>
-              <Component />
-            </Layout>
+            <Landing />
           </CSSTransition>
-        )}
+          )
+        }
       </Route>
-    ))
-    }
-  </Router>
-);
+
+      { routes.map(({ path, Component }) => (
+        <Route key={path} exact path={path}>
+          {({ match }) => (
+            <CSSTransition
+              in={match !== null}
+              timeout={750}
+              classNames={'page'}
+              unmountOnExit
+              apear
+            >
+              <Layout path={path} onCloseNav={handleCloseNavbar} onOpenNav={handleOpenNav} showNavbar={showNavbar}>
+                <Component onOpenNav={handleOpenNav}/>
+              </Layout>
+            </CSSTransition>
+          )}
+        </Route>
+      ))
+      }
+    </Router>
+    );
+}
 
 export default Routes;
