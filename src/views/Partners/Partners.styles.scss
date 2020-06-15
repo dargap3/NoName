@@ -15,6 +15,9 @@
             height: 236px;
             margin: 0 0 100px 48px;
             border: 1px solid darken(#fff, 50%);
+            @media (min-width: 1000px) {
+                border: none;
+            }
             img {
                 width: 100%;
                 height: auto;

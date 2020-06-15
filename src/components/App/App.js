@@ -1,5 +1,6 @@
 import React from 'react';
 
+import MouseTracker from '../MouseTracker/MouseTracker';
 import Routes from '../Routes/Routes';
 
 
@@ -9,7 +10,7 @@ const App = () => {
   return (
   <>
     <Routes />
-    
+    <MouseTracker />
   </>
 )};
 

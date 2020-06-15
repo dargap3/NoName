@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './MouseTracker.styles.scss';
+
 export default class MouseTracker extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +26,7 @@ export default class MouseTracker extends React.Component {
   render() {
     return (
       
-        <div style={{ position: 'absolute', left: this.state.x - 25, top: this.state.y - 25, width: 50, height: 50, backgroundColor: 'red', opacity: 0.5, borderRadius: '50%' }} />
+        <div className={'mouse-tracker'} style={{ position: 'relative', left: this.state.x - 4, top: this.state.y }} />
       
     );
   }
