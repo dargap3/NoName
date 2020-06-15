@@ -43,11 +43,12 @@ const WannaBePartner = () => {
           </p>
           <p className={'wanna-be-partner__body last'}>
             Por eso juntamos
-
-            <span onClick={handleClick} className={'animated-text animated-text--18'}>un equipo tremendo</span><br/> 
+            <span 
+              onClick={handleClick}
+              className={'animated-text animated-text--18'}
+            >
               un equipo tremendo
-            </span><br/> 
-
+            </span><br/>
             que nunca te dirá qué hacer, lo hará contigo.
           </p>
       </section> 
