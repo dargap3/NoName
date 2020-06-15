@@ -32,7 +32,7 @@ const Routes = () => {
     <Router>
       <Route exact path='/'>      
         { ({ match }) => (
-          <CSSTransition
+          <CSSTransition          
             in={match !== null}
             timeout={750}
             classNames={'page'}
@@ -55,7 +55,12 @@ const Routes = () => {
               unmountOnExit
               apear
             >
-              <Layout path={path} onCloseNav={handleCloseNavbar} onOpenNav={handleOpenNav} showNavbar={showNavbar}>
+              <Layout
+                path={path}
+                onCloseNav={handleCloseNavbar}
+                onOpenNav={handleOpenNav}
+                showNavbar={showNavbar}
+              >
                 <Component onOpenNav={handleOpenNav}/>
               </Layout>
             </CSSTransition>

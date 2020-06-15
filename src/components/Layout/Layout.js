@@ -8,7 +8,12 @@ const Layout = ({ children, path, onOpenNav, onCloseNav, showNavbar }) => {
 
 	return (
 		<div className={'container page'}>
-		  <Header path={path} onCloseNav={onCloseNav} onOpenNav={onOpenNav} showNavbar={showNavbar}/>
+		  <Header 
+        path={path}
+        onCloseNav={onCloseNav}
+        onOpenNav={onOpenNav}
+        showNavbar={showNavbar}
+      />
 		  <main className={'main'}>
 		    { children }
 		  </main>
