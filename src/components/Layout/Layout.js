@@ -12,7 +12,7 @@ const Layout = ({ children, path, onOpenNav, onCloseNav, showNavbar }) => {
 		  <main className={'main'}>
 		    { children }
 		  </main>
-		</div>	
+		</div>
 	)	
 }
 
