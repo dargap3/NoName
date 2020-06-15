@@ -13,6 +13,7 @@ import './Partner.styles.scss';
 
 
 const Partner = () => {
+	const history = useHistory();
 	const [ width, setWidth ] = useState(window.innerWidth);
 	useEffect(() => {
 	  const handleResize = () => setWidth(window.innerWidth);
@@ -21,7 +22,6 @@ const Partner = () => {
 	    window.removeEventListener('resize', handleResize); // componentunWillMount
 	  }
 	}, [width]);
-	const history = useHistory();
 	return (
     <section className={'partner-container'}>
     	<div className={'partner-signature'}>

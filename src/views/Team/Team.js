@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import { animateScroll as scroll} from 'react-scroll';
 
 import Footer from '../../components/Footer/Footer';
 
@@ -12,11 +13,14 @@ import image6 from '../../assets/images/image-six.png';
 import image7 from '../../assets/images/image-seven.png';
 import image8 from '../../assets/images/image-eight.png';
 import image9 from '../../assets/images/image-nine.png';
+import image10 from '../../assets/images/image10.png';
+import image11 from '../../assets/images/image11.png';
 
 
 import './Team.styles.scss';
 
 const Team = () => {
+  const history = useHistory();
   const [ width, setWidth ] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
@@ -25,6 +29,15 @@ const Team = () => {
       window.removeEventListener('resize', handleResize); // componentWillUnMount
     }
   }, [width]);
+
+  const handleClick = () => {
+    if (document.documentElement.scrollTop > 0) {
+      scroll.scrollToTop();
+      setTimeout(() => history.push(`/equipo/${900}`), 1000);
+    } else {
+      history.push(`/equipo/${900}`); 
+    }
+  }
 
   return (
     <div className={'team__container'}>  	
@@ -39,47 +52,38 @@ const Team = () => {
         </p>
       </section>
       <section className={'profile-team'}> {/*AQUÍ IRIA UN MAP CON LAS IMAGENES DE LOS DATOS QUE SE TRAIGAN DE INSTAGRAM*/}
-        <div>
-          <Link to={`/equipo/${100}`} className={'partner-link'}>
-            <img src={image1} alt={'person one'}/>
-          </Link>
+        <div onClick={handleClick}>
+          <img src={image1} alt={'person one'}/>
         </div>
-        <div>
-          <Link to={`/equipo/${200}`} className={'partner-link'}>
-            <img src={image2} alt={'person one'}/>
-          </Link>
+        <div onClick={handleClick}>
+          <img src={image2} alt={'person one'}/>
         </div>
-        <div>
-          <Link to={`/equipo/${300}`} className={'partner-link'}>
-            <img src={image3} alt={'person one'}/>
-          </Link>
+        <div onClick={handleClick}>
+          <img src={image3} alt={'person one'}/>
         </div>
-        <div>
-          <Link to={`/equipo/${400}`} className={'partner-link'}>
-            <img src={image4} alt={'person one'}/>
-          </Link>
+        <div onClick={handleClick}>
+          <img src={image4} alt={'person one'}/>
         </div>
-        <div>
-          <Link to={`/equipo/${500}`} className={'partner-link'}>
-            <img src={image5} alt={'person one'}/>
-          </Link>
+        <div onClick={handleClick}>
+          <img src={image5} alt={'person one'}/>
         </div>
-        <div>
-          <Link to={`/equipo/${600}`} className={'partner-link'}>
-            <img src={image6} alt={'person one'}/>
-          </Link>
-        </div><div>
-          <Link to={`/equipo/${700}`} className={'partner-link'}>
-            <img src={image7} alt={'person one'}/>
-          </Link>
-        </div><div>
-          <Link to={`/equipo/${800}`} className={'partner-link'}>
-            <img src={image8} alt={'person one'}/>
-          </Link>
-        </div><div>
-          <Link to={`/equipo/${900}`} className={'partner-link'}>
-            <img src={image9} alt={'person one'}/>
-          </Link>
+        <div onClick={handleClick}>
+          <img src={image6} alt={'person one'}/>
+        </div>
+        <div onClick={handleClick}>
+          <img src={image7} alt={'person one'}/>
+        </div>
+        <div onClick={handleClick}>
+          <img src={image8} alt={'person one'}/>
+        </div>
+        <div onClick={handleClick}>
+          <img src={image9} alt={'person one'}/>
+        </div>
+        <div onClick={handleClick}>
+          <img src={image10} alt={'person one'}/>
+        </div>
+        <div onClick={handleClick}>
+          <img src={image11} alt={'person one'}/>
         </div>
       </section>
       {width > 1000 && <Footer />}

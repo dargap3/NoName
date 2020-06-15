@@ -4,13 +4,16 @@ import Header from '../Header/Header';
 
 import './Layout.styles.scss'
 
-const Layout = ({ children, path }) => (
-  <div className={'container page'}>
-    <Header path={path} />
-    <main className={'main'}>
-      { children }
-    </main>
-  </div>
-);
+const Layout = ({ children, path, onOpenNav, onCloseNav, showNavbar }) => {
+
+	return (
+		<div className={'container page'}>
+		  <Header path={path} onCloseNav={onCloseNav} onOpenNav={onOpenNav} showNavbar={showNavbar}/>
+		  <main className={'main'}>
+		    { children }
+		  </main>
+		</div>	
+	)	
+}
 
 export default Layout;

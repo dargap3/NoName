@@ -33,7 +33,6 @@
     width: 100%;
     margin: 2px;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     margin-right: 50px;
     div {
@@ -55,5 +54,7 @@
         margin-right: 50px;
         margin-left: 30px;
         width: 380px;
+        height: 450px;
+        overflow-y: scroll;
     }
 }

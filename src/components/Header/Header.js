@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-//import { useRouteMatch } from "react-router-dom";
+import React from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 import Navbar from '../Navbar/Navbar';
@@ -10,13 +9,11 @@ import hamburger from '../../assets/images/hamburger.svg';
 
 import './header.styles.scss'; 
 
-const Header = ({ path }) => {
-  //const match = useRouteMatch('/equipo/:partnerId');
-  const [showNavbar, setShowNavbar] = useState(false);
-  const handleCloseNavbar = () => setShowNavbar(false);
+const Header = ({ path, onCloseNav, onOpenNav, showNavbar }) => {
+
   return (
   <header className={'header'}>    
-    <button onClick={() => setShowNavbar(true)} className={'nav-toggle'} >
+    <button onClick={onOpenNav} className={'nav-toggle'} >
       <img src={hamburger} alt='button toggle' />
     </button>    
     { path !== '/equipo/:partnerId' && 
@@ -31,9 +28,9 @@ const Header = ({ path }) => {
         unmountOnExit
       >
       <Navbar
-          onClose={() => setShowNavbar(false)}
-          onClick={handleCloseNavbar}
-        />
+          onClose={onCloseNav}
+          onCloseNav={onCloseNav}
+      />
       </CSSTransition>
   </header>
 );
