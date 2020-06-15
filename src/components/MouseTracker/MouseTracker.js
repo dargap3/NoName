@@ -26,7 +26,7 @@ export default class MouseTracker extends React.Component {
   render() {
     return (
       
-        <div className={'mouse-tracker'} style={{ position: 'relative', left: this.state.x - 4, top: this.state.y }} />
+        <div className={'mouse-tracker'} style={{ position: 'relative', left: this.state.x - 20, top: this.state.y - 20}} />
       
     );
   }
