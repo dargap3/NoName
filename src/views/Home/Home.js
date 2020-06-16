@@ -3,12 +3,14 @@ import React, { useState } from 'react';
 import Footer from '../../components/Footer/Footer';
 import Modal from '../../components/Modal/Modal';
 
-import './home.styles.scss';
 import jamesFranco from '../../assets/gif/James Franco.gif'
+
+import './home.styles.scss';
 
 const Home = ({ onOpenNav }) => {
   const [modalIsOpen, setIsModalOpen] = useState(false);
   const onCloseModal = () => setIsModalOpen(false);
+
   return (
     <>    
       <section className={'home'} >
@@ -16,15 +18,34 @@ const Home = ({ onOpenNav }) => {
           Lo hacemos todo para que las PyMEs dejen de ser PyMEs. 
           ¿Cómo? Literalmente nos remangamos para hacer que las 
           mejores empresas escalen a niveles superiores, de una
-          manera integral y disfrutando el camino <span role='img' aria-labelledby='emoji'>🧗‍♀️</span> 
+          manera integral y disfrutando el camino 
+          <span 
+            role='img' 
+            aria-labelledby='emoji'
+          >
+            🧗‍♀️
+          </span> 
         </p>
         <p className={'home__body'}>
             Por eso no somos una sola empresa, somos todas las 
             empresas con las que trabajamos. Y como nos dimos 
-            cuenta que<br /> <span onClick={ () => setIsModalOpen(true) } className={'animated-text animated-text--16'}>era imposible tener muchos nombres,</span><br />
+            cuenta que<br />
+            <span 
+              onClick={ () => setIsModalOpen(true) } 
+              className={'animated-text animated-text--16'}
+            >
+            era imposible tener muchos nombres,
+            </span><br />
             tomamos uno en el que caben todos. 
         </p>
-        <p className={'home__body'}><span className={'animated-text animated-text--16'} onClick={onOpenNav}>¿Tú qué estás buscando?</span></p>
+        <p className={'home__body'}>
+          <span 
+            className={'animated-text animated-text--16'} 
+            onClick={onOpenNav}
+          >
+            ¿Tú qué estás buscando?
+          </span>
+        </p>
       </section> 
       <Footer />
       <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={false}>

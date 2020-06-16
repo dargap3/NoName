@@ -17,7 +17,7 @@ import image10 from '../../assets/images/image10.png';
 import image11 from '../../assets/images/image11.png';
 
 
-import './Team.styles.scss';
+import './Team.styles.scss'; 
 
 const Team = () => {
   const history = useHistory();

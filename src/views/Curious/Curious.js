@@ -44,6 +44,7 @@ const Curious = () => {
             <span 
               onClick={ () => setIsModalOpen(true) } 
               className={'animated-text animated-text--20'}
+              style={{margin: '10px 0'}}
             >
               no aceleran, escalan.
             </span>

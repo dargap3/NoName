@@ -1,88 +1,86 @@
 .partner-container {
-	padding: 0 0 36px 50px;
-	margin-top: -30px;
-	@media (min-width: 1000px) {
-		display: flex;
-	}
-	.partner-signature {
-		width: 330px;
-		height: 100px;
-		margin-bottom: 10px;
-		.arrow-back {
-			position: absolute;
-			top: 68px;
-			right: 35px;
-			width: 43px;
-			@media (min-width: 1000px) {
-				position: relative;
-				margin-left: 280px;
-			}
-			svg {
-				fill: #fff;
-				transform: rotate(180deg);
-				font-size: 200px;
-			}
-		}
-		@media (min-width: 1000px) {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			width: 30%;
-			height: 380px;
-		}
-		img {
-			width: 100%;
-			height: auto;
-			margin-left: -25px;
-			@media (min-width: 1000px) {
-				width: 96%;
-				margin-top: -35px;
-				margin-left: -60px;
-			}
-		}
-	}
-	.partner-description {
-		@media (min-width: 1000px) {
-			width: 70%;
-		}
-		&__title {
-			font-weight: 800;
-			font-size: 33px;
-			line-height: 13px;
-			margin-bottom: 17px;
-		}
-		p {
-			font-weight: 400;
-			font-size: 13px;
-			line-height: 13px;
-			margin-bottom: 5px;
-		}
-		.carousel-container {
-			width: 335px;
-			height: 305px;
-			margin-top: 20px;
-			margin-bottom: 15px;
-			@media (min-width: 1000px) {
-				width: 870px;
-			}
-			.image-carousel {
-				width: 335px;
-				height: 305px;
-				margin-bottom: 5px;
-			}
-		}
-		&__role {
-			font-weight: bold !important;
-		}
-		&__personality {
-			width: 97%;
-			margin-top: 40px;
-			span {
-				font-weight: bold;
-			}
-			@media (min-width: 1000px) {
-				width: 34%;
-			}
-		}
-	}
+    padding: 0 0 36px 50px;
+    margin-top: -30px;
+    @media (min-width: 1000px) {
+        display: flex;
+    }
+    .partner-signature {
+        width: 330px;
+        height: 100px;
+        margin-bottom: 10px;
+        .arrow-back {
+            position: absolute;
+            top: 68px;
+            right: 35px;
+            width: 43px;
+            @media (min-width: 1000px) {
+                position: relative;
+                margin-left: 280px;
+            }
+            svg {
+                font-size: 200px;
+            }
+        }
+        @media (min-width: 1000px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30%;
+            height: 380px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            margin-left: -25px;
+            @media (min-width: 1000px) {
+                width: 96%;
+                margin-top: -35px;
+                margin-left: -60px;
+            }
+        }
+    }
+    .partner-description {
+        @media (min-width: 1000px) {
+            width: 70%;
+        }
+        &__title {
+            font-weight: 800;
+            font-size: 33px;
+            line-height: 13px;
+            margin-bottom: 17px;
+        }
+        p {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 13px;
+            margin-bottom: 5px;
+        }
+        .carousel-container {
+            width: 335px;
+            height: 305px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            @media (min-width: 1000px) {
+                width: 870px;
+            }
+            .image-carousel {
+                width: 335px;
+                height: 305px;
+                margin-bottom: 5px;
+            }
+        }
+        &__role {
+            font-weight: bold !important;
+        }
+        &__personality {
+            width: 97%;
+            margin-top: 40px;
+            span {
+                font-weight: bold;
+            }
+            @media (min-width: 1000px) {
+                width: 34%;
+            }
+        }
+    }
 }

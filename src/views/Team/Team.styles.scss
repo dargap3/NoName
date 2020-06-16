@@ -10,8 +10,8 @@
         width: 80%;
         &:first-child {
             font-weight: bold;
-            font-size: 30px;
-            line-height: 33px;
+            font-size: 35px;
+            line-height: 37px;
             margin-bottom: 18px;
         }
         &:last-child {
@@ -47,8 +47,8 @@
         }
     }
     .partner-link {
-      color: inherit;
-      text-decoration: none;
+        color: inherit;
+        text-decoration: none;
     }
     @media (min-width: 1000px) {
         margin-right: 50px;
