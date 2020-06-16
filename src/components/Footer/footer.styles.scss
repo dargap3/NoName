@@ -5,12 +5,20 @@
     margin-bottom: 25px;
     border-top: 1px solid #fff;
     margin-left: 48px;
+    .footer__text {
+        p:nth-child(2) {
+            margin-left: 3px;
+        }
+    }
     @media (min-width: 1000px) {
         margin-left: 0;
         position: absolute;
         left: 0;
         bottom: 0;
         width: 95%;
+        p+p {
+            margin-left: 3px;
+        }
         .footer__text {
             margin-left: 88px;
             display: flex;
