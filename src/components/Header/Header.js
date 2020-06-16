@@ -10,7 +10,6 @@ import hamburger from '../../assets/images/hamburger.svg';
 import './header.styles.scss'; 
 
 const Header = ({ path, onCloseNav, onOpenNav, showNavbar }) => {
-
   return (
   <header className={'header'}>    
     <button onClick={onOpenNav} className={'nav-toggle'} >
@@ -22,14 +21,13 @@ const Header = ({ path, onCloseNav, onOpenNav, showNavbar }) => {
       </div>
     }
     <CSSTransition
-        in={showNavbar}
-        timeout={500}
-        classNames="alert"
-        unmountOnExit
-      >
+      in={showNavbar}
+      timeout={500}
+      classNames="alert"
+      unmountOnExit
+    >
       <Navbar
-          onClose={onCloseNav}
-          onCloseNav={onCloseNav}
+        onCloseNav={onCloseNav}
       />
       </CSSTransition>
   </header>

@@ -1,31 +1,49 @@
 import React, { useState } from 'react';
+import { Picker } from "emoji-mart";
 
+import "emoji-mart/css/emoji-mart.css";
 import './form.styles.scss';
 
 const Form = () => {
-  const [formData, setFormData] = useState({});
+  const [ nombre, setNombre ] = useState('');
+  const [ sitioweb, setSitioweb ] = useState('');
+  const [ celular, setCelular ] = useState('');
+  const [ mensaje, setMensaje ] = useState('');
+  
+ /*  const [formData, setFormData] = useState({}); */
 
-  const updateInput = e => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+  const [emojiPickerState, SetEmojiPicker] = useState(false);
+
+  /* let emojiPicker;
+  if (emojiPickerState) {
+    emojiPicker = (
+      <Picker
+        title="Pick your emoji…"
+        emoji="point_up"
+        onSelect={emoji => setMensaje(mensaje + emoji.native)}
+      />
+    );
+  } */
+
+  function triggerPicker(event) {
+    event.preventDefault();
+    SetEmojiPicker(!emojiPickerState);
   }
 
-  const handleSubmit = event => {
+/*   const handleSubmit = event => {
     event.preventDefault()
-    /* sendEmail() */
+    sendEmail()
     setFormData({
       nombre: '',
       sitioweb: '',
       celular: '',
       mensaje: '',
     });
-  }
+  } */
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form /* onSubmit={handleSubmit} */>
         <section className={'form__contain'}>
           <p>
           <label htmlFor='nombre'>
@@ -35,8 +53,8 @@ const Form = () => {
               type="text"
               name="nombre"
               id='nombre'
-              onChange={updateInput}
-              value={formData.nombre || ''}
+              onChange={ event => setNombre(event.target.value) }
+              value={nombre}
             />
           </p>
           <label htmlFor='sitio web o instagram'>
@@ -46,8 +64,8 @@ const Form = () => {
               type="url"
               name="sitioweb"
               id='sitio web o instagram'
-              onChange={updateInput}
-              value={formData.sitioweb || ''}
+              onChange={ event => setSitioweb(event.target.value) }
+              value={sitioweb}
             />
           <label htmlFor="celular">
             Tu número de contacto:
@@ -56,8 +74,8 @@ const Form = () => {
               type="tel"
               name="celular"
               id='celular'
-              onChange={updateInput}
-              value={formData.celular || ''}
+              onChange={ event => setCelular(event.target.value) }
+              value={celular}
             />
           <label htmlFor="mensaje">
             ¿Cuál es la oportunidad o dolor principal de tu empresa?
@@ -67,13 +85,34 @@ const Form = () => {
               name="mensaje"
               id='mensaje'
               rows='2'
-              onChange={updateInput}
-              value={formData.mensaje || ''}
+              onChange={ event => setMensaje(event.target.value) }
+              value={mensaje}
             ></textarea>
         </section>
         <section className={'form__buttons'}>
-          <button className={'button--emoji'} type="submit">Emoji</button>
-          <button className={'button--submit'} type="submit">Enviar</button>
+          
+          {
+            emojiPickerState 
+          && 
+            <Picker
+              
+              theme='light'
+              onSelect={emoji => setMensaje(mensaje + emoji.native)}
+            /> 
+          }
+          
+          <button 
+            className={'button--emoji'}
+            onClick={triggerPicker}
+          >
+            Emoji
+          </button>
+          <button 
+            className={'button--submit'} 
+            type="submit"
+          >
+            Enviar
+          </button>
         </section>
       </form>
     </>

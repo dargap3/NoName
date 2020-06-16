@@ -47,3 +47,11 @@
         }
     }
 }
+
+.modal__close {
+    display: flex;
+    margin-left: 85%;
+    svg {
+        margin: 5px;
+    }
+}
