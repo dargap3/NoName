@@ -91,7 +91,7 @@ const Form = () => {
         </section>
         <section className={'form__buttons'}>
           
-          {
+          {/* {
             emojiPickerState 
           && 
             <Picker
@@ -99,7 +99,7 @@ const Form = () => {
               theme='light'
               onSelect={emoji => setMensaje(mensaje + emoji.native)}
             /> 
-          }
+          } */}
           
           <button 
             className={'button--emoji'}
