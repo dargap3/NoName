@@ -1,8 +1,9 @@
 .partner-container {
-    padding: 0 0 36px 50px;
+    margin: 0 0 36px 50px;
     margin-top: -30px;
     @media (min-width: 1000px) {
         display: flex;
+        margin-left: -33%;
     }
     .partner-signature {
         width: 330px;
@@ -10,12 +11,12 @@
         margin-bottom: 10px;
         .arrow-back {
             position: absolute;
-            top: 68px;
-            right: 35px;
+            top: 60px;
+            right: 50px;
             width: 43px;
             @media (min-width: 1000px) {
                 position: relative;
-                margin-left: 280px;
+                margin-left: 260px;
             }
             svg {
                 font-size: 200px;
@@ -61,7 +62,7 @@
             margin-top: 20px;
             margin-bottom: 15px;
             @media (min-width: 1000px) {
-                width: 870px;
+                width: 92%;
             }
             .image-carousel {
                 width: 335px;
@@ -73,7 +74,7 @@
             font-weight: bold !important;
         }
         &__personality {
-            width: 97%;
+            width: 92%;
             margin-top: 40px;
             span {
                 font-weight: bold;
