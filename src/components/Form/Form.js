@@ -23,6 +23,7 @@ const Form = () => {
 
   const [formData, setFormData] = useState(initialFormData);
   const [emojiPickerState, SetEmojiPicker] = useState(false);
+  const [display, setDisplay] = useState(false);
 
   const updateInput = event => {
     setFormData({
@@ -45,6 +46,7 @@ const Form = () => {
       celular: '',
       mensaje: '',
     });
+    setDisplay(!display);
   }
 
   return (
@@ -90,7 +92,7 @@ const Form = () => {
               type="text"
               name="mensaje"
               id='mensaje'
-              rows='2'
+              rows='5'
               onChange={updateInput}
               onClick={ event => {SetEmojiPicker(false)}}
               value={formData.mensaje || ''}
@@ -158,6 +160,26 @@ const Form = () => {
           
         </section>
       </form>
+      <div  className={`send-message ${ display ? '' : 'display' }`}>
+        <h3>¡Ya estamos en contacto! 
+          <span
+            style={{marginLeft: '8px'}}
+            role='img' 
+            aria-label='horn celebration'
+          >
+            🎉
+          </span>
+        </h3>
+        <p>Todas las semanas revisamos nuevas empresas que están buscando escalar. Te aseguramos que haremos todo lo posible por ponernos en contacto contigo lo antes posible.
+          <span
+              style={{marginLeft: '8px'}}
+              role='img' 
+              aria-label='people running'
+            >
+            🏃‍♀️🏃‍♂️💨
+          </span>
+        </p>
+      </div>
     </>
   );
 }
