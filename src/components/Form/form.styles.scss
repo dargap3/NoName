@@ -34,7 +34,7 @@ form {
     }
     .form__buttons {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         margin-top: 1em;
         button {
@@ -42,9 +42,7 @@ form {
             background-color: #000;
             outline: none;
             border: none;
-        }
-        .emoji__container {
-            max-width: 250px !important;
+            font-weight: bold;
         }
         .button--emoji {
             width: 50px;
@@ -54,6 +52,9 @@ form {
         .button--submit {
             width: 70px;
             height: 34px;
+        }
+        @media (min-width: 1000px) {
+            justify-content: space-between;
         }
     }
 }

@@ -17,7 +17,7 @@ import image10 from '../../assets/images/image10.png';
 import image11 from '../../assets/images/image11.png';
 
 
-import './Team.styles.scss'; 
+import './Team.styles.scss';
 
 const Team = () => {
   const history = useHistory();
@@ -48,7 +48,7 @@ const Team = () => {
         <p className={'team__body'}>
           <strong>Los NoNamers</strong> somos una colección de 11 seres humanos diversos y complementarios. 
           No somos consultores, ni asesores ni banqueros de inversión. 
-          Somos doers que <br />#<strong>HacemosNoDecimos</strong> que las cosas pasen en las empresas más tremendas de Colombia.
+          Somos doers que #<strong>HacemosNoDecimos</strong> que las cosas pasen en las empresas más tremendas de Colombia.
         </p>
       </section>
       <section className={'profile-team'}> {/*AQUÍ IRIA UN MAP CON LAS IMAGENES DE LOS DATOS QUE SE TRAIGAN DE INSTAGRAM*/}
