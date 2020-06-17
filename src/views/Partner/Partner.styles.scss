@@ -62,12 +62,16 @@
             margin-top: 20px;
             margin-bottom: 15px;
             @media (min-width: 1000px) {
-                width: 92%;
+                width: 870px;
             }
             .image-carousel {
                 width: 335px;
                 height: 305px;
                 margin-bottom: 5px;
+                display: block;
+            }
+            svg {
+                margin-left: 4px;
             }
         }
         &__role {
