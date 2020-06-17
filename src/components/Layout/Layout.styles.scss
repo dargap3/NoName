@@ -19,10 +19,11 @@
     }
     @media (min-width: 1000px) {
         margin-top: 175px;
-        .animated-text--16,
-        .animated-text--18,
-        .animated-text--20 {
-            animation-name: none;
+        width: 70%;
+        .animated-text {
+            animation: breathing18 3s ease-in-out alternate infinite;
+            transform-origin: left center;
+            margin-left: 8px;
         }
     }
 }

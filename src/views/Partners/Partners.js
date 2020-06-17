@@ -30,7 +30,7 @@ const Partners = () => {
   const onCloseModal = () => setIsModalOpen(false);
 
   return (
-    <div className={'partners__container'}>	
+    <>
       <section className={'partners'}>
         <p className={'partners__body'}>
           Los llamamos aliados 
@@ -44,7 +44,7 @@ const Partners = () => {
             className={'animated-text animated-text--20'}
           >
             ¿Hacemos país?
-          </span>
+          </span> 
         </p>
       </section>
       <section className={'partners__slider'}>
@@ -74,7 +74,7 @@ const Partners = () => {
           <Form />        
         </section>      
       </Modal>
-    </div>
+    </>
   );
 }
 

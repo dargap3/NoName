@@ -24,16 +24,15 @@
     @media (min-width: 1000px) {
         .wanna-be-partner__body {
             max-width: 580px;
-            line-height: 18px;
+            line-height: 20px;
         }
         strong {
             font-weight: 800;
             font-size: 48px;
             line-height: 45px;
         }
-        span {
-            font-size: 40px;
-            line-height: 44px;
+        .last {
+            line-height: 30px;
         }
     }
 }

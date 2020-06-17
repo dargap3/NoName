@@ -17,9 +17,9 @@ const Footer = ({inverted}) => (
       <p>Oficina 1502 · Medellín</p> 
     </div>
     <div className={'redes'}>
-      <img src={linkedin} alt='logo linkedin'/>
-      <img src={instagram} alt='logo instagram'/>
-      <img src={twitter} alt='logo twitter'/> 
+      <a target='blank' href="https://www.linkedin.com/company/noname-colombia/?viewAsMember=true"><img src={linkedin} alt='logo linkedin'/></a>
+      <a target='blank' href="https://www.instagram.com/nonamecolombia/"><img src={instagram} alt='logo instagram'/></a>
+      <a target='blank' href="https://twitter.com/noname_colombia"><img src={twitter} alt='logo twitter'/></a>
     </div>
   </footer>
 )

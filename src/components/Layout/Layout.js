@@ -8,7 +8,7 @@ const Layout = ({ children, path, onOpenNav, onCloseNav, showNavbar }) => {
 
 	return (
 		<div className={'container page'}>
-		  <Header 
+		  <Header
         path={path}
         onCloseNav={onCloseNav}
         onOpenNav={onOpenNav}
