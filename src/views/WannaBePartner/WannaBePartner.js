@@ -36,7 +36,7 @@ const WannaBePartner = () => {
               className={'animated-text animated-text--20'}
             >
               hablemos.
-            </span>
+            </span> 
           </p>
           <p className={'wanna-be-partner__body'}>
             Nosotros entendimos que el talento con actitud es un recurso escaso y sobretodo para las empresas.
@@ -45,6 +45,7 @@ const WannaBePartner = () => {
             Por eso juntamos
             <span 
               onClick={handleClick}
+              style={{marginLeft: '8px'}}
               className={'animated-text animated-text--18'}
             >
               un equipo tremendo

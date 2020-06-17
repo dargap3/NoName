@@ -1,49 +1,55 @@
-import React, { useState } from 'react';
-/* import { Picker } from "emoji-mart"; */
+import React, { useState, useEffect } from 'react';
+import { Picker } from "emoji-mart";
 
 import "emoji-mart/css/emoji-mart.css";
 import './form.styles.scss';
 
 const Form = () => {
-  const [ nombre, setNombre ] = useState('');
-  const [ sitioweb, setSitioweb ] = useState('');
-  const [ celular, setCelular ] = useState('');
-  const [ mensaje, setMensaje ] = useState('');
-  
- /*  const [formData, setFormData] = useState({}); */
+  const initialFormData = {
+      nombre: '',
+      sitioweb: '',
+      celular: '',
+      mensaje: '',
+  }
 
+  const [ width, setWidth ] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);  //componentDidMount y componentDidUpdate
+    return () => {
+      window.removeEventListener('resize', handleResize); // componentWillUnMount
+    }
+  }, [width]);
+
+  const [formData, setFormData] = useState(initialFormData);
   const [emojiPickerState, SetEmojiPicker] = useState(false);
 
-  /* let emojiPicker;
-  if (emojiPickerState) {
-    emojiPicker = (
-      <Picker
-        title="Pick your emoji…"
-        emoji="point_up"
-        onSelect={emoji => setMensaje(mensaje + emoji.native)}
-      />
-    );
-  } */
+  const updateInput = event => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  }
 
-  function triggerPicker(event) {
+  const triggerPicker = event => {
     event.preventDefault();
     SetEmojiPicker(!emojiPickerState);
   }
 
-/*   const handleSubmit = event => {
+  const handleSubmit = event => {
     event.preventDefault()
-    sendEmail()
+    /* sendEmail() */
     setFormData({
       nombre: '',
       sitioweb: '',
       celular: '',
       mensaje: '',
     });
-  } */
+  }
 
   return (
     <>
-      <form /* onSubmit={handleSubmit} */>
+      <form onSubmit={handleSubmit}>
         <section className={'form__contain'}>
           <p>
           <label htmlFor='nombre'>
@@ -53,8 +59,8 @@ const Form = () => {
               type="text"
               name="nombre"
               id='nombre'
-              onChange={ event => setNombre(event.target.value) }
-              value={nombre}
+              onChange={updateInput}
+              value={formData.nombre || ''}
             />
           </p>
           <label htmlFor='sitio web o instagram'>
@@ -64,8 +70,8 @@ const Form = () => {
               type="url"
               name="sitioweb"
               id='sitio web o instagram'
-              onChange={ event => setSitioweb(event.target.value) }
-              value={sitioweb}
+              onChange={updateInput}
+              value={formData.sitioweb || ''}
             />
           <label htmlFor="celular">
             Tu número de contacto:
@@ -74,8 +80,8 @@ const Form = () => {
               type="tel"
               name="celular"
               id='celular'
-              onChange={ event => setCelular(event.target.value) }
-              value={celular}
+              onChange={updateInput}
+              value={formData.celular || ''}
             />
           <label htmlFor="mensaje">
             ¿Cuál es la oportunidad o dolor principal de tu empresa?
@@ -85,34 +91,71 @@ const Form = () => {
               name="mensaje"
               id='mensaje'
               rows='2'
-              onChange={ event => setMensaje(event.target.value) }
-              value={mensaje}
+              onChange={updateInput}
+              onClick={ event => {SetEmojiPicker(false)}}
+              value={formData.mensaje || ''}
             ></textarea>
         </section>
-        <section className={'form__buttons'}>
-          
-          {/* {
+        
+          { 
             emojiPickerState 
-          && 
+            && 
             <Picker
-              
-              theme='light'
-              onSelect={emoji => setMensaje(mensaje + emoji.native)}
-            /> 
-          } */}
+              title=''
+              emoji=''
+              i18n={{
+                search: 'Buscar',
+                notfound: 'No encontramos tu Emoji',
+                skintext: 'Escoge el tono de piel',
+                categories: {
+                  search: 'Resultados',
+                  recent: ' ',
+                  smileys: ' ',
+                  people: ' ',
+                  nature: ' ',
+                  foods: ' ',
+                  activity: ' ',
+                  places: ' ',
+                  objects: ' ',
+                  symbols: ' ',
+                  flags: ' ',
+                  custom: ' ',
+                },
+              }}
+              style={{
+                width: '100%', 
+                backgroundColor: '#F4F3F1',
+                marginTop: '0.5em',
+                borderColor: '#000',
+              }}
+              onSelect={ emoji => {
+                setFormData({
+                  ...formData,
+                  mensaje: formData.mensaje + emoji.native,
+                });
+              }}
+            />
+          }
+        
+        <section className={'form__buttons'}>
+          { 
+            width > 1000 
+          && 
+            <button 
+              className={'button--emoji'}
+              onClick={triggerPicker}
+            >
+              Emoji
+            </button>
+          }
           
-          <button 
-            className={'button--emoji'}
-            onClick={triggerPicker}
-          >
-            Emoji
-          </button>
           <button 
             className={'button--submit'} 
             type="submit"
           >
             Enviar
           </button>
+          
         </section>
       </form>
     </>

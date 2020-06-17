@@ -18,8 +18,9 @@ const Home = ({ onOpenNav }) => {
           Lo hacemos todo para que las PyMEs dejen de ser PyMEs. 
           ¿Cómo? Literalmente nos remangamos para hacer que las 
           mejores empresas escalen a niveles superiores, de una
-          manera integral y disfrutando el camino 
-          <span 
+          manera integral y disfrutando el camino.
+          <span
+            style={{marginLeft: '8px'}}
             role='img' 
             aria-labelledby='emoji'
           >

@@ -52,7 +52,8 @@ const Curious = () => {
           <p className={'curious__body'}>
             Quizás 
             <span 
-              className={'animated-text animated-text--20'}
+              style={{marginLeft: '8px'}}
+              className={'animated-text animated-text--20'} 
               onClick={handleClickTwo}
             >
               nuestros aliados
@@ -61,10 +62,11 @@ const Curious = () => {
           <p className={'curious__body'}>
             o los 
             <span 
+              style={{marginLeft: '8px'}}
               className={'animated-text animated-text--20'}
               onClick={handleClickOne}
             >
-              Nonamers
+              NoNamers
             </span>
           </p>
           <p className={'curious__body last'}>
