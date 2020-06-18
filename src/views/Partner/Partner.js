@@ -5,9 +5,6 @@ import Footer from '../../components/Footer/Footer';
 
 import Carousel from '@brainhubeu/react-carousel';
 
-import image1 from '../../assets/images/image-one.png';
-
-
 import './Partner.styles.scss';
 
 const Partner = (props) => {
