@@ -13,6 +13,7 @@ import Partner from '../../views/Partner/Partner';
 
 import './routes.styles.scss'
 
+
 const routes = [
   { path: '/home',  Component: Home },
   { path: '/ser-un-aliado',  Component: WannaBePartner },
@@ -47,7 +48,7 @@ const Routes = () => {
 
       { routes.map(({ path, Component }) => (
         <Route key={path} exact path={path}>
-          {({ match }) => (
+          {({ match, ...props }) => (
             <CSSTransition
               in={match !== null}
               timeout={750}
@@ -61,7 +62,7 @@ const Routes = () => {
                 onOpenNav={handleOpenNav}
                 showNavbar={showNavbar}
               >
-                <Component onOpenNav={handleOpenNav}/>
+                <Component onOpenNav={handleOpenNav} {...props} />
               </Layout>
             </CSSTransition>
           )}
