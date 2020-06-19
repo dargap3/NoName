@@ -22,7 +22,8 @@ const Partner = (props) => {
         console.log(error);
       }
     };
-    fetchImages();    
+    fetchImages();
+    // eslint-disable-next-line   
   }, []);
 
   console.log(query)
