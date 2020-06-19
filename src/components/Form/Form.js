@@ -40,7 +40,7 @@ const Form = () => {
 
   const handleSubmit = event => {
     event.preventDefault()
-    sendMessage();
+    sendMessage()
     setFormData({
       nombre: '',
       sitioweb: '',
@@ -50,7 +50,8 @@ const Form = () => {
     setDisplay(!display);
   }
 
-  const sendMessage = () => {    
+  const sendMessage = async () => {
+    try {
       firestore.collection('mensajes').add({
         nombre: formData.nombre,
         website: formData.sitioweb,
@@ -58,8 +59,10 @@ const Form = () => {
         mensaje: formData.mensaje,
         fecha: new Date(),
       })
-  }
-
+    } catch(e) {
+      console.log('error', e);
+    }      
+    }
 
   return (
     <>

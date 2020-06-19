@@ -23,7 +23,7 @@ const Partner = (props) => {
       }
     };
     fetchImages();
-    // eslint-disable-next-line   
+    // eslint-disable-next-line 
   }, []);
 
   console.log(query)
