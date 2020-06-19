@@ -1,6 +1,9 @@
 .team__container {
     @media (min-width: 1000px) {
         display: flex;
+        .footer--light {
+            bottom: -25px;
+        }
     }
 }
 
