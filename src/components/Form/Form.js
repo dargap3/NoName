@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { firestore } from '../../firebase/firebase.utils';
 import { Picker } from "emoji-mart";
 
 import "emoji-mart/css/emoji-mart.css";
@@ -39,7 +40,7 @@ const Form = () => {
 
   const handleSubmit = event => {
     event.preventDefault()
-    /* sendEmail() */
+    sendMessage();
     setFormData({
       nombre: '',
       sitioweb: '',
@@ -48,6 +49,17 @@ const Form = () => {
     });
     setDisplay(!display);
   }
+
+  const sendMessage = () => {    
+      firestore.collection('mensajes').add({
+        nombre: formData.nombre,
+        website: formData.sitioweb,
+        numero: formData.celular,
+        mensaje: formData.mensaje,
+        fecha: new Date(),
+      })
+  }
+
 
   return (
     <>
@@ -98,7 +110,7 @@ const Form = () => {
               value={formData.mensaje || ''}
             ></textarea>
         </section>
-        
+
           { 
             emojiPickerState 
             && 
