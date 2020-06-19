@@ -30,7 +30,7 @@ const Home = ({ onOpenNav }) => {
         <p className={'home__body'}>
             Por eso no somos una sola empresa, somos todas las 
             empresas con las que trabajamos. Y como nos dimos 
-            cuenta que<br />
+            cuenta que
             <span 
               onClick={ () => setIsModalOpen(true) } 
               className={'animated-text animated-text--16'}
