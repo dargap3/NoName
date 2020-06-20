@@ -49,8 +49,9 @@ const Partners = () => {
       </section>
       <section className={'partners__slider'}>
         <Carousel
-          autoPlay={4000}
-          animationSpeed={3000}
+          autoPlay={5000}
+          animationSpeed={4000}
+          keepDirectionWhenDragging
           centered
           infinite
           slidesPerPage = { width >= 1000 ? 3 : 1}

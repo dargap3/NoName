@@ -39,8 +39,9 @@ const Form = () => {
   }
 
   const handleSubmit = event => {
-    event.preventDefault()
-    sendMessage()
+    event.preventDefault();
+    SetEmojiPicker(false);
+    sendMessage();
     setFormData({
       nombre: '',
       sitioweb: '',
@@ -171,8 +172,7 @@ const Form = () => {
             type="submit"
           >
             Enviar
-          </button>
-          
+          </button>          
         </section>
       </form>
       <div  className={`send-message ${ display ? '' : 'display' }`}>

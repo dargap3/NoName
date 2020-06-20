@@ -61,9 +61,10 @@ const Partner = (props) => {
         </a>
 				<div className={'carousel-container'}>
 					<Carousel
-		        autoPlay={6000}
+		        autoPlay={7000}
 		        animationSpeed={4000}
 		        infinite
+            keepDirectionWhenDragging
 		        slidesPerPage={ width > 1000 ? 2.5 : 1 }
 		        centered={false}       
 		        >
