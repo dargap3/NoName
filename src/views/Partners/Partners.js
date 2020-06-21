@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Carousel from '@brainhubeu/react-carousel';
 
-import Footer from '../../components/Footer/Footer';
 import Form from '../../components/Form/Form';
 import Modal from '../../components/Modal/Modal';
 
@@ -34,7 +33,7 @@ const Partners = () => {
       <section className={'partners'}>
         <p className={'partners__body'}>
           Los llamamos aliados 
-          <strong>porque lo que tenemos con ellos no son negocios sino conspiraciones</strong> 
+          <strong style={{margin: '0px 8px'}}>porque lo que tenemos con ellos no son negocios sino conspiraciones</strong> 
           para hacer país. Todos ellos nos han permitido meternos al lodo con ellos desde el día 1, y gracias a ellos #
           <strong>HacemosNoDecimos</strong> ⚒️
         </p> 
@@ -49,8 +48,9 @@ const Partners = () => {
       </section>
       <section className={'partners__slider'}>
         <Carousel
-          autoPlay={4000}
-          animationSpeed={3000}
+          autoPlay={5000}
+          animationSpeed={4000}
+          keepDirectionWhenDragging
           centered
           infinite
           slidesPerPage = { width >= 1000 ? 3 : 1}
@@ -62,7 +62,7 @@ const Partners = () => {
           <img src={carouselImage3} alt='logo noise' />
         </Carousel>
       </section>
-      <Footer />
+      
       <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={false}>
         <button className={'modal__close'} onClick={onCloseModal}>
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { animateScroll as scroll} from 'react-scroll';
 
-import Footer from '../../components/Footer/Footer';
 import Modal from '../../components/Modal/Modal';
 
 import './curious.styles.scss';
@@ -73,8 +72,14 @@ const Curious = () => {
             te lo puedan explicar mejor.
           </p>
       </section>
-      <Footer />
+      
       <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={false}>
+        <button className={'modal__close'} onClick={onCloseModal} style={{transform: 'scale(0.5)'}}>
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M29 2L5 27" stroke="black" strokeWidth="4"/>
+            <line x1="1.38919" y1="2.5612" x2="30.3892" y2="30.5612" stroke="black" strokeWidth="4"/>
+          </svg>
+        </button>
         <div className={'modal__content--home'}>
           <div className={'modal__text--home'} >
             <p>Una significa aumentar la velocidad y la otra, alcanzar el máximo potencial posible. <strong>¿Qué tal la vista allá arriba?</strong></p>

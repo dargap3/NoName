@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory} from 'react-router-dom';
 
-import Footer from '../../components/Footer/Footer';
-
 import Carousel from '@brainhubeu/react-carousel';
 
 import './Partner.styles.scss';
@@ -61,9 +59,10 @@ const Partner = (props) => {
         </a>
 				<div className={'carousel-container'}>
 					<Carousel
-		        autoPlay={6000}
+		        autoPlay={7000}
 		        animationSpeed={4000}
 		        infinite
+            keepDirectionWhenDragging
 		        slidesPerPage={ width > 1000 ? 2.5 : 1 }
 		        centered={false}       
 		        >
@@ -91,7 +90,6 @@ const Partner = (props) => {
 					 {query.mensaje}
 				</p>
     	</div>
-    	{width > 1000 && <Footer />}
     </section>
 	);
 }
