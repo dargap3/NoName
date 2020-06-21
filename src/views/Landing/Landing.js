@@ -27,13 +27,14 @@ const Landing = () => {
   }, [modalIsOpen] );
 
   return (
-    <div className={'page'} >
+    <div className={'container page'} >
       <section className={'landing'}>
         <div className={'landing__title'}>
           <img src={gifLogo} alt='gif__ok' className={'landing__gif'} />         
         </div>
       </section>
       <Footer />
+      
       <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={false}>
         <div className={'modal__content--landing'} >
         <button className={'modal__close'} onClick={handleClick}>

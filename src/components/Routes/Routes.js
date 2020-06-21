@@ -62,6 +62,7 @@ const Routes = () => {
                 onCloseNav={handleCloseNavbar}
                 onOpenNav={handleOpenNav}
                 showNavbar={showNavbar}
+                { ...props }
               >
                 <Component onOpenNav={handleOpenNav} {...props} />
               </Layout>

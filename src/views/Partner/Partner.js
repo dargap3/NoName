@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory} from 'react-router-dom';
 
-import Footer from '../../components/Footer/Footer';
-
 import Carousel from '@brainhubeu/react-carousel';
 
 import './Partner.styles.scss';
@@ -92,7 +90,6 @@ const Partner = (props) => {
 					 {query.mensaje}
 				</p>
     	</div>
-    	{width > 1000 && <Footer />}
     </section>
 	);
 }

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { animateScroll as scroll} from 'react-scroll';
 
-import Footer from '../../components/Footer/Footer';
 import Modal from '../../components/Modal/Modal';
 
 import './curious.styles.scss';
@@ -73,7 +72,7 @@ const Curious = () => {
             te lo puedan explicar mejor.
           </p>
       </section>
-      <Footer />
+      
       <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={false}>
         <button className={'modal__close'} onClick={onCloseModal} style={{transform: 'scale(0.5)'}}>
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

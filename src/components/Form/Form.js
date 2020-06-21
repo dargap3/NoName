@@ -62,7 +62,7 @@ const Form = () => {
       })
     } catch(e) {
       console.log('error', e);
-    }      
+    }
     }
 
   return (

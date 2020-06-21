@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { animateScroll as scroll} from 'react-scroll';
 
-import Footer from '../../components/Footer/Footer';
-
 import './Team.styles.scss';
 
 const Team = () => {
@@ -13,8 +11,7 @@ const Team = () => {
     const fetchImages = async () => {
       try {
         const response = await fetch('https://website-noname.firebaseio.com/Equipo.json');
-        const data = await response.json();
-        
+        const data = await response.json();        
         setQuery(data);
       } catch (error) {
         console.log(error);
@@ -25,15 +22,6 @@ const Team = () => {
   console.log(query)
 
   const history = useHistory();
-
-  const [ width, setWidth ] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);  //componentDidMount y componentDidUpdate
-    return () => {
-      window.removeEventListener('resize', handleResize); // componentWillUnMount
-    }
-  }, [width]);
 
   return (
     <div className={'team__container'}>  	 
@@ -55,7 +43,7 @@ const Team = () => {
               scroll.scrollToTop();
               setTimeout(() => history.push(`/equipo/${id}`), 1000);
             } else {
-              history.push(`/equipo/${id}`); 
+              history.push(`/equipo/${id}`);
             }
           }
             return (
@@ -65,7 +53,6 @@ const Team = () => {
             )
           })}
       </section>
-      {width > 1000 && <Footer />}
     </div>
   );
 }

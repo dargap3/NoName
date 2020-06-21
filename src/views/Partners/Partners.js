@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Carousel from '@brainhubeu/react-carousel';
 
-import Footer from '../../components/Footer/Footer';
 import Form from '../../components/Form/Form';
 import Modal from '../../components/Modal/Modal';
 
@@ -63,7 +62,7 @@ const Partners = () => {
           <img src={carouselImage3} alt='logo noise' />
         </Carousel>
       </section>
-      <Footer />
+      
       <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={false}>
         <button className={'modal__close'} onClick={onCloseModal}>
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
