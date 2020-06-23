@@ -47,23 +47,23 @@ const Form = () => {
       sitioweb: '',
       celular: '',
       mensaje: '',
-    });
-    setDisplay(!display);
+    });    
   }
 
   const sendMessage = async () => {
     try {
-      firestore.collection('mensajes').add({
+      await firestore.collection('mensajes').add({
         nombre: formData.nombre,
         website: formData.sitioweb,
         numero: formData.celular,
         mensaje: formData.mensaje,
         fecha: new Date(),
-      })
-    } catch(e) {
-      console.log('error', e);
+      });
+      setDisplay(!display);
+    } catch(error) {
+      console.log('error', error);
     }
-    }
+  }
 
   return (
     <>
