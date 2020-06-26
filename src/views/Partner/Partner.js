@@ -5,7 +5,7 @@ import Carousel from '@brainhubeu/react-carousel';
 
 import './Partner.styles.scss';
 
-const Partner = (props) => {
+const Partner = (props) => { 
   const partnerId = props.location.pathname.split('/')[2];
   const [query, setQuery] = useState([]); 
 
@@ -44,7 +44,7 @@ const Partner = (props) => {
     <section className={'partner-container'}>
     	<div className={'partner-signature'}>
     		<img src={query.imagen0} alt={'firma NoNamer'} />
-    		<div className={'arrow-back'} onClick={ () => history.goBack()}>
+    		<div className={'arrow-back'} onClick={ () => history.goBack() } >
 	        <svg width="71" height="42" viewBox="0 0 71 42" fill="none" xmlns="http://www.w3.org/2000/svg">
 	          <path d="M71 21H17" stroke="#F4F3F1" stroke-width="9"/>
 	          <path d="M34 4L9 21L34 38" stroke="white" stroke-width="9"/>
