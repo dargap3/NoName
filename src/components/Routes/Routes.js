@@ -46,7 +46,7 @@ const Routes = () => {
 
       { routes.map(({ path, Component }) => (
         <Route key={path} exact path={path}>
-          {({ match, ...props }) => (
+          {({ match }) => (
             <CSSTransition
               in={match !== null}
               timeout={750}
@@ -59,9 +59,8 @@ const Routes = () => {
                 onCloseNav={handleCloseNavbar}
                 onOpenNav={handleOpenNav}
                 showNavbar={showNavbar}
-                { ...props }
               >
-                <Component onOpenNav={handleOpenNav} {...props} />
+                <Component onOpenNav={handleOpenNav}/>
               </Layout>
             </CSSTransition>
           )}
