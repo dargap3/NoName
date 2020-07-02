@@ -16,7 +16,6 @@ const customStyles = {
     borderRadius: 0,
     padding: 0,
     border: 'none',
-    overflow: 'hidden',
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.75)',
