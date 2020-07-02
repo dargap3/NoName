@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+
+import { Context } from '../../context/Context';
 
 import Modal from '../../components/Modal/Modal';
-
-import jamesFranco from '../../assets/gif/James Franco.gif'
 
 import './home.styles.scss';
 
 const Home = ({ onOpenNav }) => {
+  const { modalHome } = useContext(Context);
+
   const [modalIsOpen, setIsModalOpen] = useState(false);
   const onCloseModal = () => setIsModalOpen(false);
-
+  
   return (
     <>    
       <section className={'home'} >
@@ -57,11 +59,11 @@ const Home = ({ onOpenNav }) => {
         </button>
         <div className={'modal__content--home'}>
           <div className={'modal__text--home'} >
-            <h1>BUENO, NO IMPOSIBLE. EN MÉXICO REGISTRARON A UNA MUJER CON MÁS DE 30 NOMBRES:</h1>
-            <p>"Maria de la Asunción Luisa Gonzaga Guadalupe Refugio Luz Loreto Salud Altagracia Carmen Matilde Josefa Ignacia Francisca Solano Vicenta Ferrer Antonia Ramona Agustina Carlota Inocencia Federica"</p>
+            <h1>{modalHome?.texto[0]}</h1>
+            <p>{modalHome?.texto[1]}</p>
           </div>
           <div className={'modal__img--home'}>
-            <img src={jamesFranco} alt=""/>
+            <img src={modalHome?.gif} alt={modalHome?.alt} />
           </div>
         </div>          
       </Modal>

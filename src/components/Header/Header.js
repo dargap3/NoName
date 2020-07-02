@@ -15,7 +15,7 @@ const Header = ({ path, onCloseNav, onOpenNav, showNavbar }) => {
     <button onClick={onOpenNav} className={'nav-toggle'} >
       <img src={hamburger} alt='button toggle' />
     </button>    
-    { path !== '/equipo/:partnerId' && 
+    { path !== '/equipo/:noNamerId' && 
       <div className={'header__logo'}>
         <img src={logo} alt='logo noname'/>
       </div>

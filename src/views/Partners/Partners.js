@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Carousel from '@brainhubeu/react-carousel';
+
+import { Context } from '../../context/Context';
 
 import Form from '../../components/Form/Form';
 import Modal from '../../components/Modal/Modal';
@@ -7,14 +9,9 @@ import Modal from '../../components/Modal/Modal';
 import '@brainhubeu/react-carousel/lib/style.css';
 import './Partners.styles.scss';
 
-import carouselImage1 from '../../assets/logo/logo-carpinteria.png'
-import carouselImage2 from '../../assets/logo/logo-hierbas.png'
-import carouselImage3 from '../../assets/logo/logo-noise.png'
-import carouselImage4 from '../../assets/logo/logo-siembra.png'
-import carouselImage5 from '../../assets/logo/logo-true.png'
-
-
 const Partners = () => {
+  const { partners } = useContext(Context);
+
   const [ width, setWidth ] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -55,11 +52,15 @@ const Partners = () => {
           infinite
           slidesPerPage = { width >= 1000 ? 3 : 1}
         >
-          <img src={carouselImage5} alt='logo true' />
-          <img src={carouselImage1} alt='logo la carpinteria' />
-          <img src={carouselImage2} alt='logo taller de hierbas' />
-          <img src={carouselImage4} alt='logo siembraViva' />
-          <img src={carouselImage3} alt='logo noise' />
+          {
+            partners.map( (partner) => (
+              <img 
+                key={partner.id}
+                src={partner.logo}
+                alt={`${partner.nombre} logo`} 
+              />
+            ))
+          }   
         </Carousel>
       </section>
       
