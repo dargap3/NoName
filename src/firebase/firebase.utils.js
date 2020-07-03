@@ -14,6 +14,16 @@ const config = {
 
 firebase.initializeApp(config);
 
+export const convertCollectionsSnapshotToMap = collections => {
+  const transformedCollection = collections.docs.map( doc => (
+    {
+      id: doc.id,
+      ...doc.data(),
+    })
+   )
+  return transformedCollection;
+};
+
 export const firestore = firebase.firestore();
 
 export default firebase;

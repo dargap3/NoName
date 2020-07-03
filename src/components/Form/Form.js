@@ -6,9 +6,10 @@ import "emoji-mart/css/emoji-mart.css";
 import './form.styles.scss';
 
 const Form = () => {
-  const initialFormData = {
+  const INITIALFORMDATA = {
       nombre: '',
       sitioweb: '',
+      email: '',
       celular: '',
       mensaje: '',
   }
@@ -22,7 +23,7 @@ const Form = () => {
     }
   }, [width]);
 
-  const [formData, setFormData] = useState(initialFormData);
+  const [formData, setFormData] = useState(INITIALFORMDATA);
   const [emojiPickerState, SetEmojiPicker] = useState(false);
   const [display, setDisplay] = useState(false);
 
@@ -45,9 +46,10 @@ const Form = () => {
     setFormData({
       nombre: '',
       sitioweb: '',
+      email: '',
       celular: '',
       mensaje: '',
-    });    
+    });   
   }
 
   const sendMessage = async () => {
@@ -55,6 +57,7 @@ const Form = () => {
       await firestore.collection('mensajes').add({
         nombre: formData.nombre,
         website: formData.sitioweb,
+        email: formData.email,
         numero: formData.celular,
         mensaje: formData.mensaje,
         fecha: new Date(),
@@ -67,6 +70,30 @@ const Form = () => {
 
   return (
     <>
+    {
+      display 
+      ?
+      <div  className={`send-message {/* ${ display ? '' : 'display' } */}`}>
+        <h3>¡Gracias! 
+          <span
+            style={{marginLeft: '8px'}}
+            role='img' 
+            aria-label='horn celebration'
+          >
+            🎉
+          </span>
+        </h3>
+        <p>Nuestro equipo de Desarrollo de Negocios se pondrá en contacto contigo lo antes posible.
+          <span
+              style={{marginLeft: '8px'}}
+              role='img' 
+              aria-label='people running'
+            >
+            🏃‍♀️🏃‍♂️💨
+          </span>
+        </p>
+      </div>
+      :
       <form onSubmit={handleSubmit}>
         <section className={'form__contain'}>
           <p>
@@ -77,6 +104,7 @@ const Form = () => {
               type="text"
               name="nombre"
               id='nombre'
+              required
               onChange={updateInput}
               value={formData.nombre || ''}
             />
@@ -85,11 +113,22 @@ const Form = () => {
             Website o instagram de tu empresa:
           </label>
             <input
-              type="url"
+              type="texto"
               name="sitioweb"
               id='sitio web o instagram'
               onChange={updateInput}
               value={formData.sitioweb || ''}
+            />
+            <label htmlFor='sitio web o instagram'>
+            Tu correo:
+          </label>
+            <input
+              type="email"
+              name="email"
+              id='email'
+              required
+              onChange={updateInput}
+              value={formData.email || ''}
             />
           <label htmlFor="celular">
             Tu número de contacto:
@@ -109,6 +148,7 @@ const Form = () => {
               name="mensaje"
               id='mensaje'
               rows='5'
+              required
               onChange={updateInput}
               onClick={ event => {SetEmojiPicker(false)}}
               value={formData.mensaje || ''}
@@ -175,26 +215,10 @@ const Form = () => {
           </button>          
         </section>
       </form>
-      <div  className={`send-message ${ display ? '' : 'display' }`}>
-        <h3>¡Ya estamos en contacto! 
-          <span
-            style={{marginLeft: '8px'}}
-            role='img' 
-            aria-label='horn celebration'
-          >
-            🎉
-          </span>
-        </h3>
-        <p>Todas las semanas revisamos nuevas empresas que están buscando escalar. Te aseguramos que haremos todo lo posible por ponernos en contacto contigo lo antes posible.
-          <span
-              style={{marginLeft: '8px'}}
-              role='img' 
-              aria-label='people running'
-            >
-            🏃‍♀️🏃‍♂️💨
-          </span>
-        </p>
-      </div>
+
+    }
+      
+      
     </>
   );
 }

@@ -1,4 +1,4 @@
-.team__container {
+.nonamers__container {
     @media (min-width: 1000px) {
         display: flex;
         .footer--light {
@@ -7,7 +7,7 @@
     }
 }
 
-.team {
+.nonamers {
     padding: 0 0 20px 48px;
     &__body {
         width: 80%;
@@ -22,7 +22,7 @@
         }
     }
     @media (min-width: 1000px) {
-        .team__body {
+        .nonamers__body {
             width: 352px;
             &:first-child {
                 font-size: 48px;
@@ -32,7 +32,7 @@
     }
 }
 
-.profile-team {
+.profile-nonamers {
     width: 100%;
     margin: 2px;
     display: flex;

@@ -6,24 +6,21 @@ import Layout from '../Layout/Layout'
 import Landing from '../../views/Landing/Landing';
 import Home from '../../views/Home/Home';
 import WannaBePartner from '../../views/WannaBePartner/WannaBePartner';
-import Team from '../../views/Team/Team';
+import NoNamers from '../../views/NoNamers/NoNamers';
 import Partners from '../../views/Partners/Partners';
 import Curious from '../../views/Curious/Curious';
-import Partner from '../../views/Partner/Partner';
+import NoNamer from '../../views/NoNamer/NoNamer';
 
-import './routes.styles.scss'
-
+import './routes.styles.scss';
 
 const routes = [
   { path: '/home',  Component: Home },
   { path: '/ser-un-aliado',  Component: WannaBePartner },
-  { path: '/equipo', Component: Team },
+  { path: '/equipo', Component: NoNamers },
   { path: '/conocer-los-aliados',  Component: Partners },
   { path: '/soy-curioso',  Component: Curious },
-  { path: '/equipo/:partnerId',  Component: Partner }
+  { path: '/equipo/:noNamerId',  Component: NoNamer }
 ]
-
-
 
 const Routes = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -49,7 +46,7 @@ const Routes = () => {
 
       { routes.map(({ path, Component }) => (
         <Route key={path} exact path={path}>
-          {({ match, ...props }) => (
+          {({ match }) => (
             <CSSTransition
               in={match !== null}
               timeout={750}
@@ -62,9 +59,8 @@ const Routes = () => {
                 onCloseNav={handleCloseNavbar}
                 onOpenNav={handleOpenNav}
                 showNavbar={showNavbar}
-                { ...props }
               >
-                <Component onOpenNav={handleOpenNav} {...props} />
+                <Component onOpenNav={handleOpenNav}/>
               </Layout>
             </CSSTransition>
           )}

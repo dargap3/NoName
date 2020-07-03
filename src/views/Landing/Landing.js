@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+
+import { Context } from '../../context/Context';
 
 import Footer from '../../components/Footer/Footer';
 import Modal from '../../components/Modal/Modal';
@@ -8,10 +10,12 @@ import './landing.styles.scss';
 import gifLogo from '../../assets/logo/WhatsApp-Video-2020-05-29-at-9.13.56-AM.gif';
 
 const Landing = () => {
+  const { modalInicio } = useContext(Context);
+
   const [modalIsOpen, setIsModalOpen] = useState(false);
   const onCloseModal = () => setIsModalOpen(false);
-  const history = useHistory();
 
+  const history = useHistory();
   const handleClick = () => {
     onCloseModal();
     history.push("/home"); 
@@ -36,16 +40,23 @@ const Landing = () => {
       <Footer />
       
       <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={false}>
-        <div className={'modal__content--landing'} >
+        <div
+          className={'modal__content--landing'}
+          style={{
+            backgroundImage: `url('${modalInicio?.["imagen de fondo"]}')`,
+            backgroundSize: 'cover',
+          }} 
+        >
         <button className={'modal__close'} onClick={handleClick}>
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M29 2L5 27" stroke="black" strokeWidth="4"/>
             <line x1="1.38919" y1="2.5612" x2="30.3892" y2="30.5612" stroke="black" strokeWidth="4"/>
           </svg>
         </button>
-          <p>Para nosotros este no es el mes de la igualdad, porque no somos iguales. Celebramos la diferencia porque es ahí donde están las nuevas respuestas.</p>
-          <p>#HappyPride <span role='img' aria-labelledby='jsx-a11y/accessible-emoji'>🏳️‍🌈</span></p>
-          <p>En NoName #HacemosNoDecimos Por eso creamos esta experiencia, para que le encuentres tu propio significado a nuestro nombre sin nombre.</p>
+          <p>{modalInicio?.texto[0]}</p>
+          <p>{`${modalInicio?.texto[1]} `}
+            <span role='img' aria-labelledby='jsx-a11y/accessible-emoji'>{modalInicio?.texto[2]}</span></p>
+          <p>{modalInicio?.texto[3]}</p>
           <Link to='/home' onClick={onCloseModal} style={{ textDecoration: 'none' }}>
             ok, vamos! 
             <svg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg">

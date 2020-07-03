@@ -1,15 +1,18 @@
 import React from 'react';
 
+import { ContextProvider } from '../../context/Context';
+
 import MouseTracker from '../MouseTracker/MouseTracker';
 import Routes from '../Routes/Routes';
-
 
 import './App.scss';
 
 const App = () => {
   return (
   <>
-    <Routes />
+    <ContextProvider>
+      <Routes />
+    </ContextProvider>
     <MouseTracker />
   </>
 )};
