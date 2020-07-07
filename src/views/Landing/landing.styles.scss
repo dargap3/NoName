@@ -24,9 +24,9 @@
     text-align: right;
     font-size: 18px;
     line-height: 20px;
-    max-width: 320px;
+    width: 341px;
+    height: 360px;
     padding: 10px 35px 35px 17px;
-    background-image: url('../../assets/images/fondo_Mesa\ de\ trabajo\ 1-21\ 1.png');
     p+p {
         padding-top: 20px;
     }
@@ -44,5 +44,11 @@
             margin-left: 15px;
             margin-right: -15px;
         }
+    }
+    .modal__link--landing {
+        text-decoration: none;
+        position: fixed;
+        right: 1.5em;
+        bottom: 1em;
     }
 }
