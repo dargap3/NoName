@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import parse from 'html-react-parser';
 
 import { Context } from '../../context/Context';
 
@@ -59,8 +60,15 @@ const Home = ({ onOpenNav }) => {
         </button>
         <div className={'modal__content--home'}>
           <div className={'modal__text--home'} >
-            <h1>{modalHome?.texto[0]}</h1>
-            <p>{modalHome?.texto[1]}</p>
+            {
+              parse (
+                `
+                <h1>${modalHome?.texto[0]}</h1>
+                <p>${modalHome?.texto[1]}</p>
+                `
+              )
+            }
+            
           </div>
           <div className={'modal__img--home'}>
             <img src={modalHome?.gif} alt={modalHome?.alt} />

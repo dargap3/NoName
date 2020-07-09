@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import parse from 'html-react-parser';
 
 import { Context } from '../../context/Context'; 
 
@@ -53,10 +54,16 @@ const Landing = () => {
             <line x1="1.38919" y1="2.5612" x2="30.3892" y2="30.5612" stroke="black" strokeWidth="4"/>
           </svg>
         </button>
-          <p>{modalInicio?.texto[0]}</p>
-          <p>{`${modalInicio?.texto[1]} `}
-            <span role='img' aria-labelledby='jsx-a11y/accessible-emoji'>{modalInicio?.texto[2]}</span></p>
-          <p>{modalInicio?.texto[3]}</p>
+          {
+            parse (
+              `<p>${modalInicio?.texto[0]}</p>
+              <p>${modalInicio?.texto[1]}
+                <span role='img' aria-labelledby='jsx-a11y/accessible-emoji'>${modalInicio?.texto[2]}</span>
+              </p>
+              <p>${modalInicio?.texto[3]}</p>
+              `
+            )
+          }
           <Link 
             to='/home' 
             onClick={onCloseModal}
