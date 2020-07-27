@@ -11,7 +11,7 @@ import './landing.styles.scss';
 import gifLogo from '../../assets/logo/WhatsApp-Video-2020-05-29-at-9.13.56-AM.gif';
 
 const Landing = () => {
-  const { modalInicio } = useContext(Context);
+  const { modalInicio } = useContext(Context); 
 
   const [modalIsOpen, setIsModalOpen] = useState(false);
   const onCloseModal = () => setIsModalOpen(false);
@@ -35,7 +35,7 @@ const Landing = () => {
     <div className={'container page'} >
       <section className={'landing'}>
         <div className={'landing__title'}>
-          <img src={gifLogo} alt='gif__ok' className={'landing__gif'} />         
+          <img src={gifLogo} alt='gif' className={'landing__gif'} />         
         </div>
       </section>
       <Footer />
@@ -48,12 +48,13 @@ const Landing = () => {
             backgroundSize: 'cover',
           }}
         >
-        <button className={'modal__close'} onClick={handleClick}>
+        <button style={{marginLeft: '95%'}} className={'modal__close'} onClick={handleClick}>
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M29 2L5 27" stroke="black" strokeWidth="4"/>
             <line x1="1.38919" y1="2.5612" x2="30.3892" y2="30.5612" stroke="black" strokeWidth="4"/>
           </svg>
         </button>
+        <div className={'modal__text--landing'}>
           {
             parse (
               `<p>${modalInicio?.texto[0]}</p>
@@ -64,6 +65,7 @@ const Landing = () => {
               `
             )
           }
+        </div>
           <Link 
             to='/home' 
             onClick={onCloseModal}
