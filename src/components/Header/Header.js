@@ -11,7 +11,7 @@ import './header.styles.scss';
 
 const Header = ({ path, onCloseNav, onOpenNav, showNavbar }) => {
   return (
-  <header className={'header'}>    
+  <header className={'header'}>
     <button onClick={onOpenNav} className={'nav-toggle'} >
       <img src={hamburger} alt='button toggle' />
     </button>    
@@ -26,10 +26,8 @@ const Header = ({ path, onCloseNav, onOpenNav, showNavbar }) => {
       classNames="alert"
       unmountOnExit
     >
-      <Navbar
-        onCloseNav={onCloseNav}
-      />
-      </CSSTransition>
+      <Navbar onCloseNav={onCloseNav} />
+    </CSSTransition>
   </header>
 );
 }

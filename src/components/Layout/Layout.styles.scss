@@ -17,8 +17,11 @@
         animation: breathing20 3s ease-in-out alternate infinite;
         transform-origin: left center;
     }
-    @media (min-width: 1000px) {
-        margin-top: 175px;
+}
+
+@media (min-width: 750px) {
+    .main {
+        /* margin-top: 175px; */
         padding-bottom: 50px;
         width: 70%;
         .animated-text {
@@ -26,6 +29,9 @@
             transform-origin: left center;
             margin-left: 8px;
         }
+    }
+    .header+.main {
+        padding-left: 5%;
     }
 }
 

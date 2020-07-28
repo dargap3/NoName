@@ -1,6 +1,5 @@
 .wanna-be-partner {
-    padding-top: 26px;
-    padding: 0 0 42px 48px;
+    padding-bottom: 42px;
     display: flex;
     flex-direction: column;
     height: 70%;
@@ -21,8 +20,9 @@
             text-decoration: none;
         }
     }
-    @media (min-width: 1000px) {
+    @media (min-width: 750px) {
         .wanna-be-partner__body {
+            width: 80%;
             max-width: 580px;
             line-height: 20px;
         }
@@ -35,10 +35,6 @@
             line-height: 30px;
         }
     }
-}
-
-.last {
-    padding-bottom: 50px;
 }
 
 .form__container {

@@ -97,9 +97,14 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    .header-main-container {
+        margin-left: 12%;
+    }
     @media (min-width: 750px) {
-        .hmcontainer {
+        .header-main-container {
             display: flex;
+            margin-left: 5%;
+            margin-top: 24vh;
         }
     }
 }

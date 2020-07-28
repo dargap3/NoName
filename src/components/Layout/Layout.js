@@ -21,7 +21,7 @@ const Layout = ({ children, path, onOpenNav, onCloseNav, showNavbar }) => {
 
 	return (
       <div className={'container page'}>
-        <div className={'hmcontainer'}>
+        <div className={'header-main-container'}>
           <Header
             path={path}
             onCloseNav={onCloseNav}

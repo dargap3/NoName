@@ -1,31 +1,32 @@
 .header {
-    margin: 65px 0 50px 48px;
+    margin: 65px 0 50px 0;
     .nav-toggle {
         background-color: #000;
         border: none;
         outline: none;
-        @media (min-width: 1000px) {
-            position: absolute;
-            right: 70px;
-        }
     }
     &__logo {
         margin-top: 50px;
-        min-width: 295px;
-        max-width: 320px;
+        max-width: 360px;
         img {
             width: 90%;
         }
-        @media (min-width: 1000px) {
+    }
+    @media (min-width: 750px) {
+        margin-top: 0;
+        width: 30%;
+        .nav-toggle {
+            position: fixed;
+            top: 8%;
+            right: 5%;
+        }
+        &__logo {
+            margin-top: 0;
             max-width: 360px;
             img {
-                margin-top: 60px;
                 width: 100%;
             }
         }
-    }
-    @media (min-width: 1000px) {
-        width: 30%;
     }
 }
 
