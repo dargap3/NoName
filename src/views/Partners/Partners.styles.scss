@@ -1,5 +1,5 @@
 .partners {
-    padding: 0 0 20px 48px;
+    padding-bottom: 20px;
     &__body {
         width: 275px;
         padding-bottom: 15px;
@@ -7,27 +7,26 @@
             padding-bottom: 1px;
         }
     }
-    &__slider {
+    &__carousel {
         display: flex;
         align-items: center;
         width: 265px;
         height: 236px;
-        margin: 0 0 100px 48px;
+        margin-bottom: 100px;
         img {
             max-width: 100%;
-            max-height: auto;
         }
     }
-    @media (min-width: 1000px) {
+    @media (min-width: 750px) {
         &__body {
             width: 50%;
             line-height: 22px;
         }
-        &__slider {
+        &__carousel {
             margin-bottom: 20px;
             width: 87.5%;
-            img {
-                padding-left: 10px;
+            li.BrainhubCarouselItem+li.BrainhubCarouselItem {
+                margin-left: 10px !important;
             }
         }
     }

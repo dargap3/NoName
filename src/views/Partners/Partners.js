@@ -9,7 +9,7 @@ import Modal from '../../components/Modal/Modal';
 import '@brainhubeu/react-carousel/lib/style.css';
 import './Partners.styles.scss';
 
-const Partners = () => {
+const Partners = () => { 
   const { partners } = useContext(Context);
 
   const [ width, setWidth ] = useState(window.innerWidth);
@@ -43,14 +43,14 @@ const Partners = () => {
           </span> 
         </p>
       </section>
-      <section className={'partners__slider'}>
+      <section className={'partners__carousel'}>
         <Carousel
           autoPlay={5000}
           animationSpeed={4000}
           keepDirectionWhenDragging
           centered
           infinite
-          slidesPerPage = { width >= 1000 ? 3 : 1}
+          slidesPerPage = { width >= 1000 ? 3 : width >= 750 ? 2 : 1}
         >
           {
             partners.map( (partner) => (

@@ -16,13 +16,12 @@
         margin-top: 0;
         width: 30%;
         .nav-toggle {
-            position: fixed;
+            position: absolute;
             top: 8%;
             right: 5%;
         }
         &__logo {
             margin-top: 0;
-            max-width: 360px;
             img {
                 width: 100%;
             }

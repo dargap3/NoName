@@ -44,7 +44,7 @@ const Landing = () => {
         <div
           className={'modal__content--landing'}
           style={{
-            backgroundImage: `url('${modalInicio?.["imagen de fondo"]}')`,
+            backgroundImage: `url(${modalInicio?.["imagen de fondo"]})`,
             backgroundSize: 'cover',
           }}
         >
