@@ -28,7 +28,10 @@ const Layout = ({ children, path, onOpenNav, onCloseNav, showNavbar }) => {
             onOpenNav={onOpenNav}
             showNavbar={showNavbar}
           /> 
-          <main className={'main'}>
+          <main className={`
+            ${path === '/equipo/:noNamerId' ? 'main--nonamer' : ''}
+            main
+          `}>
             { children }
           </main>
         </div>

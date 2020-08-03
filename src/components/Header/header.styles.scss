@@ -12,7 +12,10 @@
             width: 90%;
         }
     }
-    @media (min-width: 750px) {
+}
+
+@media (min-width: 750px) {
+    .header {
         margin-top: 0;
         width: 30%;
         .nav-toggle {
@@ -26,6 +29,9 @@
                 width: 100%;
             }
         }
+    }
+    .header--nonamer {
+        width: 0;
     }
 }
 

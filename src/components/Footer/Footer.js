@@ -10,7 +10,8 @@ const Footer = ({inverted}) => (
   <footer className={`
     ${inverted ? 'footer--dark' : '' }
     footer
-  `}>
+  `}
+  >
     <address className={'footer__text'}>
       <p>Edificio Buró 4.0 ·</p>
       <p>Carrera 43B # 1A Sur-7 ·</p>

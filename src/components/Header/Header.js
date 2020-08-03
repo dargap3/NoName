@@ -11,7 +11,11 @@ import './header.styles.scss';
 
 const Header = ({ path, onCloseNav, onOpenNav, showNavbar }) => {
   return (
-  <header className={'header'}>
+  <header className={`
+    ${path === '/equipo/:noNamerId' ? 'header--nonamer' : ''}
+    header
+    `}
+  >
     <button onClick={onOpenNav} className={'nav-toggle'} >
       <img src={hamburger} alt='button toggle' />
     </button>    
