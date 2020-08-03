@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .main {
     .animated-text {
         border-bottom: 1px #fff solid;
@@ -6,15 +13,24 @@
         font-weight: bold;
     }
     .animated-text--16 {
+        -webkit-animation: breathing16 3s ease-in-out alternate infinite;
         animation: breathing16 3s ease-in-out alternate infinite;
+        -webkit-transform-origin: left center;
+        -ms-transform-origin: left center;
         transform-origin: left center;
     }
     .animated-text--18 {
+        -webkit-animation: breathing18 3s ease-in-out alternate infinite;
         animation: breathing18 3s ease-in-out alternate infinite;
+        -webkit-transform-origin: left center;
+        -ms-transform-origin: left center;
         transform-origin: left center;
     }
     .animated-text--20 {
+        -webkit-animation: breathing20 3s ease-in-out alternate infinite;
         animation: breathing20 3s ease-in-out alternate infinite;
+        -webkit-transform-origin: left center;
+        -ms-transform-origin: left center;
         transform-origin: left center;
     }
 }
@@ -24,7 +40,10 @@
         padding-bottom: 50px;
         width: 70%;
         .animated-text {
+            -webkit-animation: breathing18 3s ease-in-out alternate infinite;
             animation: breathing18 3s ease-in-out alternate infinite;
+            -webkit-transform-origin: left center;
+            -ms-transform-origin: left center;
             transform-origin: left center;
             margin-left: 8px;
         }
@@ -40,20 +59,44 @@
     }
 }
 
+@-webkit-keyframes breathing16 {
+    100% {
+        -webkit-transform: scale(1.23);
+        transform: scale(1.23);
+    }
+}
+
 @keyframes breathing16 {
     100% {
+        -webkit-transform: scale(1.23);
         transform: scale(1.23);
+    }
+}
+
+@-webkit-keyframes breathing18 {
+    100% {
+        -webkit-transform: scale(1.39);
+        transform: scale(1.39);
     }
 }
 
 @keyframes breathing18 {
     100% {
+        -webkit-transform: scale(1.39);
         transform: scale(1.39);
+    }
+}
+
+@-webkit-keyframes breathing20 {
+    100% {
+        -webkit-transform: scale(1.54);
+        transform: scale(1.54);
     }
 }
 
 @keyframes breathing20 {
     100% {
+        -webkit-transform: scale(1.54);
         transform: scale(1.54);
     }
 }

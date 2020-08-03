@@ -63,6 +63,7 @@ const NoNamer = () => {
 		        infinite
             keepDirectionWhenDragging
 		        slidesPerPage={ width >= 1200 ? 2.5 : width >= 1000 ? 2 : 1}
+		        centered={false}   
 		        >
 		        <div className={'carousel__picture'}>
 					  	<img src={noNamer?.carrusel?.[0]} alt='foto NoNamer' className={'image-carousel'}/>

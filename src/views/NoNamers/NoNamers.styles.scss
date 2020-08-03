@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .nonamers__container {
     .nonamers {
         padding-bottom: 20px;
@@ -18,7 +25,10 @@
     .profile-nonamers {
         width: 100%;
         max-width: 360px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         margin-right: 50px;
         div {
@@ -45,6 +55,8 @@
         }
     }
     @media (min-width: 1200px) {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 }

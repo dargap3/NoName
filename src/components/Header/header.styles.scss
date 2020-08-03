@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .header {
     margin: 65px 0 50px 0;
     .nav-toggle {
@@ -36,19 +43,35 @@
 }
 
 .alert-enter {
+    -webkit-transform: translateX(200%);
+    -ms-transform: translateX(200%);
     transform: translateX(200%);
 }
 
 .alert-enter-active {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
     transform: translateX(0);
+    -webkit-transition: -webkit-transform 500ms;
+    transition: -webkit-transform 500ms;
+    -o-transition: transform 500ms;
     transition: transform 500ms;
+    transition: transform 500ms, -webkit-transform 500ms;
 }
 
 .alert-exit {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
     transform: translateX(0);
 }
 
 .alert-exit-active {
+    -webkit-transform: translateX(200%);
+    -ms-transform: translateX(200%);
     transform: translateX(200%);
+    -webkit-transition: -webkit-transform 500ms;
+    transition: -webkit-transform 500ms;
+    -o-transition: transform 500ms;
     transition: transform 500ms;
+    transition: transform 500ms, -webkit-transform 500ms;
 }

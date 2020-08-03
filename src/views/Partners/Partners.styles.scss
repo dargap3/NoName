@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .partners {
     padding-bottom: 20px;
     &__body {
@@ -8,7 +15,11 @@
         }
     }
     &__carousel {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         width: 265px;
         height: 236px;
@@ -33,6 +44,8 @@
 }
 
 .modal__close {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-left: 85%;
     svg {
