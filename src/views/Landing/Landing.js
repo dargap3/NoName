@@ -29,7 +29,7 @@ const Landing = () => {
     return () => {
       clearTimeout(setTimeOut);
     }
-  }, [] );
+  }, [modalIsOpen] );
 
   return (
     <div className={'container page'} >
