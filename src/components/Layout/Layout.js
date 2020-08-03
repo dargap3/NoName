@@ -28,15 +28,13 @@ const Layout = ({ children, path, onOpenNav, onCloseNav, showNavbar }) => {
             onOpenNav={onOpenNav}
             showNavbar={showNavbar}
           /> 
-          <main className={`
-            ${path === '/equipo/:noNamerId' ? 'main--nonamer' : ''}
-            main
-          `}>
+          <main 
+            className={`${path === '/equipo/:noNamerId' ? 'main--nonamer' : ''} main`}>
             { children }
           </main>
         </div>
         {
-          width < 1200 && (pathname === '/equipo' || pathname === `/equipo/${noNamerId}`)  ? null : <Footer />
+          width < 1000 && (pathname === '/equipo' || pathname === `/equipo/${noNamerId}`)  ? null : <Footer />
         }
       </div>
 	);
