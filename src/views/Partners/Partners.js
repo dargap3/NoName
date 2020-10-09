@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import Carousel from '@brainhubeu/react-carousel';
+import useWidth from '../../hooks/useWidth/useWidth';
 
 import { Context } from '../../context/Context';
 
@@ -12,15 +13,7 @@ import './Partners.styles.scss';
 const Partners = () => { 
   const { partners } = useContext(Context);
 
-  const [ width, setWidth ] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);  //componentDidMount y componentDidUpdate
-    return () => {
-      window.removeEventListener('resize', handleResize); // componentWillUnMount
-    }
-  });
+  const width = useWidth();
 
   const [modalIsOpen, setIsModalOpen] = useState(false);
   const onCloseModal = () => setIsModalOpen(false);

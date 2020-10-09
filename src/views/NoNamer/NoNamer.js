@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import parse from 'html-react-parser';
+import useWidth from '../../hooks/useWidth/useWidth';
 
 import { Context } from '../../context/Context';
 
@@ -27,18 +28,12 @@ const NoNamer = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [noNamers]);
 
+  const width = useWidth();
+
 	const [likeOne, setLikeOne] = useState(false);
 	const [likeTwo, setLikeTwo] = useState(false);
 	const [likeThree, setLikeThree] = useState(false);
-
-	const [ width, setWidth ] = useState(window.innerWidth);
-	useEffect(() => {
-	  const handleResize = () => setWidth(window.innerWidth);
-	  window.addEventListener('resize', handleResize);  //componentDidMount y componentDidUpdate
-	  return () => {
-	    window.removeEventListener('resize', handleResize); // componentunWillMount
-	  }
-	}, [width]);
+	
 	return (
     <section className={'noNamer-container'}>
     	<div className={'noNamer-signature'}>
