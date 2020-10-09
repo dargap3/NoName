@@ -2,7 +2,7 @@ import React,  { useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group'
 
-import Layout from '../Layout/Layout'
+import Layout from '../Layout/Layout';
 import Landing from '../../views/Landing/Landing';
 import Home from '../../views/Home/Home';
 import WannaBePartner from '../../views/WannaBePartner/WannaBePartner';

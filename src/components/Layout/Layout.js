@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import  { useParams, useLocation} from "react-router-dom";
+import useWidth from '../../hooks/useWidth/useWidth';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
@@ -10,25 +11,19 @@ const Layout = ({ children, path, onOpenNav, onCloseNav, showNavbar }) => {
   const { pathname } = useLocation();
   const { noNamerId } = useParams();
 
-  const [ width, setWidth ] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);  //componentDidMount y componentDidUpdate
-    return () => {
-      window.removeEventListener('resize', handleResize); // componentWillUnMount
-    }
-  });
+  const width = useWidth();
 
 	return (
       <div className={'container page'}>
-        <div className={'hmcontainer'}>
+        <div className={'header-main-container'}>
           <Header
             path={path}
             onCloseNav={onCloseNav}
             onOpenNav={onOpenNav}
             showNavbar={showNavbar}
           /> 
-          <main className={'main'}>
+          <main 
+            className={`${path === '/equipo/:noNamerId' ? 'main--nonamer' : ''} main`}>
             { children }
           </main>
         </div>
@@ -37,6 +32,6 @@ const Layout = ({ children, path, onOpenNav, onCloseNav, showNavbar }) => {
         }
       </div>
 	);
-}
+};
 
 export default Layout;

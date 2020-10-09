@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { firestore } from '../../firebase/firebase.utils';
 import { Picker } from "emoji-mart";
+import useWidth from '../../hooks/useWidth/useWidth';
 
 import "emoji-mart/css/emoji-mart.css";
 import './form.styles.scss';
@@ -14,14 +15,7 @@ const Form = () => {
       mensaje: '',
   }
 
-  const [ width, setWidth ] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);  //componentDidMount y componentDidUpdate
-    return () => {
-      window.removeEventListener('resize', handleResize); // componentWillUnMount
-    }
-  }, [width]);
+  const width = useWidth();
 
   const [formData, setFormData] = useState(INITIALFORMDATA);
   const [emojiPickerState, SetEmojiPicker] = useState(false);

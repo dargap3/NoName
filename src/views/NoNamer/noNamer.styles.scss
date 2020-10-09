@@ -1,53 +1,32 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .noNamer-container {
-    margin: 0 0 36px 50px;
-    margin-top: -30px;
-    @media (min-width: 1000px) {
-        display: flex;
-        margin-left: -33%;
-    }
     .noNamer-signature {
         width: 330px;
-        height: 100px;
         margin-bottom: 10px;
+        margin-left: -7%;
         .arrow-back {
             position: absolute;
-            top: 60px;
-            right: 50px;
+            top: 7.75%;
+            right: 10%;
             width: 43px;
-            @media (min-width: 1000px) {
-                position: relative;
-                margin-left: 260px;
-            }
             svg {
                 font-size: 200px;
             }
         }
-        @media (min-width: 1000px) {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 30%;
-            height: 380px;
-        }
         img {
             width: 100%;
-            height: auto;
-            margin-left: -25px;
-            @media (min-width: 1000px) {
-                width: 96%;
-                margin-top: -35px;
-                margin-left: -60px;
-            }
         }
     }
     .noNamer-description {
-        @media (min-width: 1000px) {
-            width: 70%;
-        }
         &__title {
             font-weight: 800;
             font-size: 33px;
-            line-height: 13px;
             margin-bottom: 17px;
         }
         p {
@@ -60,17 +39,13 @@
             width: 335px;
             margin-top: 20px;
             margin-bottom: 15px;
-            @media (min-width: 1000px) {
-                width: 870px;
-            }
             .image-carousel {
                 width: 335px;
-                height: auto;
                 margin-bottom: 5px;
                 display: block;
             }
             svg {
-                margin-left: 4px;
+                margin-left: 15px;
             }
         }
         &__role {
@@ -81,7 +56,56 @@
             span {
                 font-weight: bold;
             }
-            @media (min-width: 1000px) {
+        }
+    }
+}
+
+@media (min-width: 750px) {
+    .noNamer-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: -80px;
+        .noNamer-signature {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            width: 30%;
+            margin-left: 0;
+            .arrow-back {
+                position: relative;
+                left: 70%;
+                margin-bottom: 15%;
+            }
+        }
+        .noNamer-description {
+            width: 70%;
+            padding-left: 5%;
+            .carousel-container {
+                width: 100%;
+                max-width: 870px;
+                .image-carousel {
+                    max-width: 335px;
+                }
+            }
+            &__personality {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .noNamer-container {
+        .noNamer-description {
+            &__personality {
                 width: 34%;
             }
         }

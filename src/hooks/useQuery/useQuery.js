@@ -16,7 +16,7 @@ const useQuery = (collectionName) => {
     );
   }, [collectionName] );
 
-  return query;  
+  return query; 
 }
 
 export default useQuery;

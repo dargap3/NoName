@@ -1,8 +1,12 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .home {
-    padding: 0 0 60px 48px;
-    display: flex;
-    flex-direction: column;
-    height: 70%;
+    padding-bottom: 60px;
     &__body {
         width: 275px;
         font-size: 13.4px;
@@ -12,8 +16,9 @@
         &:last-child {
             padding-top: 5px;
         }
-        @media (min-width: 1000px) {
-            width: 526px;
+        @media (min-width: 750px) {
+            width: 80%;
+            max-width: 526px;
             font-size: 18px;
             line-height: 25px;
         }
@@ -38,7 +43,11 @@
     .modal__img--home {
         width: 100%;
         margin-bottom: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
         align-items: flex-end;
         img {
             width: 100%;

@@ -9,7 +9,7 @@ import Modal from '../../components/Modal/Modal';
 
 import './curious.styles.scss';
 
-const Curious = () => {
+const Curious = () => { 
   const { modalCurioso } = useContext(Context);
 
   const [modalIsOpen, setIsModalOpen] = useState(false);
@@ -37,7 +37,7 @@ const Curious = () => {
   return (
     <>
       <section className={'curious'} >
-        <h2 className={'curious__body'}>
+        <h2 className={'curious__title'}>
           <strong>
             {'NO SOMOS UN PUNTO COM HACEMOS LAS COSAS Y PUNTO'}
           </strong>        

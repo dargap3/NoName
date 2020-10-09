@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import parse from 'html-react-parser';
+import useWidth from '../../hooks/useWidth/useWidth';
 
 import { Context } from '../../context/Context';
 
@@ -27,18 +28,12 @@ const NoNamer = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [noNamers]);
 
+  const width = useWidth();
+
 	const [likeOne, setLikeOne] = useState(false);
 	const [likeTwo, setLikeTwo] = useState(false);
 	const [likeThree, setLikeThree] = useState(false);
-
-	const [ width, setWidth ] = useState(window.innerWidth);
-	useEffect(() => {
-	  const handleResize = () => setWidth(window.innerWidth);
-	  window.addEventListener('resize', handleResize);  //componentDidMount y componentDidUpdate
-	  return () => {
-	    window.removeEventListener('resize', handleResize); // componentunWillMount
-	  }
-	}, [width]);
+	
 	return (
     <section className={'noNamer-container'}>
     	<div className={'noNamer-signature'}>
@@ -62,22 +57,22 @@ const NoNamer = () => {
 		        animationSpeed={4000}
 		        infinite
             keepDirectionWhenDragging
-		        slidesPerPage={ width > 1000 ? 2.5 : 1 }
-		        centered={false}       
+		        slidesPerPage={ width >= 1200 ? 2.5 : width >= 1000 ? 2 : 1}
+		        centered={false}   
 		        >
-		        <div>
+		        <div className={'carousel__picture'}>
 					  	<img src={noNamer?.carrusel?.[0]} alt='foto NoNamer' className={'image-carousel'}/>
 							<svg width="24" height="20" viewBox="0 0 24 20" fill={likeOne ? 'red' : 'black'} xmlns="http://www.w3.org/2000/svg" onClick={() => setLikeOne(!likeOne)}>
 							  <path d="M1.7782 3.09827C5.67253 -1.55591 10.0861 2.58119 11.9035 5.42541C11.9035 5.42541 17.745 -1.94376 21.6393 2.71044C27.5495 9.77392 12.2929 19 12.2929 19C12.2929 19 -2.50557 12.4066 1.7782 3.09827Z" stroke={likeOne ? 'none' : 'white'}/>
 							</svg>
 		        </div>
-					  <div>
+					  <div className={'carousel__picture'}>
 					  	<img src={noNamer?.carrusel?.[1]} alt='foto NoNamer' className={'image-carousel'}/>
 					  	<svg width="24" height="20" viewBox="0 0 24 20" fill={likeTwo ? 'red' : 'black'} xmlns="http://www.w3.org/2000/svg" onClick={() => setLikeTwo(!likeTwo)}>
 					  	  <path d="M1.7782 3.09827C5.67253 -1.55591 10.0861 2.58119 11.9035 5.42541C11.9035 5.42541 17.745 -1.94376 21.6393 2.71044C27.5495 9.77392 12.2929 19 12.2929 19C12.2929 19 -2.50557 12.4066 1.7782 3.09827Z" stroke={likeTwo ? 'none' : 'white'}/>
 					  	</svg>
 		        </div>
-					  <div>
+					  <div className={'carousel__picture'}>
 					  	<img src={noNamer?.carrusel?.[2]} alt='foto NoNamer' className={'image-carousel'}/>
 							<svg width="24" height="20" viewBox="0 0 24 20" fill={likeThree ? 'red' : 'black'} xmlns="http://www.w3.org/2000/svg" onClick={() => setLikeThree(!likeThree)}>
 							  <path d="M1.7782 3.09827C5.67253 -1.55591 10.0861 2.58119 11.9035 5.42541C11.9035 5.42541 17.745 -1.94376 21.6393 2.71044C27.5495 9.77392 12.2929 19 12.2929 19C12.2929 19 -2.50557 12.4066 1.7782 3.09827Z" stroke={likeThree ? 'none' : 'white'}/>

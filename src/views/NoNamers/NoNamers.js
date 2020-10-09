@@ -30,6 +30,7 @@ const NoNamers = () => {
       <section className={'profile-nonamers'}>
         {(sortedNoNamers || []).map((item) => {
           const {id, carrusel, nombre} = {...item}
+
           const handleClick = () => {
             if (document.documentElement.scrollTop > 0) {
               scroll.scrollToTop();
@@ -38,6 +39,7 @@ const NoNamers = () => {
               history.push(`/equipo/${id}`);
             }
           }
+          
             return (
               <div key={id} onClick={handleClick}>
                 <img src={carrusel?.[0]} alt={`foto ${nombre}`}/>     
