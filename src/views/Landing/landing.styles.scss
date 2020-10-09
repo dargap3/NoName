@@ -1,22 +1,15 @@
 .landing {
-    padding: 45px 0 0 48px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: auto 0;
     overflow: hidden;
     &__title {
-        height: 60%;
-        display: flex;
-        align-items: flex-end;
-        width: 100%;
-        @media (min-width: 1000px) {
-            justify-content: center;
+        margin: 0 auto;
+        width: 80%;
+        @media (min-width: 750px) {
+            width: 43%;
         }
     }
     &__gif {
-        max-width: 100%;
-        margin-left: -20px;
+        width: 100%;
     }
 }
 
@@ -24,9 +17,15 @@
     text-align: right;
     font-size: 18px;
     line-height: 20px;
-    max-width: 320px;
+    width: 320px;
+    height: 370px;
     padding: 10px 35px 35px 17px;
-    background-image: url('../../assets/images/fondo_Mesa\ de\ trabajo\ 1-21\ 1.png');
+    .modal__text--landing {
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
     p+p {
         padding-top: 20px;
     }
@@ -44,5 +43,11 @@
             margin-left: 15px;
             margin-right: -15px;
         }
+    }
+    .modal__link--landing {
+        text-decoration: none;
+        position: fixed;
+        right: 1.5em;
+        bottom: 1em;
     }
 }

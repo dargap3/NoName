@@ -30,36 +30,29 @@ exports.sendNotification = functions.firestore.document('mensajes/{docId}').onCr
 function sendNotificationMail( email, nombre ) {
   return transport
     .sendMail({
-      from: 'NoName <no-reply@noname.com.co>',
+      from: `NoName <${SENDER_EMAIL}>`,
       to: email,
       subject: `Hola ${nombre}`,
-      html: `<h3>Hola ${nombre},</h3>
-            <br>
-            <p>Somos Diana y Andrés,  Business Builders de NoName.  ¡Nos emociona que nos hayas escrito!</p>
-            <p>Como pudiste leer en nuestra página web, nuestra misión es ayudar a empresas a escalar a otro nivel con talento multidisciplinario que trabaje sin tregua y con creatividad para lograr que las cosas pasen en las Pymes de Colombia.</p>
-            <ul>
-              <li>Como nuestro trabajo es intensivo y de gran profundidad, nuestra capacidad de aliarnos con empresas es limitado cada año. No somos masivos.</li>
-              <li>Nuestro propósito superior es ayudar a construir país y por esta razón nuestro foco se centra en empresas colombianas.</li>
-              <li>Buscamos Pymes que tengan gran potencial, que generen valor único y que tengan ganas de crecer. ¿A dónde quisieras llegar con tu empresa?</li>
-            </ul>
-            <p>Respóndenos este correo y cuéntanos: ¿cuál es tu empresa?, ¿qué vendes? ¿Cuáles fueron tus ventas a Diciembre 2019? y todo lo que quieras que sepamos!</p>
+      html: `<p>Soy Miguel Piedrahita, director general de NoName Colombia y te hablo en nombre de todo el equipo. </p>
+            <p>¡Nos emociona que nos hayas escrito y que hayas tenido la generosidad de dejarnos una nota expresando tu interés. Gracias igualmente por contarnos más de ti.</p>
+            <p>Como pudiste leer en nuestra página web, nuestra razón de existir es hacer todo lo humanamente posible para que las mejores PyMes de Colombia dejen de ser PyMes y se conviertan, más pronto que tarde, en las empresas del futuro de nuestro querido país. Lo hacemos poniendo a disposición nuestro talento humano multidisciplinario para hacer que las cosas pasen.</p>
+            <p>Nos parece fundamental que conozcas más detalles adicionales sobre nosotros:</p>
+            <ol>
+              <li>Nuestro propósito superior es ayudar a construir país y por esta razón nuestro foco se centra en empresas colombianas. 🇨🇴</li>
+              <li>Buscamos Pymes que tengan gran potencial, que generen valor único y que tengan ganas de crecer con calidad. En ingresos, en márgenes, en liquidez, en reconocimiento de marca, en creación de empleo directo, digno y de calidad. En creación de valor ampliado. 📈</li>
+              <li>Como nuestro trabajo es intensivo y de gran profundidad, nuestra capacidad de aliarnos, en cuanto a cantidad de alianzas con empresas es muy limitada. Por esta razón, nuestro aliado prospecto debe sumar ingresos anuales por encima de COP 5.000 millones. 💰</li>
+            </ol>
+            <p>Por favor responde este correo contándonos: ¿cuál es tu empresa?, ¿qué vendes? ¿cuáles fueron tus ventas aproximadas el año pasado? y en general, todo lo que quieras que sepamos! Solo compártenos lo que te haga sentir cómodo(a). Nuestro objetivo no es conocer información confidencial por conocerla. Solo porque te sientes con la tranquilidad de suministrar esta información.</p>
+            <p>Al escribirnos, quedaste inscrito en nuestras bases de datos, para enviarte información interesante, newsletters e invitarte a algunos eventos. De igual forma te invitamos a seguirnos en redes para estar en contacto:</p>
+            <p>
+              <span><a href='https://www.instagram.com/nonamecolombia/'>Instagram</a> - </span>
+              <span><a href='https://www.linkedin.com/company/noname-colombia'>LinkedIn</a> - </span>
+              <span><a href='https://twitter.com/noname_colombia'>Twitter</a></span>
+            </p>
             <p>¡Muchas gracias por tomarte el tiempo en escribirnos!</p>
             <p>Quedamos pendientes de tu respuesta.</p>
             <br>
-            <div>
-              <span>
-                <p>Diana Trujillo</p>
-                <p>Business Builder – Generación de Negocios</p>
-                <p>dianatrujillo@noname.com.co</p>
-                <p>Cel: 3152862730</p>
-              </span>
-              <span>
-                <p>Andrés Sanín</p>
-                <p>Business Builder – Generación de Negocios</p>
-                <p>andressanin@noname.com.co</p>
-                <p>Cel: 3146814782</p>
-              </span>
-            </div>            
+            <p>NoNamers✌️</p>    
             `
     })
     .then( res => console.log('mensaje enviado con exito'))

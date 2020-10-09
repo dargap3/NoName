@@ -3,7 +3,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import Navbar from '../Navbar/Navbar';
 
-import logo from '../../assets/logo/LOGOX4.jpg';
+import logo from '../../assets/logo/logox4.png';
 import hamburger from '../../assets/images/hamburger.svg';
 
 
@@ -11,7 +11,9 @@ import './header.styles.scss';
 
 const Header = ({ path, onCloseNav, onOpenNav, showNavbar }) => {
   return (
-  <header className={'header'}>    
+  <header 
+    className={`${path === '/equipo/:noNamerId' ? 'header--nonamer' : ''} header`}
+  >
     <button onClick={onOpenNav} className={'nav-toggle'} >
       <img src={hamburger} alt='button toggle' />
     </button>    
@@ -26,10 +28,8 @@ const Header = ({ path, onCloseNav, onOpenNav, showNavbar }) => {
       classNames="alert"
       unmountOnExit
     >
-      <Navbar
-        onCloseNav={onCloseNav}
-      />
-      </CSSTransition>
+      <Navbar onCloseNav={onCloseNav} />
+    </CSSTransition>
   </header>
 );
 }

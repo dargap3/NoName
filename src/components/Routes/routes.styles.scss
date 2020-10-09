@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .page {
     position: absolute;
     background-color: black;
@@ -5,14 +12,22 @@
 }
 
 .page-enter {
+    -webkit-transform: translateX(200%);
+    -ms-transform: translateX(200%);
     transform: translateX(200%);
     z-index: 1;
 }
 
 .page-enter-active {
     z-index: 10;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
     transform: translateX(0);
+    -webkit-transition: -webkit-transform 750ms;
+    transition: -webkit-transform 750ms;
+    -o-transition: transform 750ms;
     transition: transform 750ms;
+    transition: transform 750ms, -webkit-transform 750ms;
 }
 
 .page-exit {
