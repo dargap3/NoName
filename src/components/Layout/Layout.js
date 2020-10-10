@@ -21,9 +21,9 @@ const Layout = ({ children, path, onOpenNav, onCloseNav, showNavbar }) => {
             onCloseNav={onCloseNav}
             onOpenNav={onOpenNav}
             showNavbar={showNavbar}
-          /> 
+          />
           <main 
-            className={`${path === '/equipo/:noNamerId' ? 'main--nonamer' : ''} main`}>
+            className={`${(path === '/equipo/:noNamerId' || path === '/small-talks-coolness-report') ? 'main--nonamer' : ''} main`}>
             { children }
           </main>
         </div>
