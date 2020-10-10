@@ -97,6 +97,19 @@ const Navbar = ({ onCloseNav }) => {
           onClick={onCloseNav}
         >
           <NavLink 
+            to={{pathname: '/small-talks-coolness-report'}} 
+            activeClassName={'selected'} 
+            className={'nav__link'}
+          >
+          small talks coolness report
+            <hr className={'nav__link--4'}/>
+          </NavLink>
+        </li>
+        <li
+          className={'nav__item'} 
+          onClick={onCloseNav}
+        >
+          <NavLink 
             to={{pathname: '/home'}} 
             activeClassName={'selected'} 
             className={'nav__link'}

@@ -10,6 +10,7 @@ import NoNamers from '../../views/NoNamers/NoNamers';
 import Partners from '../../views/Partners/Partners';
 import Curious from '../../views/Curious/Curious';
 import NoNamer from '../../views/NoNamer/NoNamer';
+import SmallTalksCoolnessReport from '../../views/SmallTalksCoolnessReport/SmallTalksCoolnessReport';
 
 import './routes.styles.scss';
 
@@ -19,7 +20,8 @@ const routes = [
   { path: '/equipo', Component: NoNamers },
   { path: '/conocer-los-aliados',  Component: Partners },
   { path: '/soy-curioso',  Component: Curious },
-  { path: '/equipo/:noNamerId',  Component: NoNamer }
+  { path: '/equipo/:noNamerId',  Component: NoNamer },
+  { path: '/small-talks-coolness-report', Component: SmallTalksCoolnessReport}
 ]
 
 const Routes = () => {
