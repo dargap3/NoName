@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import SmallTalk from '../../components/SmallTalk/SmallTalk';
 
 import Carousel from '@brainhubeu/react-carousel';
-import Modal from '../../components/Modal/Modal';
 import useWidth from '../../hooks/useWidth/useWidth';
+import {useMouseTracker} from '../../hooks/useMouseTracker/useMouseTracker';
 
 import {Animated} from "react-animated-css";
 
@@ -22,12 +23,12 @@ const carouselData = [
   {
     id: 1,
     imageSrc: SmallTalk2,
-    videoUrl: "https://www.youtube.com/embed/xwtdhWltSIg",
+    videoUrl: "https://www.youtube.com/embed/4TeshUpfml4",
   },
   {
     id: 2,
     imageSrc: SmallTalk3,
-    videoUrl: "https://www.youtube.com/embed/4TeshUpfml4",
+    videoUrl: "https://www.youtube.com/embed/xwtdhWltSIg",
   },
 ];
 
@@ -38,12 +39,12 @@ const coolnessReportList = [
     text: 'uno',
   },
   {
-    id: 0,
+    id: 1,
     imageSrc: SmallTalk2,
     text: 'dos',
   },
   {
-    id: 0,
+    id: 2,
     imageSrc: SmallTalk3,
     text: 'tres',
   },
@@ -51,11 +52,8 @@ const coolnessReportList = [
 
 const SmallTalksCoolnessReport = () => {
   const width = useWidth();
-
-  const [modalIsOpen, setIsModalOpen] = useState(false);
+  const mouseTracker = useMouseTracker();
   const [tab, setTab] = useState(-1);
-
-  const onCloseModal = () => setIsModalOpen(false);
 
   return (
     <>
@@ -79,21 +77,7 @@ const SmallTalksCoolnessReport = () => {
             >
               {
                 carouselData.map( (data) => (
-                  <>
-                    <div className={'right__image'}>
-                      <img 
-                        key={data.id}
-                        src={data.imageSrc}
-                        alt={''}
-                        onClick={ () => setIsModalOpen(true) }
-                        className={'carru_image'} 
-                      />  
-                    </div>
-                    <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={false} className={'small-talks-modal'}>
-                      <iframe title={data.id} src={data.videoUrl} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                      </iframe>
-                    </Modal>
-                  </>
+                    <SmallTalk key={data.id} data={data}/>
                 ))
               }
           </Carousel>
@@ -113,16 +97,21 @@ const SmallTalksCoolnessReport = () => {
             const { imageSrc = '', text = '', } = { ...item }
             return (
               <div className={'right__list'} onClick={() => setTab(index)}>
-                <p className={tab === index && 'active-text'}>{text}</p>
-                <Animated 
-                  animationIn={'fadeIn'} 
-                  animationOut={'fadeOut'} 
-                  isVisible={tab === index ? true : false}
-                >
-                  <div className={'right__list_image'}>
-                    <img src={imageSrc} alt={text}/>  
-                  </div>
-                </Animated>
+                <p>{text}</p>
+                  <Animated 
+                    animationIn={'fadeIn'} 
+                    animationOut={'fadeOut'} 
+                    animationInDuration={1000} 
+                    animationOutDuration={1000} 
+                    isVisible={tab === index || width > 1024 ? true : false}
+                  >
+                    <div
+                      className={'right__list_image'}
+                      style={{position: `${width > 1024 && 'fixed'}`, left: width > 1024 && mouseTracker.x + 20, top: width > 1024 && mouseTracker.y + 20}}
+                    >
+                      <img src={imageSrc} alt={text}/>  
+                    </div>    
+                  </Animated>
               </div>
             )
           })}
