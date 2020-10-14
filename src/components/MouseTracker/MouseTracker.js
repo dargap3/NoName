@@ -1,31 +1,13 @@
 import React from 'react';
-
+import {useMouseTracker} from '../../hooks/useMouseTracker/useMouseTracker';
 import './MouseTracker.styles.scss';
 
-export default class MouseTracker extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleMouseMove = this.handleMouseMove.bind(this);
-    this.state = { x: 0, y: 0 };
-  }
+const  MouseTracker = () => {
+  const mouseTracker = useMouseTracker();
 
-  componentDidMount() {
-    window.addEventListener('mousemove', this.handleMouseMove);
-  }
-
-  componentWillMount() {
-    window.removeEventListener('mousemove', this.handleMouseMove); 
-  }
-
-  handleMouseMove(event) {
-    this.setState({
-      x: event.clientX,
-      y: event.clientY
-    });
-  }
-  render() {
-    return (      
-      <div className={'mouse-tracker'} style={{ position: 'fixed', left: this.state.x - 20, top: this.state.y - 20}} />      
-    );
-  }
+  return (      
+    <div className={'mouse-tracker'} style={{ position: 'fixed', left: mouseTracker.x - 20, top: mouseTracker.y - 20}} />      
+  );
 }
+
+export default MouseTracker;
