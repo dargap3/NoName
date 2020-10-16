@@ -18,17 +18,17 @@ const carouselData = [
   {
     id: 0,
     imageSrc: SmallTalk1,
-    videoUrl: "https://www.youtube.com/embed/MH6TJU0qWoY",
+    videoUrl: "https://fast.wistia.net/embed/iframe/ksj1vlxco3?videoFoam=true",
   },
   {
     id: 1,
     imageSrc: SmallTalk2,
-    videoUrl: "https://www.youtube.com/embed/4TeshUpfml4",
+    videoUrl: "https://fast.wistia.net/embed/iframe/pwl7j3puws?videoFoam=true",
   },
   {
     id: 2,
     imageSrc: SmallTalk3,
-    videoUrl: "https://www.youtube.com/embed/xwtdhWltSIg",
+    videoUrl: "https://fast.wistia.net/embed/iframe/bpu4pgomff?videoFoam=true",
   },
 ];
 
