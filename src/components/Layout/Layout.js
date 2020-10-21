@@ -1,5 +1,6 @@
 import React from 'react';
 import  { useParams, useLocation} from "react-router-dom";
+
 import useWidth from '../../hooks/useWidth/useWidth';
 
 import Header from '../Header/Header';
@@ -15,7 +16,12 @@ const Layout = ({ children, path, onOpenNav, onCloseNav, showNavbar }) => {
 
 	return (
       <div className={'container page'}>
-        <div className={'header-main-container'}>
+        <div 
+          className={'header-main-container'}
+          style={
+            (path === '/small-talks-coolness-report' && width <= 750) ? {marginLeft: 0} : {marginLeft: ''}
+          }
+        >
           <Header
             path={path}
             onCloseNav={onCloseNav}
@@ -23,7 +29,8 @@ const Layout = ({ children, path, onOpenNav, onCloseNav, showNavbar }) => {
             showNavbar={showNavbar}
           />
           <main 
-            className={`${(path === '/equipo/:noNamerId' || path === '/small-talks-coolness-report') ? 'main--nonamer' : ''} main`}>
+            className={`${(path === '/equipo/:noNamerId' || path === '/small-talks-coolness-report') ? 'main--nonamer' : ''} main`}
+          >
             { children }
           </main>
         </div>

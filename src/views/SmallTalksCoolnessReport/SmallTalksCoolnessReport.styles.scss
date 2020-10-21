@@ -15,14 +15,19 @@
         width: 28%;
         &-coolness-report {
             p {
-                margin-top: 30px;
+                margin-top: 10px;
+                @media (max-width: 768px) {
+                    width: 76%;
+                    margin: 10px auto;
+                    text-align: center;
+                }
             }
             @media (max-width: 768px) {
                 margin-bottom: 80px;
             }
         }
         @media (max-width: 768px) {
-            width: 80%;
+            width: 100%;
         }
         .image-container {
             @media (max-width: 768px) {
@@ -31,21 +36,25 @@
             }
             img {
                 width: 75%;
+                max-width: 190px;
                 @media (max-width: 768px) {
                     width: 70%;
+                    max-width: 157px;
                 }
             }
         }
     }
     .right {
         width: 65%;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
         &-coolness-report {
             @media (max-width: 768px) {
                 margin-bottom: 80px;
+                width: 76%;
+                margin: 0 auto 80px;
             }
-        }
-        @media (max-width: 768px) {
-            width: 80%;
         }
         &__list {
             padding-bottom: 20px;
@@ -99,17 +108,25 @@
 }
 
 .small-talks {
-    align-items: center;
     @media (max-width: 576px) {
         align-items: flex-start;
     }
     p {
         font-size: 16px;
+        @media (max-width: 750px) {
+            width: 76%;
+            margin: 0 auto;
+            text-align: center;
+        }
     }
     p:last-child {
-        margin-top: 50px;
+        margin-top: 10px;
     }
     .right {
+        transform: translateY(-100px);
+        @media (max-width: 768px) {
+            transform: translateY(0);
+        }
         &__image {
             width: 192px;
             height: 300px;
@@ -155,7 +172,6 @@
 }
 
 .coolness-report {
-    margin-top: 100px;
     font-size: 16px;
 }
 
@@ -188,13 +204,13 @@
 .BrainhubCarousel__arrowLeft {
     left: 50px;
     @media (max-width: 576px) {
-        left: 0;
+        left: 8%;
     }
 }
 
 .BrainhubCarousel__arrowRight {
     right: 50px;
     @media (max-width: 576px) {
-        right: 0;
+        right: 8%;
     }
 }
