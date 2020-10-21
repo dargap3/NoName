@@ -49,10 +49,6 @@
 }
 
 .small-talks-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 85vw;
-    max-width: 100vw;
-    height: 85vh;
+    position: relative;
+    max-width: 85vw;
 }
