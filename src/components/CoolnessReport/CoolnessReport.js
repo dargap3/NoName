@@ -4,13 +4,13 @@ import { Animated } from "react-animated-css";
 import useWidth from '../../hooks/useWidth/useWidth';
 import { useMouseTracker } from '../../hooks/useMouseTracker/useMouseTracker';
 
-const CoolnessReport = ({ nombre, imagen, report, index }) => {
+const CoolnessReport = ({ nombre, imagen, report, index,}) => {
   const width = useWidth();
   const mouseTracker = useMouseTracker();
   const [tab, setTab] = useState(-1);
 
   return (
-    <div className={'right__list'} onClick={() => setTab(index)}>
+    <div key={nombre} className={'right__list'} onClick={() => setTab(index)}>
       <a href={report} download={nombre} target="_blank" rel="noopener noreferrer">
         <p>{nombre}</p>
       </a>
