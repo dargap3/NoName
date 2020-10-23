@@ -1,13 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Animated } from "react-animated-css";
 
 import useWidth from '../../hooks/useWidth/useWidth';
 import { useMouseTracker } from '../../hooks/useMouseTracker/useMouseTracker';
 
-const CoolnessReport = ({ nombre, imagen, report, index,}) => {
+const CoolnessReport = ({ nombre, imagen, report, index, tab, setTab}) => {
   const width = useWidth();
   const mouseTracker = useMouseTracker();
-  const [tab, setTab] = useState(-1);
 
   return (
     <div key={nombre} className={'right__list'} onClick={() => setTab(index)}>

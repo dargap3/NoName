@@ -92,7 +92,7 @@ const Navbar = ({ onCloseNav }) => {
             <hr className={'nav__link--4'}/>
           </NavLink>
         </li>
-        <li
+        {/* <li
           className={'nav__item'} 
           onClick={onCloseNav}
         >
@@ -104,7 +104,7 @@ const Navbar = ({ onCloseNav }) => {
           small talks coolness report
             <hr className={'nav__link--4'}/>
           </NavLink>
-        </li>
+        </li> */}
         <li
           className={'nav__item'} 
           onClick={onCloseNav}
