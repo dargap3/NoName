@@ -1,6 +1,11 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 const nodemailer = require('nodemailer');
+const cors = require('cors')({
+  origin: true,
+});
+const axios = require('axios');
+
 admin.initializeApp()
 require('dotenv').config()
 
@@ -24,7 +29,7 @@ exports.sendNotification = functions.firestore.document('mensajes/{docId}').onCr
   const numero = data.numero;
   const mensaje = data.mensaje;
 
-  return sendNotificationMail(email, nombre), sendNotificationMail2(email, nombre, website, numero, mensaje)
+  return sendNotificationMail(email, nombre), sendNotificationMail2(email, nombre, website, numero, mensaje), subscribeUser(email, nombre, numero)
 })
 
 function sendNotificationMail( email, nombre ) {
@@ -73,6 +78,48 @@ function sendNotificationMail2( email, nombre, website, numero, mensaje ) {
     .then( res => console.log('mensaje enviado con exito'))
     .catch(e => console.log('error'))
 }
+
+const subscribeUser = async (email, nombre, numero) => {
+  return (
+    subscribeUserToMailchimp(email, nombre, numero)
+    .then(response => console.log('mensaje MailChimp enviado con éxito') )
+    .catch(error => console.log('error'))
+  )
+}
+
+ const {REACT_APP_MAILCHIMP_API,REACT_APP_MAILCHIMP_LIST_ID,REACT_APP_MAILCHIMP_USER} = process.env; 
+
+// Retrieving the api key from the firebase environment variables list
+/* const  { "4c6f12b0a2965973cd5c200ce2b7f2f1-us2"   = fun */
+
+const subscribeUserToMailchimp = (email, nombre, numero) => {
+  const mailchimpApiUrl = 'https://usXX.api.mailchimp.com/3.0'
+  const listID = REACT_APP_MAILCHIMP_LIST_ID
+
+  // creating the axios options parameter
+  const options = {
+		method: 'POST',
+		url: `${mailchimpApiUrl}/lists/${listID}/members/`,
+		headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+    auth: {
+      username: REACT_APP_MAILCHIMP_USER,
+      password: REACT_APP_MAILCHIMP_API
+    },
+    data: {
+      email_address: email,
+      status: 'subscribed',
+      merge_fields: {
+        'FNAME': nombre,
+        'LNAME': numero
+      }
+    }
+  }
+  
+  return axios(options)
+}
+
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
