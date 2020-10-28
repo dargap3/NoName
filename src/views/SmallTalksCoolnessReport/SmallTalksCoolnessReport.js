@@ -26,7 +26,11 @@ const SmallTalksCoolnessReport = () => (
     <section className={'coolness-report'}>
       <div className={'left left-coolness-report'}>
         <div className={'image-container'}>
-          <img src={CoolnessReport} alt=""/>
+          <img 
+            style={{maxHeight: '109px'}}
+            src={CoolnessReport} 
+            alt=""
+          />
         </div>        
         <p>Curaduría mensual de la cultura pop que hoy ocupa un lugar en nuestras conversaciones.</p>
       </div>
