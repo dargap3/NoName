@@ -1,5 +1,6 @@
 import React from 'react';
 import { Animated } from "react-animated-css";
+import parse from 'html-react-parser';
 
 import useWidth from '../../hooks/useWidth/useWidth';
 import { useMouseTracker } from '../../hooks/useMouseTracker/useMouseTracker';
@@ -11,7 +12,11 @@ const CoolnessReport = ({ nombre, imagen, report, index, tab, setTab}) => {
   return (
     <div key={nombre} className={'right__list'} onClick={() => setTab(index)}>
       <a href={report} download={nombre} target="_blank" rel="noopener noreferrer">
-        <p>{nombre}</p>
+        <p>
+          {
+            parse(`${nombre}`)
+          }
+        </p>
       </a>
       <Animated 
         animationIn={'fadeIn'} 

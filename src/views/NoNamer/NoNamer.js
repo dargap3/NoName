@@ -38,7 +38,7 @@ const NoNamer = () => {
     <section className={'noNamer-container'}>
     	<div className={'noNamer-signature'}>
     		<img src={ noNamer?.firma } alt='nonamer firma' />
-    		<div className={'arrow-back'} onClick={ () => history.push('/equipo')} >
+    		<div className={'arrow-back'} onClick={ () => history.push('/nonamers')} >
 	        <svg width="71" height="42" viewBox="0 0 71 42" fill="none" xmlns="http://www.w3.org/2000/svg">
 	          <path d="M71 21H17" stroke="#F4F3F1" stroke-width="9"/>
 	          <path d="M34 4L9 21L34 38" stroke="white" stroke-width="9"/>
