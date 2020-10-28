@@ -14,8 +14,7 @@ const SmallTalksCoolnessReport = () => (
       <div className={'left'}>
         <div className={'image-container'}>
           <img src={LogoSmallTalks} alt=""/>
-        </div>
-        <p>Small Talks Big Minds.</p>
+        </div>        
         <p>Conversaciones frescas pero trascendentales para el mundo de los negocios y las marcas.</p>
       </div>
       <div className={'right'}>
@@ -27,9 +26,12 @@ const SmallTalksCoolnessReport = () => (
     <section className={'coolness-report'}>
       <div className={'left left-coolness-report'}>
         <div className={'image-container'}>
-          <img src={CoolnessReport} alt=""/>
-        </div>
-        <p>Coolness Report. </p>
+          <img 
+            style={{maxHeight: '109px'}}
+            src={CoolnessReport} 
+            alt=""
+          />
+        </div>        
         <p>Curaduría mensual de la cultura pop que hoy ocupa un lugar en nuestras conversaciones.</p>
       </div>
       <div className={'right right-coolness-report'}>

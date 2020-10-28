@@ -41,16 +41,16 @@ const Navbar = ({ onCloseNav }) => {
       </button>
       <ul className={'nav__list'}>
         <li
-          className={'nav__item'} 
-          onClick={onCloseNav}
+            className={'nav__item'} 
+            onClick={onCloseNav}
         >
           <NavLink 
-            to={{pathname: '/ser-un-aliado'}} 
+            to={{pathname: '/cool-stuff'}} 
             activeClassName={'selected'} 
             className={'nav__link'}
           >
-          quiero ser un aliado
-            <hr className={'nav__link--1'}/>
+          cool stuff
+            <hr className={'nav__link--4'}/>
           </NavLink>
         </li>
         <li
@@ -58,11 +58,11 @@ const Navbar = ({ onCloseNav }) => {
           onClick={onCloseNav}
         >
           <NavLink 
-            to={{pathname: '/equipo'}} 
+            to={{pathname: '/nonamers'}} 
             activeClassName={'selected'} 
             className={'nav__link'}
           >
-          quiero conocer<br/>al equipo
+          nonamers
             <hr className={'nav__link--2'}/>
           </NavLink>
         </li>
@@ -71,15 +71,30 @@ const Navbar = ({ onCloseNav }) => {
           onClick={onCloseNav}
         >
           <NavLink 
-            to={{pathname: '/conocer-los-aliados'}} 
+            to={{pathname: '/aliados'}} 
             activeClassName={'selected'} 
             className={'nav__link'}
           >
-          quiero conocer a los aliados
+          aliados
             <hr className={'nav__link--3'}/>
           </NavLink>
         </li>
         <li
+          className={'nav__item'} 
+          onClick={onCloseNav}
+        >
+          <NavLink 
+            to={{pathname: '/contacto'}} 
+            activeClassName={'selected'} 
+            className={'nav__link'}
+          >
+          contacto
+            <hr className={'nav__link--1'}/>
+          </NavLink>
+        </li>
+        
+        
+        {/* <li
           className={'nav__item'} 
           onClick={onCloseNav}
         >
@@ -91,20 +106,8 @@ const Navbar = ({ onCloseNav }) => {
           quiero curiosear
             <hr className={'nav__link--4'}/>
           </NavLink>
-        </li>
-        <li
-          className={'nav__item'} 
-          onClick={onCloseNav}
-        >
-          <NavLink 
-            to={{pathname: '/small-talks-coolness-report'}} 
-            activeClassName={'selected'} 
-            className={'nav__link'}
-          >
-          small talks coolness report
-            <hr className={'nav__link--4'}/>
-          </NavLink>
-        </li>
+        </li> */}
+        
         <li
           className={'nav__item'} 
           onClick={onCloseNav}

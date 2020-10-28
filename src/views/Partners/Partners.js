@@ -1,22 +1,18 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import Carousel from '@brainhubeu/react-carousel';
 import useWidth from '../../hooks/useWidth/useWidth';
+import { useHistory } from 'react-router-dom';
 
 import { Context } from '../../context/Context';
-
-import Form from '../../components/Form/Form';
-import Modal from '../../components/Modal/Modal';
 
 import '@brainhubeu/react-carousel/lib/style.css';
 import './Partners.styles.scss';
 
 const Partners = () => { 
   const { partners } = useContext(Context);
+  const history = useHistory();
 
   const width = useWidth();
-
-  const [modalIsOpen, setIsModalOpen] = useState(false);
-  const onCloseModal = () => setIsModalOpen(false);
 
   return (
     <>
@@ -29,7 +25,7 @@ const Partners = () => {
         </p> 
         <p className={'partners__body'}>
           <span 
-            onClick={ () => setIsModalOpen(true) } 
+            onClick={ () => history.push('/contacto') } 
             className={'animated-text animated-text--20'}
           >
             ¿Hacemos país?
@@ -56,18 +52,6 @@ const Partners = () => {
           }   
         </Carousel>
       </section>
-      
-      <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={false}>
-        <button className={'modal__close'} onClick={onCloseModal}>
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M29 2L5 27" stroke="black" strokeWidth="4"/>
-            <line x1="1.38919" y1="2.5612" x2="30.3892" y2="30.5612" stroke="black" strokeWidth="4"/>
-          </svg>
-        </button>
-        <section className={'form__container'}>
-          <Form />        
-        </section>      
-      </Modal>
     </>
   );
 }
