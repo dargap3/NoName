@@ -21,6 +21,9 @@
             max-width: 526px;
             font-size: 18px;
             line-height: 25px;
+            &:last-child {
+                padding-top: 50px;
+            }
         }
     }
 }

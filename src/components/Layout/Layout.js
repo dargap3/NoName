@@ -19,7 +19,7 @@ const Layout = ({ children, path, onOpenNav, onCloseNav, showNavbar }) => {
         <div 
           className={'header-main-container'}
           style={
-            (path === '/small-talks-coolness-report' && width <= 750) ? {marginLeft: 0} : {marginLeft: ''}
+            (path === '/cool-stuff' && width <= 750) ? {marginLeft: 0} : {marginLeft: ''}
           }
         >
           <Header
@@ -29,13 +29,13 @@ const Layout = ({ children, path, onOpenNav, onCloseNav, showNavbar }) => {
             showNavbar={showNavbar}
           />
           <main 
-            className={`${(path === '/equipo/:noNamerId' || path === '/small-talks-coolness-report') ? 'main--nonamer' : ''} main`}
+            className={`${(path === '/nonamers/:noNamerId' || path === '/cool-stuff') ? 'main--nonamer' : ''} main`}
           >
             { children }
           </main>
         </div>
         {
-          width < 1000 && (pathname === '/equipo' || pathname === `/equipo/${noNamerId}`)  ? null : <Footer />
+          width < 1000 && (pathname === '/nonamers' || pathname === `/nonamers/${noNamerId}`)  ? null : <Footer />
         }
       </div>
 	);

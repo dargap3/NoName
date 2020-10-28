@@ -46,7 +46,7 @@ const Home = ({ onOpenNav }) => {
             className={'animated-text animated-text--16'} 
             onClick={onOpenNav}
           >
-            ¿Tú qué estás buscando?
+            Y tú ¿qué quisieras saber?
           </span>
         </p>
       </section> 
@@ -71,7 +71,7 @@ const Home = ({ onOpenNav }) => {
             
           </div>
           <div className={'modal__img--home'}>
-            <img src={modalHome?.gif} alt={modalHome?.alt} />
+            <img src={modalHome?.gif} alt="" />
           </div>
         </div>          
       </Modal>

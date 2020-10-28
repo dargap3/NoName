@@ -20,9 +20,10 @@ form {
     margin-bottom: 1em;
     input,
     textarea {
+        color: #fff;
         background-color: transparent;
         border: none;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid #fff;
         padding: 5px 0 0 5px;
     }
     textarea {
@@ -70,9 +71,10 @@ form {
         -ms-flex-align: center;
         align-items: center;
         margin-top: 1em;
+        margin-left: 1em;
         button {
-            color: #fff;
-            background-color: #000;
+            color: #000;
+            background-color: #fff;
             outline: none;
             border: none;
             font-weight: bold;
@@ -90,6 +92,7 @@ form {
             -webkit-box-pack: justify;
             -ms-flex-pack: justify;
             justify-content: space-between;
+            max-width: 50%;
         }
     }
 }

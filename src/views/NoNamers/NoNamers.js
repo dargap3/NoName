@@ -34,9 +34,9 @@ const NoNamers = () => {
           const handleClick = () => {
             if (document.documentElement.scrollTop > 0) {
               scroll.scrollToTop();
-              setTimeout(() => history.push(`/equipo/${id}`), 1000);
+              setTimeout(() => history.push(`/nonamers/${id}`), 1000);
             } else {
-              history.push(`/equipo/${id}`);
+              history.push(`/nonamers/${id}`);
             }
           }
           
