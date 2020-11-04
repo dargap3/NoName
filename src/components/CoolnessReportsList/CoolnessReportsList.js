@@ -16,7 +16,7 @@ const CoolnessReportsList = () => {
         slicedCoolnessReports.map((coolnessReport, index) => {
           const { imagen = '', nombre = '', report = '', } = { ...coolnessReport }
             return (
-              <CoolnessReport imagen={imagen} nombre={nombre} report={report} index={index} tab={tab} setTab={setTab} />              
+              <CoolnessReport key={nombre} imagen={imagen} nombre={nombre} report={report} index={index} tab={tab} setTab={setTab} />              
             );
         })
       }   
