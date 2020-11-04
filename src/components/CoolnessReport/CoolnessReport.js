@@ -11,7 +11,7 @@ const CoolnessReport = ({ nombre, imagen, report, index, tab, setTab}) => {
 
   return (
     <div className={'right__list'} onClick={() => setTab(index)}>
-      <p><b>CR</b>{nombre}</p>
+      <p><span style={{fontWeight: 900}}>CR</span>{nombre}</p>
       <a href={report} download target={'_blank'} rel={'noopener noreferrer'}><FiDownload/></a>
       <Animated 
         animationIn={'fadeIn'} 
