@@ -23,13 +23,22 @@ const Landing = () => {
   };
 
   useEffect(() => {
-    const setTimeOut = setTimeout(() => {
-      setIsModalOpen(true);
-    }, 4000);
-    return () => {
-      clearTimeout(setTimeOut);
+    if (modalInicio?.activar) {
+      const setTimeOut = setTimeout(() => {
+        setIsModalOpen(true);
+      }, 4000);
+      return () => {
+        clearTimeout(setTimeOut);
+      }
+    } else {
+      const setTimeOut = setTimeout(() => {
+        history.push("/home");
+      }, 4000);
+      return () => {
+        clearTimeout(setTimeOut);
+      }
     }
-  }, [modalIsOpen] );
+  }, [history, modalInicio?.activar, modalIsOpen]);
 
   return (
     <div className={'container page'} >
