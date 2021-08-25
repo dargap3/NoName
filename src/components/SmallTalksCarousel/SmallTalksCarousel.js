@@ -9,7 +9,7 @@ import SmallTalk from '../SmallTalk/SmallTalk';
 
 const SmallTalksCarousel = () => {
   const { smallTalks } = useContext(Context);
-  const sortedSmallTalks = smallTalks.sort((a, b) => b.id - a.id);
+  /* const sortedSmallTalks = smallTalks.sort((a, b) => b.id - a.id); */
 
   const width = useWidth();  
 
@@ -24,7 +24,7 @@ const SmallTalksCarousel = () => {
       arrows
     >
       {
-        sortedSmallTalks.map(({id, ...media}) => (
+        smallTalks.map(({id, ...media}) => (
             <SmallTalk key={id} media={media} />
         ))
       }

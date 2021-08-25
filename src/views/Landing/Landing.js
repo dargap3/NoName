@@ -22,6 +22,17 @@ const Landing = () => {
     history.push("/home"); 
   };
 
+/*   useEffect(() => {    
+      const setTimeOut = setTimeout(() => {
+        setIsModalOpen(true);
+      }, 4000);
+      return () => {
+        clearTimeout(setTimeOut);
+      }
+    
+  }, [modalIsOpen]); */
+
+
   useEffect(() => {
     if (modalInicio?.activar) {
       const setTimeOut = setTimeout(() => {
