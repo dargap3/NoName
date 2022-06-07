@@ -1,38 +1,38 @@
-import React from 'react';
-import useQuery from '../hooks/useQuery/useQuery';
+import React from "react";
+import useQuery from "../hooks/useQuery/useQuery";
 
 const Context = React.createContext({
   modalCurioso: {},
   modalHome: {},
   modalInicio: {},
-  partners: [],
   noNamers: [],
   smallTalks: [],
   coolnessReports: [],
+  noNamersText: {},
 });
 
-const ContextProvider = ( {children} ) => {
-  const [modalCurioso, modalHome, modalInicio] = useQuery('modals');
-  const partners = useQuery('partners');
-  const noNamers = useQuery('nonamers');
-  const smallTalks = useQuery('small-talks');
-  const coolnessReports = useQuery('coolness-reports');
+const ContextProvider = ({ children }) => {
+  const [modalCurioso, modalHome, modalInicio] = useQuery("modals");
+  const noNamers = useQuery("nonamers");
+  const smallTalks = useQuery("small-talks");
+  const coolnessReports = useQuery("coolness-reports");
+  const [noNamersText] = useQuery("nonamers-text");
 
   return (
-    <Context.Provider 
+    <Context.Provider
       value={{
         modalCurioso,
         modalHome,
         modalInicio,
-        partners,
         noNamers,
         smallTalks,
         coolnessReports,
+        noNamersText,
       }}
     >
       {children}
     </Context.Provider>
   );
-}
+};
 
-export {ContextProvider, Context};
+export { ContextProvider, Context };
