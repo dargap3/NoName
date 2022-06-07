@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { animateScroll as scroll} from 'react-scroll';
-
+import parse from 'html-react-parser';
 import { Context } from '../../context/Context';
 
 import './NoNamers.styles.scss';
 
 const NoNamers = () => {
-  const { noNamers } = useContext(Context);
+  const { noNamers, noNamersText } = useContext(Context);
+
   const sortedNoNamers = noNamers.sort( (a, b) =>
     a.nombre > b.nombre ? 1 :
       a.nombre < b.nombre ? -1 : 0
@@ -19,12 +20,18 @@ const NoNamers = () => {
     <div className={'nonamers__container'}>  	 
       <section className={'nonamers'}>
         <p className={'nonamers__body'}>
-          LOS NAMES DETRÁS <br />DE NO NAME      
+          {parse(
+            `
+            ${noNamersText?.titulo}
+            `
+          )} 
         </p>
         <p className={'nonamers__body'}>
-          <strong>Los NoNamers</strong> somos una colección de 11 seres humanos diversos y complementarios. 
-          No somos consultores, ni asesores ni banqueros de inversión. 
-          Somos doers que #<strong>HacemosNoDecimos</strong> que las cosas pasen en las empresas más tremendas de Colombia.
+        {parse(
+            `
+            ${noNamersText?.parrafo}
+            `
+            )} 
         </p>
       </section>
       <section className={'profile-nonamers'}>

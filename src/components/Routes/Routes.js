@@ -7,7 +7,6 @@ import Landing from '../../views/Landing/Landing';
 import Home from '../../views/Home/Home';
 import WannaBePartner from '../../views/WannaBePartner/WannaBePartner';
 import NoNamers from '../../views/NoNamers/NoNamers';
-import Partners from '../../views/Partners/Partners';
 import NoNamer from '../../views/NoNamer/NoNamer';
 import SmallTalksCoolnessReport from '../../views/SmallTalksCoolnessReport/SmallTalksCoolnessReport';
 
@@ -18,7 +17,6 @@ const routes = [
   { path: '/cool-stuff', Component: SmallTalksCoolnessReport},
   { path: '/nonamers', Component: NoNamers },
   { path: '/nonamers/:noNamerId',  Component: NoNamer },
-  { path: '/aliados',  Component: Partners },
   { path: '/contacto',  Component: WannaBePartner },
 ]
 

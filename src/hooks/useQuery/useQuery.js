@@ -1,22 +1,29 @@
-import { useState, useEffect } from 'react';
-import { firestore, convertCollectionsSnapshotToMap } from '../../firebase/firebase.utils';
+import { useState, useEffect } from "react";
+import {
+  db,
+  convertCollectionsSnapshotToMap,
+} from "../../firebase/firebase.utils";
+import { collection, getDocs, query } from "firebase/firestore";
 
 const useQuery = (collectionName) => {
-  const [query, setQuery] = useState([]);
+  const [data, setData] = useState([]);
 
-  useEffect( () => {
-    const unsubscribe = firestore
-      .collection(collectionName)
-      .onSnapshot( async snapshot => {
-        const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
-        setQuery(collectionsMap);
-      } );
-    return (
-      () => unsubscribe()
-    );
-  }, [collectionName] );
+  useEffect(() => {
+  const getCollections = async () => {
+  const colletionsRef = collection(db, collectionName)
+  const q = query(colletionsRef)
+   const querySnapshot = await getDocs(q)
+   const collectionsMap = convertCollectionsSnapshotToMap(querySnapshot)
+   setData(collectionsMap);
+  }
+  
+  getCollections()
 
-  return query; 
-}
+/*   return (
+    () => getCollections()) */
+}, [collectionName]);
+
+  return data;
+};
 
 export default useQuery;

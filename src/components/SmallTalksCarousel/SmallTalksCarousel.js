@@ -9,7 +9,6 @@ import SmallTalk from '../SmallTalk/SmallTalk';
 
 const SmallTalksCarousel = () => {
   const { smallTalks } = useContext(Context);
-  /* const sortedSmallTalks = smallTalks.sort((a, b) => b.id - a.id); */
 
   const width = useWidth();  
 

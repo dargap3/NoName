@@ -1,6 +1,7 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/analytics';
+import { initializeApp } from 'firebase/app';
+import {getFirestore} from 'firebase/firestore';
+import { getAnalytics } from 'firebase/analytics';
+
 
 const config = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -13,7 +14,7 @@ const config = {
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 }
 
-firebase.initializeApp(config);
+const firebaseApp = initializeApp(config);
 
 export const convertCollectionsSnapshotToMap = collections => {
   const transformedCollection = collections.docs.map( doc => (
@@ -25,8 +26,6 @@ export const convertCollectionsSnapshotToMap = collections => {
   return transformedCollection;
 };
 
-export const firestore = firebase.firestore();
+export const db = getFirestore(firebaseApp);
 
-firebase.analytics();
-
-export default firebase;
+getAnalytics(firebaseApp);

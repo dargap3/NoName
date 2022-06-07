@@ -41,19 +41,6 @@ const Navbar = ({ onCloseNav }) => {
       </button>
       <ul className={'nav__list'}>
         <li
-            className={'nav__item'} 
-            onClick={onCloseNav}
-        >
-          <NavLink 
-            to={{pathname: '/cool-stuff'}} 
-            activeClassName={'selected'} 
-            className={'nav__link'}
-          >
-          cool stuff
-            <hr className={'nav__link--4'}/>
-          </NavLink>
-        </li>
-        <li
           className={'nav__item'} 
           onClick={onCloseNav}
         >
@@ -66,19 +53,21 @@ const Navbar = ({ onCloseNav }) => {
             <hr className={'nav__link--2'}/>
           </NavLink>
         </li>
+
         <li
-          className={'nav__item'} 
-          onClick={onCloseNav}
+            className={'nav__item'} 
+            onClick={onCloseNav}
         >
           <NavLink 
-            to={{pathname: '/aliados'}} 
+            to={{pathname: '/cool-stuff'}} 
             activeClassName={'selected'} 
             className={'nav__link'}
           >
-          aliados
-            <hr className={'nav__link--3'}/>
+          Coolness Report
+            <hr className={'nav__link--4'}/>
           </NavLink>
         </li>
+
         <li
           className={'nav__item'} 
           onClick={onCloseNav}
@@ -92,21 +81,6 @@ const Navbar = ({ onCloseNav }) => {
             <hr className={'nav__link--1'}/>
           </NavLink>
         </li>
-        
-        
-        {/* <li
-          className={'nav__item'} 
-          onClick={onCloseNav}
-        >
-          <NavLink 
-            to={{pathname: '/soy-curioso'}} 
-            activeClassName={'selected'} 
-            className={'nav__link'}
-          >
-          quiero curiosear
-            <hr className={'nav__link--4'}/>
-          </NavLink>
-        </li> */}
         
         <li
           className={'nav__item'} 
