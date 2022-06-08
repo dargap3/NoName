@@ -1,18 +1,18 @@
 import React, { useState, useContext } from 'react';
-import parse from 'html-react-parser';
+/* import parse from 'html-react-parser'; */
 import useWidth from '../../hooks/useWidth/useWidth';
 
 import { Context } from '../../context/Context';
 
-import Modal from '../../components/Modal/Modal';
+/* import Modal from '../../components/Modal/Modal'; */
 
 import './home.styles.scss';
 
 const Home = ({ onOpenNav }) => {
-  const { modalHome, bannerHome } = useContext(Context);
+  const { /* modalHome */ bannerHome } = useContext(Context);
   const width = useWidth();
-  const [modalIsOpen, setIsModalOpen] = useState(false);
-  const onCloseModal = () => setIsModalOpen(false);
+ /*  const [modalIsOpen, setIsModalOpen] = useState(false);
+  const onCloseModal = () => setIsModalOpen(false); */
   
   return (
     <>    
