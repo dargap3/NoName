@@ -29,7 +29,7 @@ const Layout = ({ children, path, onOpenNav, onCloseNav, showNavbar }) => {
             showNavbar={showNavbar}
           />
           <main 
-            className={`${(path === '/nonamers/:noNamerId' || path === '/cool-stuff') ? 'main--nonamer' : ''} main`}
+            className={`${(path === '/nonamers/:noNamerId' || path === '/cool-stuff' || path === '/home') ? 'main--nonamer' : ''} main`}
           >
             { children }
           </main>

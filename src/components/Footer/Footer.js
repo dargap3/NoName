@@ -2,7 +2,6 @@ import React from 'react';
 
 import linkedin from '../../assets/images/linkedin.svg';
 import instagram from '../../assets/images/instagram.svg';
-import twitter from '../../assets/images/twitter.svg';
 
 import './footer.styles.scss';
 
@@ -36,15 +35,6 @@ const Footer = ({inverted}) => (
           <img src={instagram} alt='logo instagram'/>
         </a>
       </li>
-      <li>
-        <a 
-          rel="noopener noreferrer" 
-          target='blank' 
-          href="https://twitter.com/noname_colombia"
-        >
-          <img src={twitter} alt='logo twitter'/>
-        </a>
-      </li>      
     </ul>
   </footer>
 )
