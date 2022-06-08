@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import parse from 'html-react-parser';
+import useWidth from '../../hooks/useWidth/useWidth';
 
 import { Context } from '../../context/Context';
 
@@ -8,15 +9,17 @@ import Modal from '../../components/Modal/Modal';
 import './home.styles.scss';
 
 const Home = ({ onOpenNav }) => {
-  const { modalHome } = useContext(Context);
-
+  const { modalHome, bannerHome } = useContext(Context);
+  const width = useWidth();
   const [modalIsOpen, setIsModalOpen] = useState(false);
   const onCloseModal = () => setIsModalOpen(false);
   
   return (
     <>    
       <section className={'home'} >
-        <p className={'home__body'}>
+        {
+        <img src={ width < 750 ? bannerHome?.mobile : bannerHome?.desktop } alt='banner desktop' /> }
+        {/* <p className={'home__body'}>
           Lo hacemos todo para que las PyMEs dejen de ser PyMEs. 
           ¿Cómo? Literalmente nos remangamos para hacer que las 
           mejores empresas escalen a niveles superiores, de una
@@ -48,10 +51,10 @@ const Home = ({ onOpenNav }) => {
           >
             Y tú ¿qué quisieras saber?
           </span>
-        </p>
+        </p> */}
       </section> 
       
-      <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={false}>
+      {/* <Modal modalIsOpen={modalIsOpen} closeModal={onCloseModal} closeable={false}>
         <button className={'modal__close'} onClick={onCloseModal} style={{transform: 'scale(0.5)'}}>
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M29 2L5 27" stroke="black" strokeWidth="4"/>
@@ -74,7 +77,7 @@ const Home = ({ onOpenNav }) => {
             <img src={modalHome?.gif} alt="" />
           </div>
         </div>          
-      </Modal>
+      </Modal> */}
     </>
 );}
 

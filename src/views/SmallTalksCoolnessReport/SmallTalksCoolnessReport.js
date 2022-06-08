@@ -1,15 +1,15 @@
 import React from "react";
 
 import CoolnessReportsList from "../../components/CoolnessReportsList/CoolnessReportsList";
-import SmallTalksCarousel from '../../components/SmallTalksCarousel/SmallTalksCarousel';
-import LogoSmallTalks from  '../../assets/logo/LOGO SMALL TALKS-04 1.png';
+/* import SmallTalksCarousel from '../../components/SmallTalksCarousel/SmallTalksCarousel';
+import LogoSmallTalks from  '../../assets/logo/LOGO SMALL TALKS-04 1.png'; */
 import CoolnessReport from "../../assets/logo/LOGO COOLNESS REPORT-05 1.png";
 
 import "./SmallTalksCoolnessReport.styles.scss";
 
 const SmallTalksCoolnessReport = () => (
   <>
-        <section className={'small-talks'}>
+    {/*         <section className={'small-talks'}>
       <div className={'left'}>
         <div className={'image-container'}>
           <img src={LogoSmallTalks} alt=""/>
@@ -21,7 +21,7 @@ const SmallTalksCoolnessReport = () => (
         <div className={'line'}>
       </div>
       </div>
-    </section>
+    </section> */}
     <section className={"coolness-report"}>
       <div className={"left left-coolness-report"}>
         <div className={"image-container"}>

@@ -14,7 +14,7 @@ const Header = ({ path, onCloseNav, onOpenNav, showNavbar }) => {
   const width = useWidth();
   return (
   <header 
-    className={`${(path === '/nonamers/:noNamerId' || path === '/cool-stuff') ? 'header--nonamer' : ''} header`}
+    className={`${(path === '/nonamers/:noNamerId' || path === '/cool-stuff' || path === '/home') ? 'header--nonamer' : ''} header`}
     style={
             (path === '/cool-stuff' && width <= 750) ? {marginLeft: '12%'} : {marginLeft: ''}
           }
@@ -22,7 +22,7 @@ const Header = ({ path, onCloseNav, onOpenNav, showNavbar }) => {
     <button onClick={onOpenNav} className={'nav-toggle'} >
       <img src={hamburger} alt='button toggle' />
     </button>    
-    { ((path === '/nonamers/:noNamerId') || (path === '/cool-stuff')) ? null :
+    { ((path === '/nonamers/:noNamerId') || (path === '/cool-stuff')|| (path === '/home')) ? null :
       <div className={'header__logo'}>
         <img src={logo} alt='logo noname'/>
       </div>

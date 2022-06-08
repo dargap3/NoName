@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import parse from 'html-react-parser';
 import useWidth from '../../hooks/useWidth/useWidth';
-
 import { Context } from '../../context/Context';
 
 import Carousel from '@brainhubeu/react-carousel';

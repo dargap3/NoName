@@ -9,6 +9,7 @@ const Context = React.createContext({
   smallTalks: [],
   coolnessReports: [],
   noNamersText: {},
+  bannerHome: {},
 });
 
 const ContextProvider = ({ children }) => {
@@ -17,6 +18,7 @@ const ContextProvider = ({ children }) => {
   const smallTalks = useQuery("small-talks");
   const coolnessReports = useQuery("coolness-reports");
   const [noNamersText] = useQuery("nonamers-text");
+  const [bannerHome] = useQuery("banner-home");
 
   return (
     <Context.Provider
@@ -28,6 +30,7 @@ const ContextProvider = ({ children }) => {
         smallTalks,
         coolnessReports,
         noNamersText,
+        bannerHome
       }}
     >
       {children}
