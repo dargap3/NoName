@@ -10,12 +10,11 @@ const WannaBePartner = () => {
         </h2>
         <p className={"wanna-be-partner__body"}>
           Si llegaste hasta aquí es porque estás cansado de escuchar buenas
-          ideas, que nunca se ejecutan. Si te ha pasado, hablemos.
+          ideas que nunca se ejecutan. Si te ha pasado, hablemos.
         </p>
         <section className={"form__container"}>
           <div className={`send-message`}>
             <p>
-              Si estás interesado en contactar a NoName:{" "}
               <a
                 href="mailto:linavieira@noname.com.co"
                 style={{ fontWeight: "800", textDecoration: "underline" }}
