@@ -33,6 +33,15 @@
         -ms-transform-origin: left center;
         transform-origin: left center;
     }
+    .logo-bcorp {
+        position: absolute;
+        right: 5%;
+        bottom: 12%;
+        width: 100px;
+        img {
+            width: 100%;
+        }
+    }
 }
 
 @media (min-width: 750px) {
